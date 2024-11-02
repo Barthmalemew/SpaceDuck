@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CodebuddyPersistentProjectState">
-    <option name="autoFileMode" value="NONE" />
     <option name="autoFileSelection" value="true" />
+    <option name="promptHistory">
+      <list>
+        <option value="ok i want to set up the current project to be a node web app using the files i already created" />
+        <option value="yes" />
+        <option value="ry again with the files ive given you" />
+        <option value="ok in the llm directory, i want to install ollama" />
+        <option value="what does ollama.js do" />
+        <option value="wats the best way to integrate ollama into this current project" />
+        <option value="youre allowed to creat files if needed" />
+      </list>
+    </option>
     <option name="selectedModel" value="codebuddy:CLAUDE_3.5_SONNET_V7" />
     <option name="ttsEnabled" value="false" />
   </component>

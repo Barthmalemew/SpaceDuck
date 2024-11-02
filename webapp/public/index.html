@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>SpaceDuck</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <h1>Welcome to SpaceDuck</h1>
+    <div class="chat-container">
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be inserted here -->
+        </div>
+        <div class="chat-input-container">
+            <textarea 
+                id="chatInput" 
+                placeholder="Type your message here..."
+                rows="3"
+            ></textarea>
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
