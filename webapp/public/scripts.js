@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sendButton.disabled = true;
 
         try {
+            console.log('Sending message to server:', message);
             const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: {
@@ -30,9 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const data = await response.json();
+            console.log('Server response:', data);
             if (response.ok) {
                 addMessage(data.response);
             } else {
+                console.error('Server error:', data.error);
                 addMessage('Sorry, something went wrong. Please try again.');
             }
         } catch (error) {
