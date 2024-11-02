@@ -19,6 +19,7 @@
         <option value="Error: listen tcp 127.0.0.1:11434: bind: address already in use&#10;" />
         <option value="whats wrong with my code" />
         <option value="please actually look at the codebase, something is wrong" />
+        <option value="please document y code thoruohly to explain everythings use" />
       </list>
     </option>
     <option name="selectedModel" value="codebuddy:CLAUDE_3.5_SONNET_V7" />

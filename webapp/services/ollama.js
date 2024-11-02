@@ -1,3 +1,9 @@
+/**
+ * OllamaService Class
+ * Manages communication with the Ollama API for AI model interactions
+ * Handles model initialization, chat responses, and error management
+ * Implements system prompts and model management functionality
+ */
 const axios = require('axios');
 const { exec } = require('child_process');
 const util = require('util');
@@ -40,6 +46,9 @@ class OllamaService {
     }
 
     async checkOllamaRunning() {
+        // Verify Ollama service availability
+        // Attempts to connect to Ollama API
+        // Throws error if service is unreachable
         try {
             await axios.get(`${this.baseUrl}/api/tags`, { timeout: 5000 });
             return true;
@@ -97,6 +106,11 @@ class OllamaService {
     }
 
     getSystemPrompt() {
+        // Defines the AI's personality and response characteristics
+        // Sets guidelines for:
+        // - Response length and style
+        // - Professional tone
+        // - Scientific accuracy requirements
         const systemPrompt = `You are a NASA instructor providing clear, concise information about space exploration and science. 
         Your responses should be:
         - Brief and to the point (2-3 sentences for general responses)

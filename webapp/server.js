@@ -1,3 +1,8 @@
+/**
+ * Main server application for the NASA Space Duck chatbot
+ * Handles HTTP requests, serves static files, and manages communication with Ollama API
+ * Implements error handling and server initialization checks
+ */
 const express = require('express');
 const path = require('path');
 const ollamaService = require('./services/ollama');
@@ -13,6 +18,11 @@ let serverReady = false;
 
 async function initializeServer() {
     try {
+        // Attempt to initialize the Ollama service
+        // This includes:
+        // - Checking if Ollama is running
+        // - Verifying model availability
+        // - Setting up initial configuration
         await ollamaService.initialize();
         serverReady = true;
         console.log('Server initialization complete, ready to handle requests');
@@ -33,7 +43,9 @@ const checkServerReady = (req, res, next) => {
     next();
 };
 
-// Chat endpoint
+// Chat endpoint handler
+// Processes incoming chat messages and returns AI responses
+// Implements error handling for various failure scenarios
 app.post('/api/chat', checkServerReady, async (req, res) => {
     const { message } = req.body;
 

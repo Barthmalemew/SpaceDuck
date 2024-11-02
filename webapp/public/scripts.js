@@ -1,8 +1,15 @@
+/**
+ * Frontend JavaScript for NASA Space Duck Chat Interface
+ * Manages user interactions, message display, and API communication
+ */
 document.addEventListener('DOMContentLoaded', () => {
     const chatMessages = document.getElementById('chatMessages');
     const chatInput = document.getElementById('chatInput');
     const sendButton = document.getElementById('sendButton');
 
+    // Adds a new message to the chat interface
+    // @param message - The message text to display
+    // @param isUser - Boolean indicating if message is from user
     function addMessage(message, isUser = false) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
@@ -11,6 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
+    // Handles message sending logic
+    // Manages API communication and response handling
+    // Implements error handling for failed requests
     async function sendMessage() {
         const message = chatInput.value.trim();
         if (!message) return;
