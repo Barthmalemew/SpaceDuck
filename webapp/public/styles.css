@@ -1,7 +1,22 @@
+body
+{
+  display:flex;
+  flex-direction:column;
+  border: 3px solid blue;
+  min-height:100vh;
+}
+div.chat-container
+{
+  display:flex;
+  flex-direction:column;
+  border: 1px solid orange;
+  min-height:90vh;
+  justify-content:flex-end;
+}
 textarea
 {
 resize:none;
-height:10em;
+height:3em;
 width:60em;
 max-width:60em;
 min-width:30em;
@@ -15,16 +30,37 @@ background-color: #04AA6D; /* Green */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   border-radius:4px;
   position:absolute;
   right:0px;
-  bottom:3px;
+  bottom:0px;
 }
 div.chat-input-container
 {
-    margin-left: 10em;
-    min-width:30em;
-    display:inline-block;
+    margin:1em 25em .5em;
+    width:fit-content;
+    height:fit-content;
+    display:flex;
     position:relative;
+    bottom:0;
+    flex-direction:column;
+    border: 1px solid green;
+    
 }
+div.chat-messages
+{
+  border-color:red;
+  border-style: solid;
+  border-width:1px;
+  display:flex;
+  flex-direction:column;
+  flex-basis:40em;
+  width:62em;
+  margin: 0em 25em;
+  position:relative;
+  top:0em;
+  max-height:50em;
+  overflow:auto;
+}
+
