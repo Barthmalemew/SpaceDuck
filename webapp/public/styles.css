@@ -1,0 +1,31 @@
+textarea
+{
+resize:none;
+height:10em;
+width:60em;
+max-width:60em;
+min-width:30em;
+}
+#sendButton
+{
+background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius:4px;
+  display:inline-block;
+  position:absolute;
+  right:0px;
+  bottom:3px;
+}
+div.chat-input-container
+{
+    margin-left: 10em;
+    min-width:30em;
+    display:inline-block;
+    position:relative;
+}

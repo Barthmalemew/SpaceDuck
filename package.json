@@ -10,8 +10,9 @@
   },
   "private": true,
   "dependencies": {
+    "axios": "^1.6.2",
     "express": "^4.18.2",
-    "axios": "^1.6.2"
+    "SpaceDuck": "file:"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
