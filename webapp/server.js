@@ -3,32 +3,95 @@
  * Handles HTTP requests, serves static files, and manages communication with Ollama API
  * Implements error handling and server initialization checks
  */
+const { spawn } = require('child_process');
 const express = require('express');
 const path = require('path');
-const ollamaService = require('./services/ollama');
+const axios = require('axios');
+const fs = require('fs');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.SERVER_PORT || 3000;
 
+// Middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
 
-// Initialize Ollama before accepting requests
+// Add rate limiting
+const rateLimit = require('express-rate-limit');
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100 // limit each IP to 100 requests per windowMs
+});
+
+app.use('/api/', limiter);
+
+// Configure Ollama service URL
+const OLLAMA_SERVICE_URL = process.env.OLLAMA_SERVICE_URL || 'http://localhost:5000';
+
+// Create axios instance for Ollama service
+const ollamaClient = axios.create({ baseURL: OLLAMA_SERVICE_URL });
+
+let pythonProcess = null;
 let serverReady = false;
+
+// Function to start the Python Ollama service
+async function startOllamaService() {
+    console.log('Starting Ollama service...');
+    const pythonScript = path.join(__dirname, 'services', 'ollama.py');
+
+    // Check if virtual environment exists, if not create it
+    if (!fs.existsSync(path.join(__dirname, 'venv'))) {
+        console.log('Creating Python virtual environment...');
+        await new Promise((resolve, reject) => {
+            const venvProcess = spawn('python', ['-m', 'venv', 'venv']);
+            venvProcess.on('close', (code) => code === 0 ? resolve() : reject());
+        });
+        
+        // Install requirements
+        await new Promise((resolve, reject) => {
+            const pipProcess = spawn(path.join(__dirname, 'venv', 'bin', 'pip'), ['install', '-r', 'requirements.txt']);
+            pipProcess.on('close', (code) => code === 0 ? resolve() : reject());
+        });
+    }
+    pythonProcess = spawn(path.join(__dirname, 'venv', 'bin', 'python'), [pythonScript], {
+        stdio: 'pipe'
+    });
+
+    pythonProcess.stdout.on('data', (data) => {
+        console.log(`Ollama service: ${data}`);
+    });
+
+    pythonProcess.stderr.on('data', (data) => {
+        console.error(`Ollama service error: ${data}`);
+    });
+
+    pythonProcess.on('close', (code) => {
+        console.log(`Ollama service exited with code ${code}`);
+        if (code !== 0) {
+            console.error('Ollama service crashed, attempting restart...');
+            setTimeout(startOllamaService, 5000);
+        }
+    });
+
+    // Wait for service to start
+    await new Promise(resolve => setTimeout(resolve, 2000));
+}
 
 async function initializeServer() {
     try {
-        // Attempt to initialize the Ollama service
-        // This includes:
-        // - Checking if Ollama is running
-        // - Verifying model availability
-        // - Setting up initial configuration
-        await ollamaService.initialize();
-        serverReady = true;
-        console.log('Server initialization complete, ready to handle requests');
+        // Start Ollama service first
+        await startOllamaService();
+        
+        const response = await ollamaClient.get('/health');
+        if (response.data.status === 'ready') {
+            serverReady = true;
+            console.log('Server initialization complete, ready to handle requests');
+        }
     } catch (error) {
         console.error('Server initialization failed:', error);
-        process.exit(1); // Exit if initialization fails
+        setTimeout(initializeServer, 5000); // Retry every 5 seconds
     }
 }
 
@@ -43,27 +106,26 @@ const checkServerReady = (req, res, next) => {
     next();
 };
 
+app.get('/api/random-question', checkServerReady, async (req, res) => {
+    try {
+        const response = await ollamaClient.get('/random-question');
+        const question = response.data.question;
+        res.json({ question });
+    } catch (error) {
+        console.error('Error getting random question:', error);
+        res.status(500).json({
+            error: 'Failed to get random question'
+        });
+    }
+});
+
 // Chat endpoint handler
 // Processes incoming chat messages and returns AI responses
 // Implements error handling for various failure scenarios
 app.post('/api/chat', checkServerReady, async (req, res) => {
-    const { message } = req.body;
-
-    if (!message) {
-        return res.status(400).json({
-            error: 'Message is required',
-            details: 'Please provide a message to chat with the AI.'
-        });
-    }
-
     try {
-        const response = await ollamaService.chat(message);
-
-        const botResponse = response.response ||
-            response.message ||
-            response.content ||
-            'I apologize, but I was unable to generate a response.';
-
+        const response = await ollamaClient.post('/chat', { message: req.body.message });
+        const botResponse = response.data.response;
         res.json({ response: botResponse });
     } catch (error) {
         console.error('Chat error:', error);
@@ -84,6 +146,17 @@ app.post('/api/chat', checkServerReady, async (req, res) => {
             details: error.message
         });
     }
+});
+
+// Graceful shutdown handler
+process.on('SIGINT', async () => {
+    console.log('Shutting down server...');
+    if (pythonProcess) {
+        pythonProcess.kill();
+    }
+    // Wait for cleanup
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    process.exit(0);
 });
 
 // Start server initialization

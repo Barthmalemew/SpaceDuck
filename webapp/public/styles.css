@@ -1,66 +1,64 @@
-body
-{
-  display:flex;
-  flex-direction:column;
-  border: 3px solid blue;
-  min-height:100vh;
-}
-div.chat-container
-{
-  display:flex;
-  flex-direction:column;
-  border: 1px solid orange;
-  min-height:90vh;
-  justify-content:flex-end;
-}
-textarea
-{
-resize:none;
-height:3em;
-width:60em;
-max-width:60em;
-min-width:30em;
-}
-#sendButton
-{
-background-color: #04AA6D; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  border-radius:4px;
-  position:absolute;
-  right:0px;
-  bottom:0px;
-}
-div.chat-input-container
-{
-    margin:1em 25em .5em;
-    width:fit-content;
-    height:fit-content;
-    display:flex;
-    position:relative;
-    bottom:0;
-    flex-direction:column;
-    border: 1px solid green;
-    
-}
-div.chat-messages
-{
-  border-color:red;
-  border-style: solid;
-  border-width:1px;
-  display:flex;
-  flex-direction:column;
-  flex-basis:40em;
-  width:62em;
-  margin: 0em 25em;
-  position:relative;
-  top:0em;
-  max-height:50em;
-  overflow:auto;
+/* Lock the page by disabling scrolling */
+body {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid blue;
+    min-height: 100vh;
+    margin: 0;
+    align-items: center;
+    padding: 0 1em;
+    overflow: hidden; /* Disable scrolling */
 }
 
+/* Chat container fixed dimensions */
+div.chat-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid orange;
+    height: 90vh; /* Fixed height */
+    width: 90vw;  /* Fixed width */
+    justify-content: flex-end;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+/* Chat messages fixed height */
+div.chat-messages {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    height: 70vh; /* Fixed height */
+    overflow-y: auto;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+/* Input container fixed height */
+div.chat-input-container {
+    margin: 1em 0;
+    width: 100%;
+    height: 10vh; /* Fixed height */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Textarea fixed, no resizing */
+textarea {
+    resize: none;
+    width: 100%;
+    padding: 0.5em;
+    height: 100%;
+}
+
+/* Send button */
+#sendButton {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 4px;
+    margin-left: 0.5em;
+    height: 100%; /* Match the height of the input container */
+}

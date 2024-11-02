@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatMessages = document.getElementById('chatMessages');
     const chatInput = document.getElementById('chatInput');
     const sendButton = document.getElementById('sendButton');
+    let inactivityTimer = null;
+    const INACTIVITY_TIMEOUT = 30000; // 30 seconds
 
     // Adds a new message to the chat interface
     // @param message - The message text to display
@@ -18,9 +20,32 @@ document.addEventListener('DOMContentLoaded', () => {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    // Handles message sending logic
-    // Manages API communication and response handling
-    // Implements error handling for failed requests
+    async function askRandomQuestion() {
+        try {
+            const response = await fetch('/api/random-question');
+            const data = await response.json();
+            if (response.ok) {
+                addMessage(data.question);
+            }
+        } catch (error) {
+            console.error('Error fetching random question:', error);
+        }
+    }
+
+    function resetInactivityTimer() {
+        if (inactivityTimer) {
+            clearTimeout(inactivityTimer);
+        }
+        inactivityTimer = setTimeout(askRandomQuestion, INACTIVITY_TIMEOUT);
+    }
+
+    // Initialize the timer when the page loads
+    resetInactivityTimer();
+
+    // Reset timer when user interacts
+    chatInput.addEventListener('input', resetInactivityTimer);
+    chatMessages.addEventListener('scroll', resetInactivityTimer);
+
     async function sendMessage() {
         const message = chatInput.value.trim();
         if (!message) return;
@@ -29,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addMessage(message, true);
         chatInput.value = '';
         sendButton.disabled = true;
+        resetInactivityTimer();
 
         try {
             console.log('Sending message to server:', message);
@@ -41,15 +67,16 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const data = await response.json();
-            console.log('Server response:', data);
             if (response.ok) {
-                addMessage(data.response);
+                if (data.response) {
+                    addMessage(data.response);
+                } else {
+                    throw new Error('Invalid response format');
+                }
             } else {
-                console.error('Server error:', data.error);
-                addMessage('Sorry, something went wrong. Please try again.');
+                addMessage(`Error: ${data.error || 'Unknown error occurred'}`);
             }
         } catch (error) {
-            console.error('Error:', error);
             addMessage('Sorry, something went wrong. Please try again.');
         } finally {
             sendButton.disabled = false;
