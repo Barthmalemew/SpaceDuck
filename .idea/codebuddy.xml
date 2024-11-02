@@ -11,6 +11,15 @@
         <option value="what does ollama.js do" />
         <option value="wats the best way to integrate ollama into this current project" />
         <option value="youre allowed to creat files if needed" />
+        <option value="llama2 is installed" />
+        <option value="how do i modify the llama to act as a nasa instructor" />
+        <option value="do i need to run the ollama.js as well?" />
+        <option value="how do i start it then?" />
+        <option value="ive made changes to the port used" />
+        <option value="Error: listen tcp 127.0.0.1:11434: bind: address already in use&#10;" />
+        <option value="whats wrong with my code" />
+        <option value="please actually look at the codebase, something is wrong" />
+        <option value="please document y code thoruohly to explain everythings use" />
       </list>
     </option>
     <option name="selectedModel" value="codebuddy:CLAUDE_3.5_SONNET_V7" />
