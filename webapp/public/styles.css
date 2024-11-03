@@ -72,6 +72,7 @@ h1 {
     height: 400px;
     display: flex;
     flex-direction: column;
+    position:relative;
 }
 
 /* Chat container */
@@ -191,7 +192,7 @@ div.Duck1
 {
     height: 30%;
     max-width:fit-content;
-    position:fixed;
+    position:absolute;
     left:5vw;
 
 }
@@ -199,9 +200,10 @@ div.Duck2
 {
   position:absolute;
   z-index:1;
-  left:.5vw;
-  bottom:0vh;
+  left:0%;
+  bottom:0;
   max-width:fit-content;
+  width:25%;
   height:25%;
 }
 div.Duck3
@@ -241,6 +243,7 @@ div.Duck3
 .content {
     height: 100%;
     overflow-y: auto;
+    position:relative;
 }
 
 .question-display {
