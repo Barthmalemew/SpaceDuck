@@ -7,8 +7,7 @@ const express = require('express');
 const path = require('path');
 const axios = require('axios');
 const sqlite3 = require('sqlite3').verbose();
-const dbPath = path.join(__dirname, 'db', 'questions.db');
-const db = new sqlite3.Database(dbPath);
+const db = new sqlite3.Database(path.join(__dirname, 'db', 'questions.db'));
 require('dotenv').config();
 
 const app = express();
@@ -27,17 +26,6 @@ const limiter = rateLimit({
 });
 
 app.use('/api/', limiter);
-
-// Database error handling
-db.on('error', (err) => {
-    console.error('Database error:', err);
-});
-
-// Verify database connection
-db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='questions'", (err, row) => {
-    if (err) console.error('Error verifying database:', err);
-    else if (!row) console.error('Questions table not found in database');
-});
 
 // Configure Ollama service URL
 const OLLAMA_SERVICE_URL = process.env.OLLAMA_SERVICE_URL || 'http://localhost:5000';
@@ -86,36 +74,83 @@ const checkServerReady = (req, res, next) => {
     next();
 };
 
-app.get('/api/random-question', checkServerReady, async (req, res) => {
+// Enhanced questions endpoint with error handling and caching
+const questionCache = new Map();
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+
+app.get('/api/questions/:category', async (req, res) => {
     try {
-        const response = await ollamaClient.get('/random-question');
-        const question = response.data.question;
-        res.json({ question });
+        const category = req.params.category;
+        const cacheKey = `category_${category}`;
+        const cachedData = questionCache.get(cacheKey);
+        
+        if (cachedData && (Date.now() - cachedData.timestamp) < CACHE_DURATION) {
+            return res.json(cachedData.data);
+        }
+
+        db.get(
+            'SELECT * FROM questions WHERE category = ? ORDER BY RANDOM() LIMIT 1',
+            [category],
+            (err, row) => {
+                if (err) throw err;
+                if (!row) {
+                    return res.status(404).json({ 
+                        error: 'No questions found for this category' 
+                    });
+                }
+                questionCache.set(cacheKey, {
+                    data: row,
+                    timestamp: Date.now()
+                });
+                res.json(row);
+            });
     } catch (error) {
-        console.error('Error getting random question:', error);
+        console.error('Error fetching questions:', error);
         res.status(500).json({
-            error: 'Failed to get random question'
+            error: 'Failed to fetch questions',
+            details: error.message
         });
     }
 });
 
-// New endpoint to get questions by category
-app.get('/api/questions/category/:category', async (req, res) => {
-    const category = req.params.category;
-    db.all(
-        'SELECT * FROM questions WHERE category = ?',
-        [category],
-        (err, rows) => {
-            if (err) {
-                console.error('Database error:', err);
-                return res.status(500).json({ error: 'Database error' });
+// New endpoint to get categories
+app.get('/api/categories', async (req, res) => {
+    try {
+        db.all(
+            'SELECT DISTINCT category FROM questions',
+            [],
+            (err, rows) => {
+                if (err) throw err;
+                res.json(rows.map(row => row.category));
             }
-            if (rows.length === 0) {
-                return res.status(404).json({ error: 'No questions found for this category' });
+        );
+    } catch (error) {
+        console.error('Error fetching categories:', error);
+        res.status(500).json({
+            error: 'Failed to fetch categories',
+            details: error.message
+        });
+    }
+});
+
+// New endpoint to get random question
+app.get('/api/random-question', async (req, res) => {
+    try {
+        db.get(
+            'SELECT * FROM questions ORDER BY RANDOM() LIMIT 1',
+            [],
+            (err, row) => {
+                if (err) throw err;
+                res.json(row);
             }
-            res.json(rows);
-        }
-    );
+        );
+    } catch (error) {
+        console.error('Error fetching random question:', error);
+        res.status(500).json({
+            error: 'Failed to fetch random question',
+            details: error.message
+        });
+    }
 });
 
 // Chat endpoint handler

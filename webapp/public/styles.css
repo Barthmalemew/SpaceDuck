@@ -69,6 +69,9 @@ h1 {
     padding: 20px;
     flex: 1;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Chat container */
@@ -84,7 +87,7 @@ h1 {
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    overflow-y:auto;
+    height: 500px;
 }
 
 /* Messages area */
@@ -95,10 +98,10 @@ h1 {
     padding: 20px;
     margin-bottom: 20px;
     overflow-y: auto;
-    max-height:680px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    height: calc(100% - 70px);
 }
 
 /* Scrollbar styling */
@@ -207,24 +210,30 @@ div.Duck1
     transform:rotate(360deg);
   }
 }
+.content {
+  height: 100%;
+  overflow-y: auto;
 
-.question-item {
-    background: rgba(255, 255, 255, 0.1);
+.question-display {
     padding: 15px;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
-    cursor: pointer;
 }
 
-.question-item:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.answer.hidden {
+.answer-text {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: none;
 }
 
-.answer {
-    margin-top: 10px;
-    color: #FC3D21;
+.answer-text.visible {
+    display: block;
+}
+
+div.Duck1 {
+    height: 30%;
+    max-width:fit-content;
+    position:fixed;
 }
