@@ -208,6 +208,10 @@ button:hover {
     background-color: #ff4d2e;
 }
 
+.space-logo
+{
+  float:left;
+}
 /* Duck positioning and animations */
 div.Duck1 {
     height: 30%;
