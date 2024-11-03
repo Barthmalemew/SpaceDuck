@@ -12,6 +12,7 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.SERVER_PORT || 3000;
+let httpServer = null;
 
 // Middleware
 app.use(express.json());
@@ -36,15 +37,15 @@ let initializationError = null;
 const MAX_INIT_RETRIES = 5;
 let initRetryCount = 0;
 
-//This function checks to see if the server is initalized
 async function initializeServer() {
     try {
         //this sends a get request for the status of the server and waits for a response
         const statusResponse = await ollamaClient.get('/status');
+        console.log('Ollama service status:', statusResponse.data);
 
-        if (!statusResponse.data.initialized) {
-            console.log(`Initializing Ollama service (Status: ${statusResponse.data.status})...`);
-            await ollamaClient.post('/initialize');
+        if (statusResponse.data.status !== 'ready') {
+            const initResponse = await ollamaClient.post('/initialize');
+            if (!initResponse.data.status === 'success') throw new Error('Initialization failed');
         }
 
         serverReady = true;
@@ -53,11 +54,12 @@ async function initializeServer() {
     } catch (error) {
         initRetryCount++;
         initializationError = error.response?.data?.error || error.message;
-        console.error(`Initialization attempt ${initRetryCount} failed:`, initializationError);
+        console.error(`Initialization attempt ${initRetryCount}/${MAX_INIT_RETRIES} failed:`, initializationError);
 
         if (initRetryCount < MAX_INIT_RETRIES) {
-            console.log(`Retrying initialization in 5 seconds...`);
-            setTimeout(initializeServer, 5000);
+            const retryDelay = Math.min(5000 * Math.pow(2, initRetryCount - 1), 30000);
+            console.log(`Retrying initialization in ${retryDelay/1000} seconds...`);
+            setTimeout(initializeServer, retryDelay);
         } else {
             console.error('Max initialization retries reached. Server starting in limited mode.');
             serverReady = false;
@@ -102,8 +104,8 @@ app.get('/api/questions/:category', async (req, res) => {
             (err, row) => {
                 if (err) throw err;
                 if (!row) {
-                    return res.status(404).json({ 
-                        error: 'No questions found for this category' 
+                    return res.status(404).json({
+                        error: 'No questions found for this category'
                     });
                 }
                 //puts the question, and the time it was stored in the questionCache map under the key cacheKey
@@ -210,7 +212,7 @@ app.post('/api/chat', checkServerReady, async (req, res) => {
 process.on('SIGINT', async () => {
     console.log('Shutting down server...');
     // Clean shutdown of Express server
-    server.close();
+    if (httpServer) httpServer.close();
     process.exit(0);
 });
 
@@ -223,7 +225,7 @@ process.on('uncaughtException', (error) => {
 
 // Start server initialization
 initializeServer().then(() => {
-    app.listen(PORT, () => {
+    httpServer = app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);
     });
 });

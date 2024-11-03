@@ -74,7 +74,7 @@ class OllamaLLM(LLM):
             return ""
 
     async def astream_chat(
-        self, messages: Sequence[ChatMessage], **kwargs
+            self, messages: Sequence[ChatMessage], **kwargs
     ) -> AsyncGenerator[str, None]:
         """Stream chat responses asynchronously."""
         try:
@@ -82,7 +82,7 @@ class OllamaLLM(LLM):
             for msg in messages:
                 formatted_messages.append(f"{msg.role}: {msg.content}")
             prompt = "\n".join(formatted_messages)
-            
+
             async for response in self.astream_complete(prompt, **kwargs):
                 yield response
         except Exception as e:
@@ -90,7 +90,7 @@ class OllamaLLM(LLM):
             yield ""
 
     async def astream_complete(
-        self, prompt: str, **kwargs
+            self, prompt: str, **kwargs
     ) -> AsyncGenerator[str, None]:
         """Stream completion responses asynchronously."""
         try:
@@ -100,7 +100,7 @@ class OllamaLLM(LLM):
                 timeout=self.timeout
             )
             response.raise_for_status()
-            
+
             async for line in response.aiter_lines():
                 if line.strip():
                     data = json.loads(line)
@@ -119,7 +119,7 @@ class OllamaLLM(LLM):
         return asyncio.run(self.achat(messages, **kwargs))
 
     def stream_chat(
-        self, messages: Sequence[ChatMessage], **kwargs
+            self, messages: Sequence[ChatMessage], **kwargs
     ) -> Generator[str, None, None]:
         """Synchronous version of stream_chat."""
         async def async_generator():
@@ -129,7 +129,7 @@ class OllamaLLM(LLM):
         return async_to_sync_generator(async_generator())
 
     def stream_complete(
-        self, prompt: str, **kwargs
+            self, prompt: str, **kwargs
     ) -> Generator[str, None, None]:
         """Synchronous version of stream_complete."""
         async def async_generator():
@@ -176,7 +176,7 @@ class LlamaIndexService:
         try:
             # Debug: Print absolute path
             print(f"Absolute docs path: {self.docs_dir.absolute()}")
-            
+
             # Verify documents directory exists and contains files
             if not self.docs_dir.exists():
                 raise RuntimeError(f"Documents directory not found: {self.docs_dir}")
@@ -241,8 +241,6 @@ class LlamaIndexService:
         except Exception as e:
             return f"Error refreshing index: {str(e)}"
 
-# ollama.py content remains the same as in the previous version
-# ollama.py
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from enum import Enum
@@ -388,6 +386,15 @@ async def get_status():
         "error": ollama_service.initialization_error,
         "model": ollama_service.default_model
     }
+
+@app.post("/initialize")
+async def initialize_service():
+    try:
+        await ollama_service.initialize()
+        return {"status": "success"}
+    except Exception as e:
+        raise HTTPException(status_code=500, 
+                          detail=f"Initialization failed: {str(e)}")
 
 if __name__ == "__main__":
     import uvicorn
