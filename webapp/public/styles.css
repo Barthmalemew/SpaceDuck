@@ -51,11 +51,6 @@ h1 {
     box-sizing: border-box;
     margin-bottom: 20px;
     overflow-y:auto;
-    background-image:url('images/RubberDuck3.png');
-    background-size: 200px 100px;
-    background-position: left bottom;
-    background-repeat:no-repeat;
-    
 }
 
 /* Messages area */
@@ -69,6 +64,10 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    background-image:url('images/RubberDuck3.png');
+    background-size: 200px 100px;
+    background-position: left bottom;
+    background-repeat:no-repeat;
 }
 
 /* Scrollbar styling */
@@ -140,11 +139,10 @@ button {
 button:hover {
     background-color: #ff4d2e;
 }
-div.block
+div.Duck1
 {
-  height: 20px;
-  width: 20px;
-  background-color: red;
+  height: fit-content;
+  width: fit-content;
 }
 
 @keyframes rotate{
@@ -160,5 +158,5 @@ div.block
 }
 #rotate2D
 {
-  animation: rotate 1s linear infinite;
+  animation: rotate 12s linear infinite;
 }
