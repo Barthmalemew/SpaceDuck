@@ -5,8 +5,7 @@ from llama_index.core.llms import LLM
 from llama_index.core.llms import ChatMessage, CompletionResponse, LLMMetadata
 from llama_index.core.node_parser import SentenceSplitter, SimpleNodeParser
 from typing import Optional, List, Mapping, Any, Sequence, AsyncGenerator, Generator
-import httpx
-import os
+import httpx 
 import json
 import asyncio
 from pathlib import Path
