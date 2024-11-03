@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching random question:', error);
         }
     }
-   
+    
     async function sendMessage() {
         //sets the variable message to a trimed version of the value in the chat input variable
         const message = chatInput.value.trim();
@@ -83,4 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
             sendMessage();
         }
     });
+    
+    
 });
