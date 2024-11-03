@@ -1,48 +1,55 @@
-/**
- * Main server application for the NASA Space Duck chatbot
- * Handles HTTP requests, serves static files, and manages communication with Ollama API
- * Implements error handling and server initialization checks
- */
+// This is the main server for Space Duck. It:
+// 1. Handles all communication between the webpage and the AI
+// 2. Manages the question database
+// 3. Makes sure we don't overload our services
+// 4. Handles errors gracefully
+
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
+// Set up our database connection - we're using SQLite for practice questions
 const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database(path.join(__dirname, 'db', 'questions.db'));
+// Load our environment variables from .env file
 require('dotenv').config();
 
+// Set up our web server
 const app = express();
-const PORT = process.env.SERVER_PORT || 3000;
+const PORT = process.env.SERVER_PORT || 3000;  // Use port from settings or default to 3000
 let httpServer = null;
 
-// Middleware
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({ extended: true }));
+// Tell Express how to handle different types of requests
+app.use(express.json());  // For handling JSON data
+app.use(express.static(path.join(__dirname, 'public')));  // For serving our webpage files
+app.use(express.urlencoded({ extended: true }));  // For handling form submissions
 
-// Add rate limiting
+// Set up rate limiting to prevent overload
+// This makes sure no one can spam our server with too many requests
 const rateLimit = require('express-rate-limit');
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100 // limit each IP to 100 requests per windowMs
+    windowMs: 15 * 60 * 1000,  // Time window: 15 minutes
+    max: 100                    // Max 100 requests per window per IP
 });
-
 app.use('/api/', limiter);
 
-// Configure Ollama service URL
+// Set up connection to our AI service
 const OLLAMA_SERVICE_URL = process.env.OLLAMA_SERVICE_URL || 'http://localhost:5000';
 const ollamaClient = axios.create({ baseURL: OLLAMA_SERVICE_URL });
 
+// Track server status
 let serverReady = false;
 let initializationError = null;
 const MAX_INIT_RETRIES = 5;
 let initRetryCount = 0;
 
+// This function gets everything ready to handle requests
 async function initializeServer() {
     try {
-        //this sends a get request for the status of the server and waits for a response
+        // Check if our AI service is ready
         const statusResponse = await ollamaClient.get('/status');
         console.log('Ollama service status:', statusResponse.data);
 
+        // If it's not ready, try to initialize it
         if (statusResponse.data.status !== 'ready') {
             const initResponse = await ollamaClient.post('/initialize');
             if (!initResponse.data.status === 'success') throw new Error('Initialization failed');
@@ -52,11 +59,13 @@ async function initializeServer() {
         initializationError = null;
         console.log('Server initialization complete, ready to handle requests');
     } catch (error) {
+        // If something goes wrong, try again a few times
         initRetryCount++;
         initializationError = error.response?.data?.error || error.message;
         console.error(`Initialization attempt ${initRetryCount}/${MAX_INIT_RETRIES} failed:`, initializationError);
 
         if (initRetryCount < MAX_INIT_RETRIES) {
+            // Wait longer between each retry (but not more than 30 seconds)
             const retryDelay = Math.min(5000 * Math.pow(2, initRetryCount - 1), 30000);
             console.log(`Retrying initialization in ${retryDelay/1000} seconds...`);
             setTimeout(initializeServer, retryDelay);
@@ -67,9 +76,8 @@ async function initializeServer() {
     }
 }
 
-// Middleware to check if server is ready
+// Check if server is ready before handling requests
 const checkServerReady = (req, res, next) => {
-    //if the server isnt ready it sends an error message detailing that
     if (!serverReady) {
         return res.status(503).json({
             error: 'Server is still initializing',
@@ -79,28 +87,26 @@ const checkServerReady = (req, res, next) => {
     next();
 };
 
-// Enhanced questions endpoint with error handling and caching
+// Set up question caching to improve performance
 const questionCache = new Map();
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+const CACHE_DURATION = 5 * 60 * 1000;  // Cache questions for 5 minutes
 
+// API endpoint: Get a question from a specific category
 app.get('/api/questions/:category', async (req, res) => {
     try {
-        //this is setting the const to the category 
         const category = req.params.category;
-        //sets the value of cacheKey to a formatted string using the value of category
         const cacheKey = `category_${category}`;
-        //sets the value of cachedData to the value in the questionCache map at the key cacheKey
+
+        // Check if we have a cached question for this category
         const cachedData = questionCache.get(cacheKey);
-        
-        //This is setting a "lifespan" for cached questions to make sure the map structure is "trimed" and
         if (cachedData && (Date.now() - cachedData.timestamp) < CACHE_DURATION) {
             return res.json(cachedData.data);
         }
-        //this sends a sql esq request to the database to select a single questiom randomly from the category provided
+
+        // If no cached question, get a random one from the database
         db.get(
             'SELECT * FROM questions WHERE category = ? ORDER BY RANDOM() LIMIT 1',
             [category],
-            //checks the error and row values to catch any potentional isssues
             (err, row) => {
                 if (err) throw err;
                 if (!row) {
@@ -108,12 +114,11 @@ app.get('/api/questions/:category', async (req, res) => {
                         error: 'No questions found for this category'
                     });
                 }
-                //puts the question, and the time it was stored in the questionCache map under the key cacheKey
+                // Cache the question and send it back
                 questionCache.set(cacheKey, {
                     data: row,
                     timestamp: Date.now()
                 });
-                //this responds to the call with the contents in the row variable in the format of a json file
                 res.json(row);
             });
     } catch (error) {
@@ -125,16 +130,14 @@ app.get('/api/questions/:category', async (req, res) => {
     }
 });
 
-// New endpoint to get categories
+// API endpoint: Get all available question categories
 app.get('/api/categories', async (req, res) => {
     try {
-        //selects the distinct categories from each question in the database to get all of the categories of questions without repeats
         db.all(
             'SELECT DISTINCT category FROM questions',
             [],
             (err, rows) => {
                 if (err) throw err;
-                //returns the categories as a json file where the rows are set to the categories retrieved from the query
                 res.json(rows.map(row => row.category));
             }
         );
@@ -147,17 +150,14 @@ app.get('/api/categories', async (req, res) => {
     }
 });
 
-// New endpoint to get random question
-//this gets a single random question without consideration of its category 
+// API endpoint: Get a completely random question
 app.get('/api/random-question', async (req, res) => {
     try {
-        //this sends a query to the database to get a random question
         db.get(
             'SELECT * FROM questions ORDER BY RANDOM() LIMIT 1',
             [],
             (err, row) => {
                 if (err) throw err;
-                //response to the request with the contents of the row variable in json format
                 res.json(row);
             }
         );
@@ -170,37 +170,33 @@ app.get('/api/random-question', async (req, res) => {
     }
 });
 
-// Chat endpoint handler
-// Processes incoming chat messages and returns AI responses
-// Implements error handling for various failure scenarios
+// API endpoint: Chat with Space Duck
 app.post('/api/chat', checkServerReady, async (req, res) => {
-    //trys to get a response from the model using the users input as the prompt
     try {
-        //sets response to the response of the LLM Model to the prompt of the user input and wait till it arrives
+        // Send the user's message to our AI service
         const response = await ollamaClient.post('/chat', { prompt: req.body.message });
-        //This sets the bot response to response.data.response or response.data.text as those are two possible ways for the LLM to respond with
         const botResponse = response.data.response || response.data.text;
-        //if there is no response throw an error
+
+        // Make sure we got a response
         if (!botResponse) {
             throw new Error('Empty response received from Ollama service');
         }
-        //responses with the bot response in json format
+
         res.json({ response: botResponse });
-        //if an error is caught log it in the console
     } catch (error) {
         console.error('Detailed chat error:', error.response?.data || error.message);
         let statusCode = 500;
         let errorMessage = 'An unexpected error occurred';
-        //if the errror message includes the words too long the log that the request timed out and the program is still optional
+
+        // Provide helpful error messages for common problems
         if (error.message.includes('too long')) {
             statusCode = 504;
             errorMessage = 'The request took too long to complete. Please try again.';
-            //if the error message includes the words not running log that the LLM was not available and that user should try again later
         } else if (error.message.includes('not running')) {
             statusCode = 503;
             errorMessage = 'The model is currently unavailable. Please try again later.';
         }
-        //this responses to the call with the status code which includes any error messages and the details in a json file format
+
         res.status(statusCode).json({
             error: errorMessage,
             details: error.message
@@ -208,22 +204,20 @@ app.post('/api/chat', checkServerReady, async (req, res) => {
     }
 });
 
-// Graceful shutdown handler
+// Handle shutting down gracefully
 process.on('SIGINT', async () => {
     console.log('Shutting down server...');
-    // Clean shutdown of Express server
     if (httpServer) httpServer.close();
     process.exit(0);
 });
 
-// Add error handling for uncaught exceptions
+// Handle unexpected errors gracefully
 process.on('uncaughtException', (error) => {
     console.error('Uncaught Exception:', error);
-    // Attempt graceful shutdown
     process.exit(1);
 });
 
-// Start server initialization
+// Start everything up
 initializeServer().then(() => {
     httpServer = app.listen(PORT, () => {
         console.log(`Server is running on http://localhost:${PORT}`);

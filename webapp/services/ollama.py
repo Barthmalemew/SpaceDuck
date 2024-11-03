@@ -1,51 +1,81 @@
-# llama_index_service.py
+# NASA Space Duck LLM Service
+# This is the backend service that powers the Space Duck chatbot. It:
+# 1. Connects to a local Ollama service that runs the AI model
+# 2. Indexes and searches through NASA documents
+# 3. Handles all the error cases and retries
+
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
-from llama_index.core.llms import LLM
-from llama_index.core.llms import ChatMessage, CompletionResponse, LLMMetadata
-from llama_index.core.node_parser import SentenceSplitter, SimpleNodeParser
-from typing import Optional, List, Mapping, Any, Sequence, AsyncGenerator, Generator
+from llama_index.core.llms import LLM, ChatMessage, CompletionResponse, LLMMetadata
+from llama_index.core.node_parser import SimpleNodeParser
+from typing import Optional, List, Sequence, AsyncGenerator, Generator
 import httpx
-import os
 import json
 import asyncio
 from pathlib import Path
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from enum import Enum
+import os
+from dotenv import load_dotenv
 
+# Load environment variables from .env file
+load_dotenv()
+
+# These are the possible states of our service
+class InitializationState(Enum):
+    NOT_STARTED = "not_started"    # Just started up
+    INITIALIZING = "initializing"  # Loading models and documents
+    READY = "ready"               # Ready to handle requests
+    FAILED = "failed"             # Something went wrong
+
+# This helper converts async code (which can run in parallel) to sync code (which runs one at a time)
+def async_to_sync_generator(async_gen):
+    loop = asyncio.new_event_loop()
+    try:
+        while True:
+            try:
+                yield loop.run_until_complete(async_gen.__anext__())
+            except StopAsyncIteration:
+                break
+    finally:
+        loop.close()
+
+# This class handles all communication with the Ollama AI service
 class OllamaLLM(LLM):
-    """Ollama LLM implementation with proper async support and error handling."""
-
-    base_url: str = "http://localhost:11434"
-    model: str = "llama2"
-    timeout: int = 60
+    # Default settings for connecting to Ollama
+    base_url: str = "http://localhost:11434"  # Where Ollama is running
+    model: str = "llama2"                     # Which AI model to use
+    timeout: int = 60                         # How long to wait for responses
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+        # Set up a client for making HTTP requests to Ollama
         self._client = httpx.AsyncClient(timeout=self.timeout)
         self._validate_config()
 
     def _validate_config(self):
-        """Validate the configuration settings."""
+        # Make sure we have the minimum required settings
         if not self.base_url:
             raise ValueError("base_url must be specified")
         if not self.model:
             raise ValueError("model must be specified")
 
-    async def __aenter__(self):
-        return self
-
-    async def __aexit__(self, exc_type, exc_val, exc_tb):
-        await self._client.aclose()
+    # Clean up when we're done
+    async def __aenter__(self): return self
+    async def __aexit__(self, *_): await self._client.aclose()
 
     @property
     def metadata(self) -> LLMMetadata:
+        # Tell LlamaIndex about our model's capabilities
         return LLMMetadata(
             model_name=self.model,
-            context_window=4096,
+            context_window=4096,  # How much text it can handle at once
             model_type="ollama"
         )
 
     async def acomplete(self, prompt: str, **kwargs) -> List[str]:
-        """Complete the prompt asynchronously."""
+        # Send a prompt to Ollama and get a response
         try:
             response = await self._client.post(
                 f"{self.base_url}/api/generate",
@@ -59,13 +89,10 @@ class OllamaLLM(LLM):
             return [""]
 
     async def achat(self, messages: Sequence[ChatMessage], **kwargs) -> str:
-        """Process chat messages asynchronously."""
+        # Handle back-and-forth chat messages
         try:
-            formatted_messages = []
-            for msg in messages:
-                # Use the role directly from the ChatMessage
-                formatted_messages.append(f"{msg.role}: {msg.content}")
-
+            # Format the messages like "user: hello" and "assistant: hi"
+            formatted_messages = [f"{msg.role}: {msg.content}" for msg in messages]
             prompt = "\n".join(formatted_messages)
             responses = await self.acomplete(prompt, **kwargs)
             return responses[0] if responses else ""
@@ -73,26 +100,19 @@ class OllamaLLM(LLM):
             print(f"Error in OllamaLLM achat: {str(e)}")
             return ""
 
-    async def astream_chat(
-            self, messages: Sequence[ChatMessage], **kwargs
-    ) -> AsyncGenerator[str, None]:
-        """Stream chat responses asynchronously."""
+    # The following methods are required by LlamaIndex but we don't really use them
+    # They're just here to make the interface complete
+    async def astream_chat(self, messages: Sequence[ChatMessage], **kwargs) -> AsyncGenerator[str, None]:
         try:
-            formatted_messages = []
-            for msg in messages:
-                formatted_messages.append(f"{msg.role}: {msg.content}")
+            formatted_messages = [f"{msg.role}: {msg.content}" for msg in messages]
             prompt = "\n".join(formatted_messages)
-
             async for response in self.astream_complete(prompt, **kwargs):
                 yield response
         except Exception as e:
             print(f"Error in astream_chat: {str(e)}")
             yield ""
 
-    async def astream_complete(
-            self, prompt: str, **kwargs
-    ) -> AsyncGenerator[str, None]:
-        """Stream completion responses asynchronously."""
+    async def astream_complete(self, prompt: str, **kwargs) -> AsyncGenerator[str, None]:
         try:
             response = await self._client.post(
                 f"{self.base_url}/api/generate",
@@ -100,7 +120,6 @@ class OllamaLLM(LLM):
                 timeout=self.timeout
             )
             response.raise_for_status()
-
             async for line in response.aiter_lines():
                 if line.strip():
                     data = json.loads(line)
@@ -111,86 +130,57 @@ class OllamaLLM(LLM):
             yield ""
 
     def complete(self, prompt: str, **kwargs) -> List[str]:
-        """Synchronous complete method that uses the async version."""
         return asyncio.run(self.acomplete(prompt, **kwargs))
 
     def chat(self, messages: Sequence[ChatMessage], **kwargs) -> str:
-        """Synchronous chat method that uses the async version."""
         return asyncio.run(self.achat(messages, **kwargs))
 
-    def stream_chat(
-            self, messages: Sequence[ChatMessage], **kwargs
-    ) -> Generator[str, None, None]:
-        """Synchronous version of stream_chat."""
+    def stream_chat(self, messages: Sequence[ChatMessage], **kwargs) -> Generator[str, None, None]:
         async def async_generator():
             async for response in self.astream_chat(messages, **kwargs):
                 yield response
-
         return async_to_sync_generator(async_generator())
 
-    def stream_complete(
-            self, prompt: str, **kwargs
-    ) -> Generator[str, None, None]:
-        """Synchronous version of stream_complete."""
+    def stream_complete(self, prompt: str, **kwargs) -> Generator[str, None, None]:
         async def async_generator():
             async for response in self.astream_complete(prompt, **kwargs):
                 yield response
-
         return async_to_sync_generator(async_generator())
 
-def async_to_sync_generator(async_gen):
-    """Helper function to convert async generator to sync generator."""
-    loop = asyncio.new_event_loop()
-    try:
-        while True:
-            try:
-                yield loop.run_until_complete(async_gen.__anext__())
-            except StopAsyncIteration:
-                break
-    finally:
-        loop.close()
-
+# This service handles all the NASA documents - loading them, indexing them, and searching through them
 class LlamaIndexService:
-    """Service for managing document indexing and querying using LlamaIndex."""
-
-    def __init__(
-            self,
-            docs_dir: str = "data/nasa_docs",
-            model: str = "llama2",
-            embed_model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
-    ):
-        # Get the current file's directory and resolve the docs_dir path relative to it
+    def __init__(self, docs_dir: str = "data/nasa_docs", model: str = "llama2"):
+        # Figure out where our documents are stored
         current_dir = Path(__file__).parent
         self.docs_dir = current_dir / docs_dir
         self.model = model
         self.llm = OllamaLLM(model=model)
         self.embed_model = None
         self.index = None
-        self.embed_model_name = embed_model_name
-        # Debug logging
+
+        # Log what we're doing for debugging
         print(f"Current directory: {current_dir}")
-        print(f"Initializing LlamaIndex with documents from: {self.docs_dir}")
+        print(f"Loading NASA docs from: {self.docs_dir}")
 
     async def initialize(self):
-        """Initialize the service and create necessary components."""
         try:
-            # Debug: Print absolute path
-            print(f"Absolute docs path: {self.docs_dir.absolute()}")
+            print(f"Looking for docs in: {self.docs_dir.absolute()}")
 
-            # Verify documents directory exists and contains files
+            # Make sure our docs directory exists
             if not self.docs_dir.exists():
-                raise RuntimeError(f"Documents directory not found: {self.docs_dir}")
+                raise RuntimeError(f"Can't find documents directory: {self.docs_dir}")
 
+            # Count how many documents we found
             doc_files = list(self.docs_dir.glob('*.txt'))
             print(f"Found {len(doc_files)} document files")
 
-            # Initialize LLM and embedding model
+            # Set up the embedding model for searching
             self.embed_model = HuggingFaceEmbedding(
-                model_name=self.embed_model_name,
+                model_name="sentence-transformers/all-MiniLM-L6-v2",
                 embed_batch_size=4
             )
 
-            # Configure Settings
+            # Configure everything
             Settings.llm = self.llm
             Settings.embed_model = self.embed_model
             Settings.node_parser = SimpleNodeParser.from_defaults(
@@ -198,68 +188,37 @@ class LlamaIndexService:
                 chunk_overlap=50
             )
 
-            # Load and index documents
+            # Load and index all the documents
             if any(self.docs_dir.iterdir()):
                 documents = SimpleDirectoryReader(str(self.docs_dir)).load_data()
                 print(f"Loading {len(documents)} documents...")
-                self.index = VectorStoreIndex.from_documents(
-                    documents
-                )
-                print(f"Indexed {len(documents)} documents from {self.docs_dir}")
+                self.index = VectorStoreIndex.from_documents(documents)
+                print(f"Successfully indexed documents")
             else:
-                print(f"No documents found in {self.docs_dir}")
-                raise RuntimeError("No documents found in specified directory")
+                raise RuntimeError("No documents found to index")
 
-            print("LlamaIndex initialization complete")
             return True
-
         except Exception as e:
-            print(f"Error initializing LlamaIndex service: {str(e)}")
+            print(f"Something went wrong during initialization: {str(e)}")
             raise
 
     async def query(self, query_text: str, similarity_top_k: int = 3) -> str:
-        """Query the index with proper error handling."""
+        # Search through the documents to answer a question
         if not self.index:
-            print("Error: Index not initialized")
-            raise RuntimeError("Index not initialized")
+            raise RuntimeError("Need to initialize before querying")
 
         try:
-            query_engine = self.index.as_query_engine(
-                similarity_top_k=similarity_top_k
-            )
+            query_engine = self.index.as_query_engine(similarity_top_k=similarity_top_k)
             response = await query_engine.aquery(query_text)
             return str(response)
         except Exception as e:
-            print(f"Error in query: {str(e)}")
+            print(f"Error during query: {str(e)}")
             return f"Error processing query: {str(e)}"
 
-    async def refresh_index(self) -> str:
-        """Refresh the document index."""
-        try:
-            await self.initialize()
-            return "Index refreshed successfully"
-        except Exception as e:
-            return f"Error refreshing index: {str(e)}"
-
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from enum import Enum
-from typing import Optional, Dict, Any
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-class InitializationState(Enum):
-    NOT_STARTED = "not_started"
-    INITIALIZING = "initializing"
-    READY = "ready"
-    FAILED = "failed"
-
+# The main service that coordinates everything
 class OllamaService:
-    """Main service coordinating Ollama and LlamaIndex functionality."""
-
     def __init__(self):
+        # Get settings from environment variables
         self.base_url = os.getenv("OLLAMA_API_HOST", "http://localhost:11434")
         self.default_model = os.getenv("OLLAMA_DEFAULT_MODEL", "llama2")
         self.initialization_state = InitializationState.NOT_STARTED
@@ -267,29 +226,24 @@ class OllamaService:
         self.llama_index = LlamaIndexService(model=self.default_model)
         self._client = httpx.AsyncClient(timeout=30)
 
-    async def __aenter__(self):
-        return self
-
-    async def __aexit__(self, exc_type, exc_val, exc_tb):
-        await self._client.aclose()
+    async def __aenter__(self): return self
+    async def __aexit__(self, *_): await self._client.aclose()
 
     async def initialize(self):
-        """Initialize both Ollama and LlamaIndex services."""
+        # Skip if we're already initialized
         if self.initialization_state == InitializationState.READY:
             return
 
         self.initialization_state = InitializationState.INITIALIZING
         try:
-            # Check if Ollama is running
+            # Make sure Ollama is running and has our model
             await self._check_ollama_service()
-
-            # Initialize LlamaIndex
+            # Initialize document search
             await self.llama_index.initialize()
 
             self.initialization_state = InitializationState.READY
             self.initialization_error = None
-            print("Ollama service initialization complete")
-
+            print("Ready to handle requests!")
         except Exception as e:
             self.initialization_state = InitializationState.FAILED
             self.initialization_error = str(e)
@@ -297,21 +251,20 @@ class OllamaService:
             raise
 
     async def _check_ollama_service(self):
-        """Verify Ollama service is running and model is available."""
         try:
+            # Check what models Ollama has available
             response = await self._client.get(f"{self.base_url}/api/tags")
             response.raise_for_status()
 
+            # Download our model if it's not already there
             models = response.json().get("models", [])
             if not any(model["name"] == self.default_model for model in models):
-                print(f"Downloading model {self.default_model}...")
+                print(f"Downloading {self.default_model}...")
                 await self._pull_model()
-
         except Exception as e:
-            raise RuntimeError(f"Ollama service check failed: {str(e)}")
+            raise RuntimeError(f"Couldn't connect to Ollama: {str(e)}")
 
     async def _pull_model(self):
-        """Pull the specified model from Ollama."""
         try:
             response = await self._client.post(
                 f"{self.base_url}/api/pull",
@@ -319,20 +272,20 @@ class OllamaService:
             )
             response.raise_for_status()
         except Exception as e:
-            raise RuntimeError(f"Failed to pull model: {str(e)}")
+            raise RuntimeError(f"Couldn't download model: {str(e)}")
 
-    async def chat(self, prompt: str, model: Optional[str] = None) -> Dict[str, str]:
-        """Handle chat requests using both LlamaIndex and direct Ollama if needed."""
+    async def chat(self, prompt: str, model: Optional[str] = None) -> dict:
+        # Make sure we're ready to handle requests
         if self.initialization_state != InitializationState.READY:
-            raise RuntimeError("Service not initialized")
+            raise RuntimeError("Not ready yet - still initializing")
 
         try:
-            # First try LlamaIndex for context-aware responses
+            # First try to answer from our NASA documents
             index_response = await self.llama_index.query(prompt)
             if index_response and not index_response.startswith("Error"):
                 return {"response": index_response}
 
-            # Fallback to direct Ollama chat
+            # If we can't find an answer in the docs, ask the AI directly
             response = await self._client.post(
                 f"{self.base_url}/api/generate",
                 json={
@@ -343,12 +296,11 @@ class OllamaService:
             )
             response.raise_for_status()
             return {"response": response.json()["response"]}
-
         except Exception as e:
             raise RuntimeError(f"Chat failed: {str(e)}")
 
     def _get_system_prompt(self) -> str:
-        """Get the system prompt for NASA-specific responses."""
+        # Tell the AI how to behave
         return (
             "You are a NASA instructor providing clear, concise information about "
             "space exploration and science.\n"
@@ -359,26 +311,30 @@ class OllamaService:
             "- Written in a clear, straightforward style"
         )
 
+# Set up the web API
 app = FastAPI()
 ollama_service = OllamaService()
 
+# Initialize when the server starts
 @app.on_event("startup")
 async def startup_event():
-    print("Starting Ollama service initialization...")
+    print("Starting up...")
     await ollama_service.initialize()
 
+# This defines what a chat request looks like
 class ChatRequest(BaseModel):
     prompt: str
     model: Optional[str] = None
 
+# API endpoint for chat
 @app.post("/chat")
 async def chat(request: ChatRequest):
     try:
-        response = await ollama_service.chat(request.prompt, request.model)
-        return response
+        return await ollama_service.chat(request.prompt, request.model)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+# API endpoint to check if we're ready
 @app.get("/status")
 async def get_status():
     return {
@@ -387,15 +343,17 @@ async def get_status():
         "model": ollama_service.default_model
     }
 
+# API endpoint to manually trigger initialization
 @app.post("/initialize")
 async def initialize_service():
     try:
         await ollama_service.initialize()
         return {"status": "success"}
     except Exception as e:
-        raise HTTPException(status_code=500, 
-                          detail=f"Initialization failed: {str(e)}")
+        raise HTTPException(status_code=500,
+                            detail=f"Initialization failed: {str(e)}")
 
+# Start the server if we're running this file directly
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("PYTHON_SERVICE_PORT", 5000))
