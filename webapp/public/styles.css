@@ -197,7 +197,7 @@ div.Duck1
 }
 div.Duck2
 {
-  position:fixed;
+  position:absolute;
   z-index:1;
   left:.5vw;
   bottom:0vh;
@@ -207,8 +207,8 @@ div.Duck2
 div.Duck3
 {
   position:fixed;
-  max-height:20%;
-  max-width:20%;
+  max-height:20vh;
+  max-width:20vw;
   top:45%;
   left:-11.5vw;
 }
@@ -235,8 +235,8 @@ div.Duck3
 @keyframes among{
   0%{ transform:translate(0vw) rotate(0deg) ;}
   50%{ transform: translate(50vw) rotate(180deg);}
-  99%{ transform:translate(100vw) rotate(360deg) ;}
-  100%{transform: translate(110vw) rotate(0deg);}
+  100%{ transform:translate(110vw) rotate(360deg) ;}
+ 
 }
 .content {
     height: 100%;
