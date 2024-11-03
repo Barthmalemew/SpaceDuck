@@ -36,6 +36,7 @@ let initializationError = null;
 const MAX_INIT_RETRIES = 5;
 let initRetryCount = 0;
 
+//This function checks to see if the server is initalized
 async function initializeServer() {
     try {
         const statusResponse = await ollamaClient.get('/status');
@@ -80,6 +81,7 @@ const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
 app.get('/api/questions/:category', async (req, res) => {
     try {
+        //
         const category = req.params.category;
         const cacheKey = `category_${category}`;
         const cachedData = questionCache.get(cacheKey);
