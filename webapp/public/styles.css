@@ -188,7 +188,9 @@ div.Duck1
 {
   height: 30%;
   max-width:fit-content;
-  position:fixed
+  position:fixed;
+  left:5vw;
+
 }
 #rotate2D
 {
