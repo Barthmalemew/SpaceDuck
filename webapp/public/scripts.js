@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentAnswer = null;
 
     // Adds a new message to the chat interface
-    // @param message - The message text to display
-    // @param isUser - Boolean indicating if message is from user
     function addMessage(message, isUser = false) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
@@ -22,63 +20,50 @@ document.addEventListener('DOMContentLoaded', () => {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    // Function to display questions in the training content area
-    function displayQuestions(questions) {
-        if (questions.length === 0) {
-            trainingContent.innerHTML = 'No questions available for this category.';
-            return;
-        }
-        
-        const questionsList = questions.map(q => 
-            `<div class="question-item">
-                <p><strong>Q:</strong> ${q.question}</p>
-                <p class="answer hidden"><strong>A:</strong> ${q.correct_answer}</p>
-            </div>`
-        ).join('');
-        
-        trainingContent.innerHTML = questionsList;
-    }
-
-    // Event listener for category selection
-    categorySelect.addEventListener('change', async () => {
-        const category = categorySelect.value;
-        const response = await fetch(`/api/questions/category/${encodeURIComponent(category)}`);
-        const questions = await response.json();
-        displayQuestions(questions);
-    });
-
-    //Gets a question from the API based on selected category
+    // Gets a question from the API based on selected category
     async function getQuestion() {
         try {
             const category = categorySelect.value;
-            const endpoint = category ? `/api/questions/${encodeURIComponent(category)}` : '/api/questions';
+            if (!category) {
+                trainingContent.innerHTML = 'Please select a topic first.';
+                return;
+            }
+
+            const endpoint = `/api/questions/${encodeURIComponent(category)}`;
             const response = await fetch(endpoint);
             const data = await response.json();
-            
+
             if (response.ok) {
                 currentAnswer = data.correct_answer;
-                const questionText = `Question (${data.category}): ${data.question}`;
-                addMessage(questionText);
+                trainingContent.innerHTML = `
+                    <div class="question-display">
+                        <h3>Question:</h3>
+                        <p>${data.question}</p>
+                        <div class="answer-text" id="answerText">
+                            <h3>Answer:</h3>
+                            <p>${data.correct_answer}</p>
+                        </div>
+                    </div>`;
+
+                // Change button text and function
                 getQuestionButton.textContent = 'Show Answer';
                 getQuestionButton.onclick = showAnswer;
             }
         } catch (error) {
             console.error('Error fetching question:', error);
-            addMessage('Error: Unable to fetch question. Please try again.');
+            trainingContent.innerHTML = 'Error: Unable to fetch question. Please try again.';
         }
     }
 
     function showAnswer() {
         if (currentAnswer) {
-            addMessage(`Answer: ${currentAnswer}`);
+            const answerText = document.getElementById('answerText');
+            answerText.classList.add('visible');
             getQuestionButton.textContent = 'Get Question';
             getQuestionButton.onclick = getQuestion;
             currentAnswer = null;
         }
     }
-
-    // Event listeners for question controls
-    getQuestionButton.addEventListener('click', getQuestion);
 
     async function sendMessage() {
         const message = chatInput.value.trim();
@@ -114,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!response.ok) {
                 throw new Error(data.error || 'Server error');
             }
-            
+
             if (data.response) {
                 addMessage(data.response);
             } else {
@@ -132,6 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Event listeners
+    getQuestionButton.addEventListener('click', getQuestion);
     sendButton.addEventListener('click', sendMessage);
     chatInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
