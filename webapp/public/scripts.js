@@ -33,23 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching random question:', error);
         }
     }
-    //seems to be trying to detect inactivity
-    function resetInactivityTimer() {
-        //this detects if there is a timout id in the variable inactivityTimer if there is it then clears the timeout and prevents the function askRandomQuestion from running I think
-        if (inactivityTimer) {
-            clearTimeout(inactivityTimer);
-        }
-        //this sets the id of the time out to the variable inactivity timer and then sets the function askRandomQuestion to run after Inactivity_timeout amount of miliseconds, unless the askRandomQuestion function is meant to work as a tool to detect if the connection has a issue its kinda pointless to do this 
-        inactivityTimer = setTimeout(askRandomQuestion, INACTIVITY_TIMEOUT);
-    }
-
-    // Initialize the timer when the page loads
-    resetInactivityTimer();
-
-    // Reset timer when user interacts
-    chatInput.addEventListener('input', resetInactivityTimer);
-    chatMessages.addEventListener('scroll', resetInactivityTimer);
-
+   
     async function sendMessage() {
         //sets the variable message to a trimed version of the value in the chat input variable
         const message = chatInput.value.trim();
@@ -60,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addMessage(message, true);
         chatInput.value = '';
         sendButton.disabled = true;
-        resetInactivityTimer();
+        
         //this trys to send the users message to the server
         try {
             console.log('Sending message to server:', message);
