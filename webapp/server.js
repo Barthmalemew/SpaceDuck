@@ -39,6 +39,7 @@ let initRetryCount = 0;
 //This function checks to see if the server is initalized
 async function initializeServer() {
     try {
+        //this sends a get request for the status of the server and waits for a response
         const statusResponse = await ollamaClient.get('/status');
 
         if (!statusResponse.data.initialized) {
@@ -66,6 +67,7 @@ async function initializeServer() {
 
 // Middleware to check if server is ready
 const checkServerReady = (req, res, next) => {
+    //if the server isnt ready it sends an error message detailing that
     if (!serverReady) {
         return res.status(503).json({
             error: 'Server is still initializing',
@@ -81,18 +83,22 @@ const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
 app.get('/api/questions/:category', async (req, res) => {
     try {
-        //
+        //this is setting the const to the category 
         const category = req.params.category;
+        //sets the value of cacheKey to a formatted string using the value of category
         const cacheKey = `category_${category}`;
+        //sets the value of cachedData to the value in the questionCache map at the key cacheKey
         const cachedData = questionCache.get(cacheKey);
         
+        //This is setting a "lifespan" for cached questions to make sure the map structure is "trimed" and
         if (cachedData && (Date.now() - cachedData.timestamp) < CACHE_DURATION) {
             return res.json(cachedData.data);
         }
-
+        //this sends a sql esq request to the database to select a single questiom randomly from the category provided
         db.get(
             'SELECT * FROM questions WHERE category = ? ORDER BY RANDOM() LIMIT 1',
             [category],
+            //checks the error and row values to catch any potentional isssues
             (err, row) => {
                 if (err) throw err;
                 if (!row) {
@@ -100,10 +106,12 @@ app.get('/api/questions/:category', async (req, res) => {
                         error: 'No questions found for this category' 
                     });
                 }
+                //puts the question, and the time it was stored in the questionCache map under the key cacheKey
                 questionCache.set(cacheKey, {
                     data: row,
                     timestamp: Date.now()
                 });
+                //this responds to the call with the contents in the row variable in the format of a json file
                 res.json(row);
             });
     } catch (error) {
@@ -118,11 +126,13 @@ app.get('/api/questions/:category', async (req, res) => {
 // New endpoint to get categories
 app.get('/api/categories', async (req, res) => {
     try {
+        //selects the distinct categories from each question in the database to get all of the categories of questions without repeats
         db.all(
             'SELECT DISTINCT category FROM questions',
             [],
             (err, rows) => {
                 if (err) throw err;
+                //returns the categories as a json file where the rows are set to the categories retrieved from the query
                 res.json(rows.map(row => row.category));
             }
         );
@@ -136,13 +146,16 @@ app.get('/api/categories', async (req, res) => {
 });
 
 // New endpoint to get random question
+//this gets a single random question without consideration of its category 
 app.get('/api/random-question', async (req, res) => {
     try {
+        //this sends a query to the database to get a random question
         db.get(
             'SELECT * FROM questions ORDER BY RANDOM() LIMIT 1',
             [],
             (err, row) => {
                 if (err) throw err;
+                //response to the request with the contents of the row variable in json format
                 res.json(row);
             }
         );
@@ -159,26 +172,33 @@ app.get('/api/random-question', async (req, res) => {
 // Processes incoming chat messages and returns AI responses
 // Implements error handling for various failure scenarios
 app.post('/api/chat', checkServerReady, async (req, res) => {
+    //trys to get a response from the model using the users input as the prompt
     try {
+        //sets response to the response of the LLM Model to the prompt of the user input and wait till it arrives
         const response = await ollamaClient.post('/chat', { prompt: req.body.message });
+        //This sets the bot response to response.data.response or response.data.text as those are two possible ways for the LLM to respond with
         const botResponse = response.data.response || response.data.text;
+        //if there is no response throw an error
         if (!botResponse) {
             throw new Error('Empty response received from Ollama service');
         }
+        //responses with the bot response in json format
         res.json({ response: botResponse });
+        //if an error is caught log it in the console
     } catch (error) {
         console.error('Detailed chat error:', error.response?.data || error.message);
         let statusCode = 500;
         let errorMessage = 'An unexpected error occurred';
-
+        //if the errror message includes the words too long the log that the request timed out and the program is still optional
         if (error.message.includes('too long')) {
             statusCode = 504;
             errorMessage = 'The request took too long to complete. Please try again.';
+            //if the error message includes the words not running log that the LLM was not available and that user should try again later
         } else if (error.message.includes('not running')) {
             statusCode = 503;
             errorMessage = 'The AI service is currently unavailable. Please try again later.';
         }
-
+        //this responses to the call with the status code which includes any error messages and the details in a json file format
         res.status(statusCode).json({
             error: errorMessage,
             details: error.message
