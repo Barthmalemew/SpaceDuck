@@ -6,6 +6,9 @@
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
+const sqlite3 = require('sqlite3').verbose();
+const dbPath = path.join(__dirname, 'db', 'questions.db');
+const db = new sqlite3.Database(dbPath);
 require('dotenv').config();
 
 const app = express();
@@ -25,6 +28,17 @@ const limiter = rateLimit({
 
 app.use('/api/', limiter);
 
+// Database error handling
+db.on('error', (err) => {
+    console.error('Database error:', err);
+});
+
+// Verify database connection
+db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='questions'", (err, row) => {
+    if (err) console.error('Error verifying database:', err);
+    else if (!row) console.error('Questions table not found in database');
+});
+
 // Configure Ollama service URL
 const OLLAMA_SERVICE_URL = process.env.OLLAMA_SERVICE_URL || 'http://localhost:5000';
 const ollamaClient = axios.create({ baseURL: OLLAMA_SERVICE_URL });
@@ -37,12 +51,12 @@ let initRetryCount = 0;
 async function initializeServer() {
     try {
         const statusResponse = await ollamaClient.get('/status');
-        
+
         if (!statusResponse.data.initialized) {
             console.log(`Initializing Ollama service (Status: ${statusResponse.data.status})...`);
             await ollamaClient.post('/initialize');
         }
-        
+
         serverReady = true;
         initializationError = null;
         console.log('Server initialization complete, ready to handle requests');
@@ -50,7 +64,7 @@ async function initializeServer() {
         initRetryCount++;
         initializationError = error.response?.data?.error || error.message;
         console.error(`Initialization attempt ${initRetryCount} failed:`, initializationError);
-        
+
         if (initRetryCount < MAX_INIT_RETRIES) {
             console.log(`Retrying initialization in 5 seconds...`);
             setTimeout(initializeServer, 5000);
@@ -83,6 +97,25 @@ app.get('/api/random-question', checkServerReady, async (req, res) => {
             error: 'Failed to get random question'
         });
     }
+});
+
+// New endpoint to get questions by category
+app.get('/api/questions/category/:category', async (req, res) => {
+    const category = req.params.category;
+    db.all(
+        'SELECT * FROM questions WHERE category = ?',
+        [category],
+        (err, rows) => {
+            if (err) {
+                console.error('Database error:', err);
+                return res.status(500).json({ error: 'Database error' });
+            }
+            if (rows.length === 0) {
+                return res.status(404).json({ error: 'No questions found for this category' });
+            }
+            res.json(rows);
+        }
+    );
 });
 
 // Chat endpoint handler
