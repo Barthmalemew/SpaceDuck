@@ -3,11 +3,9 @@
  * Handles HTTP requests, serves static files, and manages communication with Ollama API
  * Implements error handling and server initialization checks
  */
-const { spawn } = require('child_process');
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
-const fs = require('fs');
 require('dotenv').config();
 
 const app = express();
@@ -29,69 +27,37 @@ app.use('/api/', limiter);
 
 // Configure Ollama service URL
 const OLLAMA_SERVICE_URL = process.env.OLLAMA_SERVICE_URL || 'http://localhost:5000';
-
-// Create axios instance for Ollama service
 const ollamaClient = axios.create({ baseURL: OLLAMA_SERVICE_URL });
 
-let pythonProcess = null;
 let serverReady = false;
-
-// Function to start the Python Ollama service
-async function startOllamaService() {
-    console.log('Starting Ollama service...');
-    const pythonScript = path.join(__dirname, 'services', 'ollama.py');
-
-    // Check if virtual environment exists, if not create it
-    if (!fs.existsSync(path.join(__dirname, 'venv'))) {
-        console.log('Creating Python virtual environment...');
-        await new Promise((resolve, reject) => {
-            const venvProcess = spawn('python', ['-m', 'venv', 'venv']);
-            venvProcess.on('close', (code) => code === 0 ? resolve() : reject());
-        });
-        
-        // Install requirements
-        await new Promise((resolve, reject) => {
-            const pipProcess = spawn(path.join(__dirname, 'venv', 'bin', 'pip'), ['install', '-r', 'requirements.txt']);
-            pipProcess.on('close', (code) => code === 0 ? resolve() : reject());
-        });
-    }
-    pythonProcess = spawn(path.join(__dirname, 'venv', 'bin', 'python'), [pythonScript], {
-        stdio: 'pipe'
-    });
-
-    pythonProcess.stdout.on('data', (data) => {
-        console.log(`Ollama service: ${data}`);
-    });
-
-    pythonProcess.stderr.on('data', (data) => {
-        console.error(`Ollama service error: ${data}`);
-    });
-
-    pythonProcess.on('close', (code) => {
-        console.log(`Ollama service exited with code ${code}`);
-        if (code !== 0) {
-            console.error('Ollama service crashed, attempting restart...');
-            setTimeout(startOllamaService, 5000);
-        }
-    });
-
-    // Wait for service to start
-    await new Promise(resolve => setTimeout(resolve, 2000));
-}
+let initializationError = null;
+const MAX_INIT_RETRIES = 5;
+let initRetryCount = 0;
 
 async function initializeServer() {
     try {
-        // Start Ollama service first
-        await startOllamaService();
+        const statusResponse = await ollamaClient.get('/status');
         
-        const response = await ollamaClient.get('/health');
-        if (response.data.status === 'ready') {
-            serverReady = true;
-            console.log('Server initialization complete, ready to handle requests');
+        if (!statusResponse.data.initialized) {
+            console.log(`Initializing Ollama service (Status: ${statusResponse.data.status})...`);
+            await ollamaClient.post('/initialize');
         }
+        
+        serverReady = true;
+        initializationError = null;
+        console.log('Server initialization complete, ready to handle requests');
     } catch (error) {
-        console.error('Server initialization failed:', error);
-        setTimeout(initializeServer, 5000); // Retry every 5 seconds
+        initRetryCount++;
+        initializationError = error.response?.data?.error || error.message;
+        console.error(`Initialization attempt ${initRetryCount} failed:`, initializationError);
+        
+        if (initRetryCount < MAX_INIT_RETRIES) {
+            console.log(`Retrying initialization in 5 seconds...`);
+            setTimeout(initializeServer, 5000);
+        } else {
+            console.error('Max initialization retries reached. Server starting in limited mode.');
+            serverReady = false;
+        }
     }
 }
 
@@ -100,7 +66,7 @@ const checkServerReady = (req, res, next) => {
     if (!serverReady) {
         return res.status(503).json({
             error: 'Server is still initializing',
-            details: 'Please wait a few moments and try again'
+            details: initializationError || 'Please wait a few moments and try again'
         });
     }
     next();
@@ -124,12 +90,14 @@ app.get('/api/random-question', checkServerReady, async (req, res) => {
 // Implements error handling for various failure scenarios
 app.post('/api/chat', checkServerReady, async (req, res) => {
     try {
-        const response = await ollamaClient.post('/chat', { message: req.body.message });
-        const botResponse = response.data.response;
+        const response = await ollamaClient.post('/chat', { prompt: req.body.message });
+        const botResponse = response.data.response || response.data.text;
+        if (!botResponse) {
+            throw new Error('Empty response received from Ollama service');
+        }
         res.json({ response: botResponse });
     } catch (error) {
-        console.error('Chat error:', error);
-
+        console.error('Detailed chat error:', error.response?.data || error.message);
         let statusCode = 500;
         let errorMessage = 'An unexpected error occurred';
 
@@ -151,12 +119,16 @@ app.post('/api/chat', checkServerReady, async (req, res) => {
 // Graceful shutdown handler
 process.on('SIGINT', async () => {
     console.log('Shutting down server...');
-    if (pythonProcess) {
-        pythonProcess.kill();
-    }
-    // Wait for cleanup
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Clean shutdown of Express server
+    server.close();
     process.exit(0);
+});
+
+// Add error handling for uncaught exceptions
+process.on('uncaughtException', (error) => {
+    console.error('Uncaught Exception:', error);
+    // Attempt graceful shutdown
+    process.exit(1);
 });
 
 // Start server initialization

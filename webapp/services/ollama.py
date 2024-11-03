@@ -1,210 +1,249 @@
-"""
-Ollama Service
-Simple microservice to handle Ollama API interactions
-Direct conversion of the original Node.js implementation
-"""
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-import uvicorn
 import os
-import requests
-import subprocess
-from typing import Optional
-import lancedb
-import aiohttp
-import pathlib
-import sys
-from contextlib import asynccontextmanager
+import asyncio
+from enum import Enum
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from dotenv import load_dotenv
+from typing import Optional, Dict, Any
+import httpx
 
-app = FastAPI()
+load_dotenv()
 
-# Enable CORS
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-class ChatRequest(BaseModel):
-    message: str
-    model: Optional[str] = None
+class InitializationState(Enum):
+    NOT_STARTED = "not_started"
+    CHECKING_SERVICE = "checking_service"
+    DOWNLOADING_MODEL = "downloading_model"
+    TESTING_MODEL = "testing_model"
+    READY = "ready"
+    FAILED = "failed"
 
 class OllamaService:
     def __init__(self):
-        self.base_url = 'http://localhost:11434'
-        self.default_model = 'llama2'
+        self.base_url = os.getenv("OLLAMA_API_HOST", "http://localhost:11434")
+        self.health_check_timeout = 5  # seconds
+        self.default_model = os.getenv("OLLAMA_DEFAULT_MODEL", "llama2")
         self.is_initialized = False
-        self.db = None
-        self.table = None
-        # Get the path to the services directory
-        self.services_dir = pathlib.Path(__file__).parent
-        # Go up one level to the webapp directory and then into data
-        self.data_dir = self.services_dir.parent / 'data'
+        self.initialization_error: Optional[str] = None
+        self.initialization_status = InitializationState.NOT_STARTED
+        self.model_loaded = False
+
+    async def check_ollama_running(self):
+        async with httpx.AsyncClient() as client:
+            try:
+                response = await client.get(
+                    f"{self.base_url}/api/version",
+                    timeout=self.health_check_timeout
+                )
+                response.raise_for_status()
+
+                if response.status_code == 200:
+                    print("Ollama service is running and responding")
+                    return True
+
+            except httpx.RequestError:
+                raise RuntimeError("Ollama service is not running or not accessible")
+            except httpx.TimeoutException:
+                raise RuntimeError("Ollama service health check timed out")
+
+        return False
+
+    async def pull_model(self, model_name: str) -> None:
+        """Pull a model from Ollama's registry."""
+        async with httpx.AsyncClient() as client:
+            try:
+                response = await client.post(
+                    f"{self.base_url}/api/pull",
+                    json={"name": model_name},
+                    timeout=600  # 10 minute timeout for model downloads
+                )
+                response.raise_for_status()
+
+                if response.status_code == 200:
+                    print(f"Successfully pulled model: {model_name}")
+                else:
+                    raise RuntimeError(f"Failed to pull model {model_name}: Unexpected status {response.status_code}")
+
+            except httpx.TimeoutException:
+                raise RuntimeError(f"Timeout while pulling model {model_name}")
+            except httpx.RequestError as e:
+                raise RuntimeError(f"Failed to pull model {model_name}: {str(e)}")
 
     async def initialize(self):
         if self.is_initialized:
             return
 
+        max_retries = 3
+        print("Initializing Ollama service...")
         try:
-            print('Initializing Ollama service...')
-            print(f'Using data directory: {self.data_dir}')
+            self.initialization_status = InitializationState.CHECKING_SERVICE
+            for attempt in range(max_retries):
+                try:
+                    if await self.check_ollama_running():
+                        break
+                except RuntimeError as e:
+                    if attempt == max_retries - 1:
+                        raise
+                    print(f"Retry {attempt + 1}/{max_retries}: {str(e)}")
+                    await asyncio.sleep(2)
 
-            # Check if Ollama is running
-            self.check_ollama_running()
+            models = await self.list_models()
+            if not any(model["name"] == self.default_model for model in models["models"]):
+                print(f"Default model {self.default_model} not found, downloading...")
+                self.initialization_status = InitializationState.DOWNLOADING_MODEL
+                await self.pull_model(self.default_model)
+            else:
+                print(f"Model {self.default_model} is already downloaded.")
 
-            # Initialize LanceDB with correct path
-            self.db = lancedb.connect(str(self.data_dir))
-            self.table = self.db.open_table('space_training')
-
-            # Check if model exists
-            models = self.list_models()
-            if not any(m['name'] == self.default_model for m in models):
-                print(f'Default model {self.default_model} not found, downloading...')
-                self.pull_model(self.default_model)
+            self.initialization_status = InitializationState.TESTING_MODEL
+            await self._test_model()
 
             self.is_initialized = True
-            print('Ollama service initialization complete')
-
+            self.initialization_status = InitializationState.READY
+            self.initialization_error = None
+            print("Ollama service initialization complete.")
         except Exception as e:
-            print(f'Failed to initialize Ollama service: {str(e)}')
-            sys.stdout.flush()
-            raise 
-        
-    def check_ollama_running(self):
-        try:
-            response = requests.get(f'{self.base_url}/api/tags', timeout=5)
-            if response.status_code != 200:
-                print(f"Ollama service returned status code: {response.status_code}")
-                sys.stdout.flush()
-                raise Exception('Ollama service returned unexpected status code')
-            print("Successfully connected to Ollama service")
-            sys.stdout.flush()
-            return True
-        except requests.RequestException as e:
-            raise Exception('Ollama service is not running. Please start Ollama first.')
+            self.initialization_status = InitializationState.FAILED
+            self.initialization_error = str(e)
+            print(f"Initialization failed: {str(e)}")
+            raise
 
-    def pull_model(self, model: str):
-        try:
-            print(f'Starting to pull model {model}. This may take several minutes...')
-            sys.stdout.flush()
-            result = subprocess.run(
-                ['ollama', 'pull', model],
-                capture_output=True,
-                text=True,
-                timeout=600
-            )
-            return True
-        except subprocess.SubprocessError as e:
-            raise Exception(f'Failed to pull model {model}: {str(e)}')
+    async def _test_model(self) -> None:
+        async with httpx.AsyncClient() as client:
+            try:
+                response = await client.post(
+                    f"{self.base_url}/api/generate",
+                    json={
+                        "model": self.default_model,
+                        "prompt": "Respond with 'OK' if you can read this message.",
+                        "stream": False
+                    },
+                    timeout=10
+                )
+                response.raise_for_status()
+                result = response.json()
 
-    async def chat(self, prompt: str, model: Optional[str] = None):
+                if not result or "response" not in result:
+                    raise RuntimeError("Model test failed: empty or invalid response")
+
+                print("Model test completed successfully")
+                self.model_loaded = True
+            except Exception as e:
+                raise RuntimeError(f"Model test failed: {str(e)}")
+
+    async def chat(self, prompt, model=None):
         if not self.is_initialized:
-            raise Exception('Ollama service is not initialized')
+            raise RuntimeError("Ollama service is not initialized. Please wait for initialization to complete.")
 
-        if not prompt or len(prompt.strip()) == 0:
-            raise HTTPException(status_code=400, detail="Empty prompt provided")
+        if model is None:
+            model = self.default_model
 
-        model = model or self.default_model
+        async with httpx.AsyncClient() as client:
+            try:
+                response = await client.post(
+                    f"{self.base_url}/api/generate",
+                    json={"model": model, "prompt": f"{self.get_system_prompt()}\n\nUser: {prompt}", "stream": False},
+                    timeout=60,
+                )
+                response.raise_for_status()
+                result = response.json()
 
-        # Add timeout handling
-        timeout = aiohttp.ClientTimeout(total=60)
+                if "response" in result:
+                    return {"response": result["response"]}
+                else:
+                    raise ValueError("Unexpected response format from Ollama")
 
-        try:
-            # Search for relevant context in LanceDB
-            search_results = self.table.search(prompt).limit(3).to_list()
-            context = '\n'.join(r['text'] for r in search_results)
-
-            # Generate response from Ollama
-            response = requests.post(
-                f'{self.base_url}/api/generate',
-                json={
-                    'model': model,
-                    'prompt': f'{self.get_system_prompt()}\n\nContext:\n{context}\n\nUser: {prompt}',
-                    'stream': False
-                },
-                timeout=60
-            )
-
-            response.raise_for_status()
-            return response.json()
-
-        except Exception as e:
-            raise Exception(f'Failed to get response from Ollama: {str(e)}')
+            except httpx.RequestError as e:
+                print(f"Request error during chat: {str(e)}")
+                raise RuntimeError(f"Failed to get response from Ollama: {str(e)}")
+            except ValueError as e:
+                print(f"Value error during chat: {str(e)}")
+                raise RuntimeError(f"Invalid response format from Ollama: {str(e)}")
 
     def get_system_prompt(self):
-        return """You are a NASA instructor providing clear, concise information about space exploration and science. 
-        Your responses should be:
-        - Brief and to the point (2-3 sentences for general responses)
-        - Use the provided context to answer questions when relevant
-        - Cite specific facts from the context when possible
-        - Professional and factual
-        - Free of roleplay elements or emotive actions
-        - Focused on accurate scientific information
-        - Written in a clear, straightforward style"""
+        return (
+            "You are a NASA instructor providing clear, concise information about space exploration and science.\n"
+            "Your responses should be:\n"
+            "- Brief and to the point (2-3 sentences for general responses)\n"
+            "- Professional and factual\n"
+            "- Free of roleplay elements or emotive actions\n"
+            "- Focused on accurate scientific information\n"
+            "- Written in a clear, straightforward style\n\n"
+            "If the user asks a specific technical question, you may provide more detailed information, "
+            "but keep general responses concise."
+        )
 
-    def list_models(self):
-        try:
-            response = requests.get(f'{self.base_url}/api/tags', timeout=5)
-            if response.status_code != 200:
-                print(f"Ollama service returned status code: {response.status_code}")
-                sys.stdout.flush()
-                raise Exception('Ollama service returned unexpected status code')
-            return response.json().get('models', [])
-        except requests.RequestException:
-            return []
+    async def list_models(self):
+        async with httpx.AsyncClient() as client:
+            try:
+                response = await client.get(f"{self.base_url}/api/tags", timeout=5)
+                response.raise_for_status()
+                return {"status": "ready", "models": response.json().get("models", [])}
+            except httpx.RequestError:
+                return {"status": "error", "models": []}
 
-    async def get_random_question(self):
-        if not self.table:
-            return 'What interests you about space?'
+    async def get_status(self):
+        return {
+            "initialized": self.is_initialized,
+            "status": self.initialization_status.value,
+            "model": self.default_model,
+            "error": self.initialization_error
+        }
 
-        try:
-            result = self.table.search("space question").limit(1).to_list()
-            return result[0].text if result else 'What do you know about space exploration?'
-        except Exception as e:
-            print('Failed to get random question:', e)
-            sys.stdout.flush()
-            return 'What interests you about space?'
+# FastAPI app to expose endpoints for OllamaService
+app = FastAPI()
+ollama_service = OllamaService()
 
-# Create singleton instance
-service = OllamaService()
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    # Startup
+@app.on_event("startup")
+async def startup_event():
+    print("Starting Ollama service initialization...")
     try:
-        await service.initialize()
+        await ollama_service.initialize()
     except Exception as e:
-        print(f"Startup error: {e}")
-    yield
-    # Shutdown
-    if service.db:
-        service.db.close()
-    print("Shutting down Ollama service...")
-    sys.stdout.flush()
+        print(f"Initialization failed: {str(e)}")
 
-# Add lifespan to FastAPI app
-app = FastAPI(lifespan=lifespan)
+class ChatRequest(BaseModel):
+    prompt: str
+    model: str = None
 
-@app.get("/health")
-async def health_check():
-    return {"status": "ready" if service.is_initialized else "initializing"}
-
-@app.get("/random-question")
-async def get_random_question():
-    question = await service.get_random_question()
-    return {"question": question}
+@app.post("/initialize")
+async def initialize():
+    try:
+        await ollama_service.initialize()
+        return {"status": "ready"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/chat")
 async def chat(request: ChatRequest):
-    if not request.message or len(request.message.strip()) == 0:
-        raise HTTPException(status_code=400, detail="Empty message provided")
+    try:
+        response = await ollama_service.chat(request.prompt, request.model)
+        if not response or "response" not in response:
+            raise HTTPException(
+                status_code=500,
+                detail="Invalid response format from Ollama service"
+            )
+        return response
+    except Exception as e:
+        print(f"Error in chat endpoint: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
-    response = await service.chat(request.message, request.model)
-    return response
+@app.get("/list_models")
+async def list_models():
+    try:
+        models = await ollama_service.list_models()
+        return models
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
+@app.get("/status")
+async def get_status():
+    try:
+        status = await ollama_service.get_status()
+        return status
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+# Start FastAPI app
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", "5000"))
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PYTHON_SERVICE_PORT", 5000)))
