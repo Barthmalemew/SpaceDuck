@@ -213,6 +213,7 @@ div.Duck1
 .content {
   height: 100%;
   overflow-y: auto;
+}
 
 .question-display {
     padding: 15px;
