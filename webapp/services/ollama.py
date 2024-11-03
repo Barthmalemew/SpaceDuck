@@ -1,249 +1,383 @@
+# llama_index_service.py
+from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from llama_index.core.llms import LLM
+from llama_index.core.llms import ChatMessage, CompletionResponse, LLMMetadata
+from llama_index.core.node_parser import SentenceSplitter, SimpleNodeParser
+from typing import Optional, List, Mapping, Any, Sequence, AsyncGenerator, Generator
+import httpx
 import os
+import json
 import asyncio
-from enum import Enum
+from pathlib import Path
+
+class OllamaLLM(LLM):
+    """Ollama LLM implementation with proper async support and error handling."""
+
+    base_url: str = "http://localhost:11434"
+    model: str = "llama2"
+    timeout: int = 60
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self._client = httpx.AsyncClient(timeout=self.timeout)
+        self._validate_config()
+
+    def _validate_config(self):
+        """Validate the configuration settings."""
+        if not self.base_url:
+            raise ValueError("base_url must be specified")
+        if not self.model:
+            raise ValueError("model must be specified")
+
+    async def __aenter__(self):
+        return self
+
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        await self._client.aclose()
+
+    @property
+    def metadata(self) -> LLMMetadata:
+        return LLMMetadata(
+            model_name=self.model,
+            context_window=4096,
+            model_type="ollama"
+        )
+
+    async def acomplete(self, prompt: str, **kwargs) -> List[str]:
+        """Complete the prompt asynchronously."""
+        try:
+            response = await self._client.post(
+                f"{self.base_url}/api/generate",
+                json={"model": self.model, "prompt": prompt},
+                timeout=self.timeout
+            )
+            response.raise_for_status()
+            return [response.json()["response"]]
+        except Exception as e:
+            print(f"Error in OllamaLLM acomplete: {str(e)}")
+            return [""]
+
+    async def achat(self, messages: Sequence[ChatMessage], **kwargs) -> str:
+        """Process chat messages asynchronously."""
+        try:
+            formatted_messages = []
+            for msg in messages:
+                # Use the role directly from the ChatMessage
+                formatted_messages.append(f"{msg.role}: {msg.content}")
+
+            prompt = "\n".join(formatted_messages)
+            responses = await self.acomplete(prompt, **kwargs)
+            return responses[0] if responses else ""
+        except Exception as e:
+            print(f"Error in OllamaLLM achat: {str(e)}")
+            return ""
+
+    async def astream_chat(
+        self, messages: Sequence[ChatMessage], **kwargs
+    ) -> AsyncGenerator[str, None]:
+        """Stream chat responses asynchronously."""
+        try:
+            formatted_messages = []
+            for msg in messages:
+                formatted_messages.append(f"{msg.role}: {msg.content}")
+            prompt = "\n".join(formatted_messages)
+            
+            async for response in self.astream_complete(prompt, **kwargs):
+                yield response
+        except Exception as e:
+            print(f"Error in astream_chat: {str(e)}")
+            yield ""
+
+    async def astream_complete(
+        self, prompt: str, **kwargs
+    ) -> AsyncGenerator[str, None]:
+        """Stream completion responses asynchronously."""
+        try:
+            response = await self._client.post(
+                f"{self.base_url}/api/generate",
+                json={"model": self.model, "prompt": prompt, "stream": True},
+                timeout=self.timeout
+            )
+            response.raise_for_status()
+            
+            async for line in response.aiter_lines():
+                if line.strip():
+                    data = json.loads(line)
+                    if "response" in data:
+                        yield data["response"]
+        except Exception as e:
+            print(f"Error in astream_complete: {str(e)}")
+            yield ""
+
+    def complete(self, prompt: str, **kwargs) -> List[str]:
+        """Synchronous complete method that uses the async version."""
+        return asyncio.run(self.acomplete(prompt, **kwargs))
+
+    def chat(self, messages: Sequence[ChatMessage], **kwargs) -> str:
+        """Synchronous chat method that uses the async version."""
+        return asyncio.run(self.achat(messages, **kwargs))
+
+    def stream_chat(
+        self, messages: Sequence[ChatMessage], **kwargs
+    ) -> Generator[str, None, None]:
+        """Synchronous version of stream_chat."""
+        async def async_generator():
+            async for response in self.astream_chat(messages, **kwargs):
+                yield response
+
+        return async_to_sync_generator(async_generator())
+
+    def stream_complete(
+        self, prompt: str, **kwargs
+    ) -> Generator[str, None, None]:
+        """Synchronous version of stream_complete."""
+        async def async_generator():
+            async for response in self.astream_complete(prompt, **kwargs):
+                yield response
+
+        return async_to_sync_generator(async_generator())
+
+def async_to_sync_generator(async_gen):
+    """Helper function to convert async generator to sync generator."""
+    loop = asyncio.new_event_loop()
+    try:
+        while True:
+            try:
+                yield loop.run_until_complete(async_gen.__anext__())
+            except StopAsyncIteration:
+                break
+    finally:
+        loop.close()
+
+class LlamaIndexService:
+    """Service for managing document indexing and querying using LlamaIndex."""
+
+    def __init__(
+            self,
+            docs_dir: str = "services/data/nasa_docs",
+            model: str = "llama2",
+            embed_model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
+    ):
+        self.docs_dir = Path(docs_dir)
+        self.model = model
+        self.llm = OllamaLLM(model=model)
+        self.embed_model = None
+        self.index = None
+        self.embed_model_name = embed_model_name
+
+    async def initialize(self):
+        """Initialize the service and create necessary components."""
+        try:
+            # Ensure directory exists
+            self.docs_dir.mkdir(parents=True, exist_ok=True)
+
+            # Initialize LLM and embedding model
+            self.embed_model = HuggingFaceEmbedding(
+                model_name=self.embed_model_name,
+                embed_batch_size=4
+            )
+
+            # Configure Settings
+            Settings.llm = self.llm
+            Settings.embed_model = self.embed_model
+            Settings.node_parser = SimpleNodeParser.from_defaults(
+                chunk_size=512,
+                chunk_overlap=50
+            )
+
+            # Load and index documents
+            if any(self.docs_dir.iterdir()):
+                documents = SimpleDirectoryReader(str(self.docs_dir)).load_data()
+                self.index = VectorStoreIndex.from_documents(
+                    documents
+                )
+                print(f"Indexed {len(documents)} documents from {self.docs_dir}")
+            else:
+                print(f"No documents found in {self.docs_dir}")
+                self.index = VectorStoreIndex.from_documents(
+                    []
+                )
+
+            print("LlamaIndex initialization complete")
+            return True
+
+        except Exception as e:
+            print(f"Error initializing LlamaIndex service: {str(e)}")
+            raise
+
+    async def query(self, query_text: str, similarity_top_k: int = 3) -> str:
+        """Query the index with proper error handling."""
+        if not self.index:
+            raise RuntimeError("Index not initialized")
+
+        try:
+            query_engine = self.index.as_query_engine(
+                similarity_top_k=similarity_top_k
+            )
+            response = await query_engine.aquery(query_text)
+            return str(response)
+        except Exception as e:
+            print(f"Error in query: {str(e)}")
+            return f"Error processing query: {str(e)}"
+
+    async def refresh_index(self) -> str:
+        """Refresh the document index."""
+        try:
+            await self.initialize()
+            return "Index refreshed successfully"
+        except Exception as e:
+            return f"Error refreshing index: {str(e)}"
+
+# ollama.py content remains the same as in the previous version
+# ollama.py
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from dotenv import load_dotenv
+from enum import Enum
 from typing import Optional, Dict, Any
-import httpx
+import os
+from dotenv import load_dotenv
 
 load_dotenv()
 
 class InitializationState(Enum):
     NOT_STARTED = "not_started"
-    CHECKING_SERVICE = "checking_service"
-    DOWNLOADING_MODEL = "downloading_model"
-    TESTING_MODEL = "testing_model"
+    INITIALIZING = "initializing"
     READY = "ready"
     FAILED = "failed"
 
 class OllamaService:
+    """Main service coordinating Ollama and LlamaIndex functionality."""
+
     def __init__(self):
         self.base_url = os.getenv("OLLAMA_API_HOST", "http://localhost:11434")
-        self.health_check_timeout = 5  # seconds
         self.default_model = os.getenv("OLLAMA_DEFAULT_MODEL", "llama2")
-        self.is_initialized = False
-        self.initialization_error: Optional[str] = None
-        self.initialization_status = InitializationState.NOT_STARTED
-        self.model_loaded = False
+        self.initialization_state = InitializationState.NOT_STARTED
+        self.initialization_error = None
+        self.llama_index = LlamaIndexService(model=self.default_model)
+        self._client = httpx.AsyncClient(timeout=30)
 
-    async def check_ollama_running(self):
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.get(
-                    f"{self.base_url}/api/version",
-                    timeout=self.health_check_timeout
-                )
-                response.raise_for_status()
+    async def __aenter__(self):
+        return self
 
-                if response.status_code == 200:
-                    print("Ollama service is running and responding")
-                    return True
-
-            except httpx.RequestError:
-                raise RuntimeError("Ollama service is not running or not accessible")
-            except httpx.TimeoutException:
-                raise RuntimeError("Ollama service health check timed out")
-
-        return False
-
-    async def pull_model(self, model_name: str) -> None:
-        """Pull a model from Ollama's registry."""
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.post(
-                    f"{self.base_url}/api/pull",
-                    json={"name": model_name},
-                    timeout=600  # 10 minute timeout for model downloads
-                )
-                response.raise_for_status()
-
-                if response.status_code == 200:
-                    print(f"Successfully pulled model: {model_name}")
-                else:
-                    raise RuntimeError(f"Failed to pull model {model_name}: Unexpected status {response.status_code}")
-
-            except httpx.TimeoutException:
-                raise RuntimeError(f"Timeout while pulling model {model_name}")
-            except httpx.RequestError as e:
-                raise RuntimeError(f"Failed to pull model {model_name}: {str(e)}")
+    async def __aexit__(self, exc_type, exc_val, exc_tb):
+        await self._client.aclose()
 
     async def initialize(self):
-        if self.is_initialized:
+        """Initialize both Ollama and LlamaIndex services."""
+        if self.initialization_state == InitializationState.READY:
             return
 
-        max_retries = 3
-        print("Initializing Ollama service...")
+        self.initialization_state = InitializationState.INITIALIZING
         try:
-            self.initialization_status = InitializationState.CHECKING_SERVICE
-            for attempt in range(max_retries):
-                try:
-                    if await self.check_ollama_running():
-                        break
-                except RuntimeError as e:
-                    if attempt == max_retries - 1:
-                        raise
-                    print(f"Retry {attempt + 1}/{max_retries}: {str(e)}")
-                    await asyncio.sleep(2)
+            # Check if Ollama is running
+            await self._check_ollama_service()
 
-            models = await self.list_models()
-            if not any(model["name"] == self.default_model for model in models["models"]):
-                print(f"Default model {self.default_model} not found, downloading...")
-                self.initialization_status = InitializationState.DOWNLOADING_MODEL
-                await self.pull_model(self.default_model)
-            else:
-                print(f"Model {self.default_model} is already downloaded.")
+            # Initialize LlamaIndex
+            await self.llama_index.initialize()
 
-            self.initialization_status = InitializationState.TESTING_MODEL
-            await self._test_model()
-
-            self.is_initialized = True
-            self.initialization_status = InitializationState.READY
+            self.initialization_state = InitializationState.READY
             self.initialization_error = None
-            print("Ollama service initialization complete.")
+            print("Ollama service initialization complete")
+
         except Exception as e:
-            self.initialization_status = InitializationState.FAILED
+            self.initialization_state = InitializationState.FAILED
             self.initialization_error = str(e)
             print(f"Initialization failed: {str(e)}")
             raise
 
-    async def _test_model(self) -> None:
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.post(
-                    f"{self.base_url}/api/generate",
-                    json={
-                        "model": self.default_model,
-                        "prompt": "Respond with 'OK' if you can read this message.",
-                        "stream": False
-                    },
-                    timeout=10
-                )
-                response.raise_for_status()
-                result = response.json()
+    async def _check_ollama_service(self):
+        """Verify Ollama service is running and model is available."""
+        try:
+            response = await self._client.get(f"{self.base_url}/api/tags")
+            response.raise_for_status()
 
-                if not result or "response" not in result:
-                    raise RuntimeError("Model test failed: empty or invalid response")
+            models = response.json().get("models", [])
+            if not any(model["name"] == self.default_model for model in models):
+                print(f"Downloading model {self.default_model}...")
+                await self._pull_model()
 
-                print("Model test completed successfully")
-                self.model_loaded = True
-            except Exception as e:
-                raise RuntimeError(f"Model test failed: {str(e)}")
+        except Exception as e:
+            raise RuntimeError(f"Ollama service check failed: {str(e)}")
 
-    async def chat(self, prompt, model=None):
-        if not self.is_initialized:
-            raise RuntimeError("Ollama service is not initialized. Please wait for initialization to complete.")
+    async def _pull_model(self):
+        """Pull the specified model from Ollama."""
+        try:
+            response = await self._client.post(
+                f"{self.base_url}/api/pull",
+                json={"name": self.default_model}
+            )
+            response.raise_for_status()
+        except Exception as e:
+            raise RuntimeError(f"Failed to pull model: {str(e)}")
 
-        if model is None:
-            model = self.default_model
+    async def chat(self, prompt: str, model: Optional[str] = None) -> Dict[str, str]:
+        """Handle chat requests using both LlamaIndex and direct Ollama if needed."""
+        if self.initialization_state != InitializationState.READY:
+            raise RuntimeError("Service not initialized")
 
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.post(
-                    f"{self.base_url}/api/generate",
-                    json={"model": model, "prompt": f"{self.get_system_prompt()}\n\nUser: {prompt}", "stream": False},
-                    timeout=60,
-                )
-                response.raise_for_status()
-                result = response.json()
+        try:
+            # First try LlamaIndex for context-aware responses
+            index_response = await self.llama_index.query(prompt)
+            if index_response and not index_response.startswith("Error"):
+                return {"response": index_response}
 
-                if "response" in result:
-                    return {"response": result["response"]}
-                else:
-                    raise ValueError("Unexpected response format from Ollama")
+            # Fallback to direct Ollama chat
+            response = await self._client.post(
+                f"{self.base_url}/api/generate",
+                json={
+                    "model": model or self.default_model,
+                    "prompt": f"{self._get_system_prompt()}\n\nUser: {prompt}",
+                    "stream": False
+                }
+            )
+            response.raise_for_status()
+            return {"response": response.json()["response"]}
 
-            except httpx.RequestError as e:
-                print(f"Request error during chat: {str(e)}")
-                raise RuntimeError(f"Failed to get response from Ollama: {str(e)}")
-            except ValueError as e:
-                print(f"Value error during chat: {str(e)}")
-                raise RuntimeError(f"Invalid response format from Ollama: {str(e)}")
+        except Exception as e:
+            raise RuntimeError(f"Chat failed: {str(e)}")
 
-    def get_system_prompt(self):
+    def _get_system_prompt(self) -> str:
+        """Get the system prompt for NASA-specific responses."""
         return (
-            "You are a NASA instructor providing clear, concise information about space exploration and science.\n"
+            "You are a NASA instructor providing clear, concise information about "
+            "space exploration and science.\n"
             "Your responses should be:\n"
             "- Brief and to the point (2-3 sentences for general responses)\n"
             "- Professional and factual\n"
-            "- Free of roleplay elements or emotive actions\n"
             "- Focused on accurate scientific information\n"
-            "- Written in a clear, straightforward style\n\n"
-            "If the user asks a specific technical question, you may provide more detailed information, "
-            "but keep general responses concise."
+            "- Written in a clear, straightforward style"
         )
 
-    async def list_models(self):
-        async with httpx.AsyncClient() as client:
-            try:
-                response = await client.get(f"{self.base_url}/api/tags", timeout=5)
-                response.raise_for_status()
-                return {"status": "ready", "models": response.json().get("models", [])}
-            except httpx.RequestError:
-                return {"status": "error", "models": []}
-
-    async def get_status(self):
-        return {
-            "initialized": self.is_initialized,
-            "status": self.initialization_status.value,
-            "model": self.default_model,
-            "error": self.initialization_error
-        }
-
-# FastAPI app to expose endpoints for OllamaService
 app = FastAPI()
 ollama_service = OllamaService()
 
 @app.on_event("startup")
 async def startup_event():
     print("Starting Ollama service initialization...")
-    try:
-        await ollama_service.initialize()
-    except Exception as e:
-        print(f"Initialization failed: {str(e)}")
+    await ollama_service.initialize()
 
 class ChatRequest(BaseModel):
     prompt: str
-    model: str = None
-
-@app.post("/initialize")
-async def initialize():
-    try:
-        await ollama_service.initialize()
-        return {"status": "ready"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    model: Optional[str] = None
 
 @app.post("/chat")
 async def chat(request: ChatRequest):
     try:
         response = await ollama_service.chat(request.prompt, request.model)
-        if not response or "response" not in response:
-            raise HTTPException(
-                status_code=500,
-                detail="Invalid response format from Ollama service"
-            )
         return response
-    except Exception as e:
-        print(f"Error in chat endpoint: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/list_models")
-async def list_models():
-    try:
-        models = await ollama_service.list_models()
-        return models
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/status")
 async def get_status():
-    try:
-        status = await ollama_service.get_status()
-        return status
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    return {
+        "status": ollama_service.initialization_state.value,
+        "error": ollama_service.initialization_error,
+        "model": ollama_service.default_model
+    }
 
-# Start FastAPI app
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PYTHON_SERVICE_PORT", 5000)))
+    port = int(os.getenv("PYTHON_SERVICE_PORT", 5000))
+    uvicorn.run(app, host="0.0.0.0", port=port)
