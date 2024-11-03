@@ -155,22 +155,34 @@ class LlamaIndexService:
 
     def __init__(
             self,
-            docs_dir: str = "services/data/nasa_docs",
+            docs_dir: str = "data/nasa_docs",
             model: str = "llama2",
             embed_model_name: str = "sentence-transformers/all-MiniLM-L6-v2"
     ):
-        self.docs_dir = Path(docs_dir)
+        # Get the current file's directory and resolve the docs_dir path relative to it
+        current_dir = Path(__file__).parent
+        self.docs_dir = current_dir / docs_dir
         self.model = model
         self.llm = OllamaLLM(model=model)
         self.embed_model = None
         self.index = None
         self.embed_model_name = embed_model_name
+        # Debug logging
+        print(f"Current directory: {current_dir}")
+        print(f"Initializing LlamaIndex with documents from: {self.docs_dir}")
 
     async def initialize(self):
         """Initialize the service and create necessary components."""
         try:
-            # Ensure directory exists
-            self.docs_dir.mkdir(parents=True, exist_ok=True)
+            # Debug: Print absolute path
+            print(f"Absolute docs path: {self.docs_dir.absolute()}")
+            
+            # Verify documents directory exists and contains files
+            if not self.docs_dir.exists():
+                raise RuntimeError(f"Documents directory not found: {self.docs_dir}")
+
+            doc_files = list(self.docs_dir.glob('*.txt'))
+            print(f"Found {len(doc_files)} document files")
 
             # Initialize LLM and embedding model
             self.embed_model = HuggingFaceEmbedding(
@@ -189,15 +201,14 @@ class LlamaIndexService:
             # Load and index documents
             if any(self.docs_dir.iterdir()):
                 documents = SimpleDirectoryReader(str(self.docs_dir)).load_data()
+                print(f"Loading {len(documents)} documents...")
                 self.index = VectorStoreIndex.from_documents(
                     documents
                 )
                 print(f"Indexed {len(documents)} documents from {self.docs_dir}")
             else:
                 print(f"No documents found in {self.docs_dir}")
-                self.index = VectorStoreIndex.from_documents(
-                    []
-                )
+                raise RuntimeError("No documents found in specified directory")
 
             print("LlamaIndex initialization complete")
             return True
@@ -209,6 +220,7 @@ class LlamaIndexService:
     async def query(self, query_text: str, similarity_top_k: int = 3) -> str:
         """Query the index with proper error handling."""
         if not self.index:
+            print("Error: Index not initialized")
             raise RuntimeError("Index not initialized")
 
         try:
