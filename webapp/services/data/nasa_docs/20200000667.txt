@@ -1,0 +1,105 @@
+APPLYING RESEARCH-BASED TRAINING PRINCIPLES:
+TOWARDS CREW-CENTERED,
+      MISSION-ORIENTED SPACE FLIGHT TRAINING
+Donna L. Dempsey, NASA Johnson Space Center Immanuel Barshi, NASA Ames Research Center
+
+
+This poster describes a training approach that applies empirically derived principles of training to reimagining the overall design of NASA's space flight training program. The poster is focused specifically on the design of astronaut training for NASA's future deep space, exploration missions to Mars. We briefly describe NASA's space flight training practices during the Apollo and Space Shuttle eras as well as NASA's current practices for training astronauts for their missions to the International Space Station. We provide an overview of NASA's current concepts for a mission to Mars to scope our training approach. We envision a new space flight training approach which we term "crew-centered, mission oriented" training, inspired by the design approach offered in the context of airline pilot training by Barshi. We apply research-based training principles reviewed by Kole and his colleagues, as well as by other researchers in training science, into real-world, practical guidelines for the particular context of training astronauts for a mission to Mars.
+
+
+
+APOLLO and SPACE SHUTTLE TRAINING
+
+INTERNATIONAL SPACE STATION TRAINING
+While the International Space Station (ISS) crew training program produces highly skilled and effective crewmembers, the longer ISS missions, wider range of astronaut duties, and ongoing, continuous ISS operations preclude instructors from "hammering in" known mission timelines. NASA recognize that there are issues with the crew retaining all of their pre-mission training and that real-time ground support is critical to the success of ISS missions. With this real-time support, this design of training is very effective for Earth-reliant operations.
+
+
+
+Apollo-era and Space Shuttle astronauts were assigned unique roles and provided extensive practice of mission operations as an intact team training to a detailed flight plan, almost to the point of memorization. This design of
+
+
+T-38 Flow
+
+
+ISS Systems Flows
+
+Team Skills	...	EVA Flow
+
+training proved very effective for these short-duration, near-Earth missions.
+
+Figure 1. The ISS Training Program is Structured Based on Individual System or Discipline Flows
+
+
+
+   Apollo-era astronauts learned the vehicle systems as they worked collaboratively with system engineers on the vehicle design. They were assigned unique roles with a well-defined set of duties or tasks and provided extensive practice of mission operations as an intact team training to a detailed flight plan, almost to the point of memorization. "Practice, practice, practice" was the unofficial motto of Apollo-era training (Weaver, et al., 2015). During this time, NASA made tremendous engineering advancements in designing simulators that could mimic the various space flight environments the crew would encounter (e.g., neutral buoyancy simulators for extra-vehicular activities (EVAs, aka space walks), motion-based simulators for ascent/entry, and reduced gravity simulators for lunar surface operations) (Weaver, et al., 2015; Woodling, et al., 1973) allowing the astronauts to practice for their missions.
+   For Space Shuttle training, NASA developed motion-based and flight simulators designed to provide pilots with training on the handling characteristics of the Space Shuttle (Null et al, 2019). The first crews of Space Shuttle astronauts learned the vehicle systems as the vehicle was being designed. As the Space Shuttle program progressed, space flight training was formalized into lessons, where sets of lessons were designed into system or discipline training flows (e.g., an electrical power training flow, an avionics training flow, a robotics training flow, and an EVA training flow), and training culminated in a series of full team simulations that provided repeated rehearsal (or "hammering in") of their specific roles for well-planned and detailed mission timelines.
+   The tremendous successes of the Apollo-era and Space Shuttle programs proved that this design of training was very effective for short-duration, near-Earth missions.
+   
+The ISS training program continues to be structured based on system or discipline flows (Figure 1). Certified training instructors develop flows based on a well-established instructional system design (ISD) model, and certified Chief Training Officers lead integrated training simulations in high-fidelity mockups that provide for multi-disciplinary training.
+   However, training is highly dependent on mission parameters and ISS missions differ significantly from NASA's previous missions in several important ways that impact the design of training. Most notably are that ISS mission are significantly longer (typically ~6 months), for operational flexibility astronauts are not assigned unique roles or duties, and ISS operations are ongoing - detailed flight plans, or timelines, are developed real-time based on long-range plans. NASA's space flight training team has had to shift from "hammering in" known, short-duration mission timelines, to providing astronauts training on anticipated skills based on long-range plans training crew skills across a wide range of job duties including EVA, robotics, scientific research, repair and maintenance, and potential malfunction and emergency response (see e.g., National Research Council, 2011).
+   While the ISS crew training program produces highly skilled and effective crewmembers, instructors in NASA's Flight Operations Directorate (FOD) recognize that there are issues with the crew retaining all of their pre-mission training, and that real-time ground support is critical to the success of ISS missions (Dempsey et al, 2018). With this real-time support, the ISS program of training is very effective for Earth-reliant operations.
+
+
+
+
+MISSIONS TO MARS
+
+RESEARCH QUESTIONS
+The design of a training program "should be informed by the best information science has to offer" (Salas, Tannenbaum, Kraiger, & Smith-Jentsch, 2012).
+
+
+For NASA future missions to Mars, astronauts will require training to operate at a level of autonomy that has never been needed before. Most critically, they will need training for the technical expertise and decision-making skills necessary to respond to unanticipated, high- risk, time critical events without real-time ground support.
+
+   To provide our astronauts with the training they will require for their missions to Mars, we agree with Salas et al. (2012) that the design of a training program "should be informed by the best information science has to offer" (p. 74). While we know a lot about training science, human research is needed to inform gaps in our knowledge, such as:
+? What skills generalize across the domains of spaceflight operations, and what training methodologies support
+generalization? ? What training design guidelines support both team and technical skills development? ? What level of simulation fidelity is necessary for a given skill or task? ? What is the suitability of available training measures to the projected needs of long-duration missions? ? How do we train for expertise with automation?
+   We propose that by incorporating future research results into our CCMOT flow, this new program of training will provide astronauts with the skills necessary to operate at the level of autonomy needed for NASA's future missions to Mars, including the ability to respond to unanticipated, high-risk, time critical events without real-time ground support.
+
+
+
+   Decades of successes in human space flight in low-Earth orbit and lunar missions have shown the effectiveness of NASA's space flight training programs for these missions. However, to date, the flight control team in MCC has always been able to provide real-time expertise to the onboard crew as needed, and a return to Earth has always been an option in response to any unforeseen event. Now there is Mars. Earth's closest planetary neighbor, but still up to
+~24 light-minutes away, and at times completely blocked by the Sun. A quick return to Earth will not be possible, and real-time expertise from MCC will no longer be available.
+   NASA has never provided astronauts with the training necessary to operate at the level of autonomy that these future missions will require. As recognized by FOD, the current design of space flight training does not produce the level of retention necessary for future semi- autonomous to autonomous mission operations (see e.g., Barshi and Dempsey, 2016; Dempsey
+et al., 2018; Kassebaum, 2017).  Most critically, the current program of training does not
+
+
+REFERENCES
+
+* Barshi, I. (2015). From Healy's training principles to training specifications: The case of the comprehensive LOFT. The American Journal of Psychology, 128(2), 219-227.  * Barshi, I. & Dempsey, D.
+L. (2016). Evidence report: Risk of Performance Errors Due to Training Deficiencies. NASA Human Research Program. * Dempsey, D. L., Barshi, I., Landon, L. B., Jensen, M, Fard, B., Nyberg, K., Hansen, J.
+(2018). Training for NASA's Gateway and Deep Space Transport (DST) Missions: FOD Stakeholder Concerns and Top Priorities Workshop.
+
+CREW-CENTERED, MISSION- ORIENTED TRAINING
+Crew-centered, mission-oriented training is a design approach that incorporates research- based training principles to imagine an astronaut training program that supports the retention necessary for NASA's future autonomous missions to Mars.
+
+Earth Ascent -
+
+provide astronauts with the technical expertise and decision-making skills necessary to work outside published procedures to respond to unanticipated, high-risk, time critical events without real-time ground support - events that are currently responded to by the highly trained and skilled flight control team* in MCC (Dempsey et al, 2018; Vera, 2019; Wu & Vera, 2019).
+
+
+* The ISS team in MCC (front room, back room, and at MSFC) typically consists of 40 - 50 flight controllers, contrasted against the 4 - 6 crewmembers on NASA's first mission to Mars.
+
+Unpublished internal document. Presented to the NASA Human Research Program. * Dempsey, D.L., & Barshi, I. (in press). Applying Research-Based Training Principles: Towards Crew-Centered, Mission-Oriented Space Flight Training. In Landon, L.B., Slack, K.J., and Salas, E. (Eds.). Psychology and Human Performance in Space Programs. Abingdon, UK: Taylor & Francis. * Healy, A. F., & Bourne,
+
+Monitoring Orion
+
+Cruise to Mars
+Saturday Ops
+
+Piloting Orion	...	Autonomous
+
+L. E., Jr. (2012). Basic research on training principles. In A. F. Healy &
+L. E. Bourne, Jr. (Eds.), Training cognition: Optimizing efficiency, durability, and generalizability (pp. 40-66). New York, NY: Psychology Press. Kassebaum. T. (2017). Crew-Related Anomalies Assessment Overview. Unpublished internal document. Presented to the NASA JSC S&MA Flight Safety Office. * Kole, J.A., Healy, A.F., Schneider, V., & Barshi, I. (in press). Training Principles for Declarative and Procedural Tasks. In Landon, L.B., Slack, K.J., and Salas, E. (Eds.). Psychology and Human Performance in Space Programs. Abingdon, UK: Taylor & Francis. * National Research Council (2011). Preparing for the High Frontier: The Role and Training of NASA Astronauts in the Post-Space Shuttle Era. Washington, DC: The National Academies Press. * Null, C. H, Kaiser, M. K., Zaal., P. M., Dempsey, D. L., Vos, G. A., Mulligan, J. B., & Billimoria, K. D., (2019). Simulator Fidelity Requirements for the Human Landing System (HLS). Unpublished internal document. Presented to the NASA Flight Operations Division. * Salas, E., Tannenbaum, S. I., Kraiger, K., & Smith-Jentsch,
+K. A. (2012). The Science of Training and Development in Organizations: What Matters in Practice. Psychological Science in the Public Interest 13(2), 74-101. * Vera. A. H. (2019) Risk of Adverse Outcome Due to Inadequate Human Systems Integration (HSI) Architecture. Unpublished internal document. Presented to the NASA Human System Risk Board. * Weaver, C. (Executive Producer), Weaver, E. (Producer, Director), & Weaver, Z. (Producer, Director). (2015). Apollo Astronauts: Training NASA's Moon Men [Motion Picture]. United States: Jansen Media. * Wu, S., & Vera, A. H. (2019). Supporting crew autonomy in deep space exploration: Preliminary onboard capability requirements and proposed research questions. Technical Report of the Autonomous Crew Operations Technical Interchange Meeting. NASA Technical Memorandum (NASA/TM-2019-220345). * Woodling, C. H., Faber, S., Van Bockel,
+J. J., Olasky, C. C., Williams, W. K., Mire, J. L. C., & Homer, J. R. (1973).
+Apollo Experience Report - Simulation of Manned Space Flight for Crew Training. (NASA Technical Note NASA-TN-D-7112).
+
+Figure 2. A CCMO Training Design is Structured Based on Operationally-Relevant Mission Sequences
+
+   We envision a new training approach which we term "crew-centered, mission-oriented training" (CCMOT). This approach incorporates empirically derived principles training to imagine a redesign of NASA's astronaut training program to one that more effectively supports skill acquisition, retention, and transfer. Examples of how research-based training principles reviewed by Kole et al. (in press), as well as others, might be incorporated into a redesigned flow include:
+      Training Principle: Easy to Difficult Ordering. Barshi (2015) suggests that easy to difficult ordering can motivate the design of the entire training flow. This can be seen in Figure 2 in the progression from a nominal Orion flight in which newly hired astronaut candidates (ASCANs) simply monitor vehicle data, to more demanding flights in which they execute procedures to configure vehicle systems, to later when they learn to pilot Orion.
+      Training Principle: Contextual Reinstatement. Kole et al. (in press) state that, "both retention and transfer are enhanced when context is reinstated". CCMOT is designed to provide training in the context in which the training knowledge and skills will be used, where context includes things such as the order and sequence of tasks, training as a team, and training in a flight-like physical environment. For example, on Day 1 of training, ASCANs may be introduced to the audio terminal unit used for space-to-ground communication during an Orion ascent training simulation flown with an instructor astronaut commanding the vehicle, but he or she would not be trained on the details of the audio system such as the physical layout and system redundancies until later in training when learning to respond to a loss of communication with the ground.
+      Training Principle: Use of Strategic Knowledge. Kole et al. (in press) state that, "When acquiring new information, learners should attempt to relate that information to prior knowledge." They go on to explain that, "When committing new information to long-term memory, that information becomes associated with retrieval cues ... By increasing the number of retrieval cues, the chance of successful retrieval in the future increases." By starting cruise-to-Mars training (Figure 2) with the simplest of Saturday tasks for which ASCANs should already have some familiarity from their home lives (e.g., trash, galley, and exercise), the ASCANs can begin to relate new information to preexisting knowledge and begin to build their knowledge of the vehicle layout, equipment, and interfaces. As training expands into new areas, training would be designed to use this simpler vehicle knowledge to build retrieval cues for more challenging tasks (e.g., conducting research, piloting spacecraft, responding autonomously to unanticipated, high-risk events).
+Training Principle: Variability of Practice. Variability of practice refers to a training design that provides varying conditions under which a task is practiced so that the task is not always practiced in the same manner (Kole et al., in
+press). Although variability of practice slows the acquisition process, according to Kole et al. it is a "particularly powerful" training principle in that it applies to both procedural and declarative memory tasks and supports both retention and transfer. Variable practice conditions include variations in the task itself, variations in the conditions under which the task is trained such as the sequencing of the task with other tasks, or even variations in similar but different tasks (Barshi, 2015; Healy & Bourne, 2012; Kole et al., 2019). An example is a simple maintenance task which may be first learned during a cruise-to-Mars training simulation in its most basic form under ideal conditions and is reintroduced in later simulations with significant variability. Part of the variability might come from executing a more complicated version of the trained maintenance task; another part of the variability might come from executing a repair task on the same equipment using an untrained procedure.
+For a fuller discussion on how research-based training principles may inform the redesign of astronaut training, we invite you to read our full research paper (Dempsey & Barshi, in press).

@@ -1,0 +1,1116 @@
+
+
+
+
+
+
+
+National Aeronautics and Space Administration
+
+[OCHMO-STD-100.1A]
+Release Date: 05/10/2021
+
+
+
+
+
+
+OFFICE OF THE CHIEF HEALTH AND MEDICAL OFFICER
+
+
+
+
+NASA ASTRONAUT MEDICAL STANDARDS, SELECTION AND ANNUAL RECERTIFICATION
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+APPROVAL PAGE
+
+OFFICE OF THE CHIEF HEALTH AND MEDICAL OFFICER
+
+
+
+
+Document Manager
+
+Dave Francisco	Date
+Technical Fellow for Human Spaceflight Standards NASA Headquarters
+
+
+
+
+
+
+
+
+
+
+5/10/2021
+
+J. D. Polk, DO, MS, MMM, CPE, FACOEP, FAsMA  DateNASA Chief Health and Medical Officer NASA Headquarters
+
+TERRANCE Digitally signed by
+TERRANCE TADDEO
+TADDEO	Date: 2021.05.12
+17:00:33 -05'00'
+
+	
+Terrance A. Taddeo, M.D., M.S.	Date NASA Chief Medical Officer
+NASA Johnson Space Center
+
+SHANNAN	Digitally signed by
+SHANNAN MOYNIHAN
+MOYNIHAN Date: 2021.05.17
+10:47:34 -05'00'
+
+Shannan Moynihan, MD, MPH	Date NASA Deputy Chief Medical Officer
+NASA Johnson Space Center
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DOCUMENT HISTORY LOG
+
+StatusDocument
+RevisionChange
+NumberApproval DateDescriptionBaseline2021- 05-10Initial Release-This NASA Technical Standard establishes criteria that were initially part of the Astronaut Medical Evaluation Requirements Document (AMERD), and has been updated using
+evidence based medicine by the Aerospace Medical Board.
+FOREWORD
+
+This NASA Technical Standard is published by the National Aeronautics and Space Administration (NASA) to provide uniform technical requirements for processes, procedures, practices, and methods that have been endorsed as standard for NASA programs and projects, including requirements for selection and annual recertification of NASA astronauts.
+
+This NASA Technical Standard is approved for use by NASA Headquarters and NASA Centers and Facilities, and applicable technical requirements may be cited in contract, program, and other Agency documents.
+
+This NASA Technical Standard provides medical requirements and clinical procedures designed to ensure crew health and safety and longevity of career of NASA astronauts. These technical standards reflect the medical requirements to successfully complete specific mission tasks and the multifaceted training and performance required of an astronaut, including but not limited to, flying in high performance aircraft, exposure to hypobaric and hyperbaric conditions, exposure to unique environments (e.g., microgravity), and conducting specialized operations (e.g., extra- vehicular activities, robotic arm operations).
+
+Table of Contents
+DOCUMENT HISTORY LOG	3
+FOREWORD	4
+NASA ASTRONAUT MEDICAL STANDARDS,	6
+SELECTION AND ANNUAL RECERTIFICATION	6
+1. SCOPE	6
+1.1 Purpose	6
+1.2 Applicability	6
+Table 1 - NASA Medical Requirements, Disqualifying Criteria and Acceptance Processand Waiver Process for recertification for NASA Career Astronauts	8
+2. APPLICABLE DOCUMENTS	9
+2.1 General	9
+2.2 Government Documents	9
+2.3 Non-Government Documents	10
+2.4 Orderof Precedence	10
+3. ACRONYMS, ABBREVIATIONS, SYMBOLS, AND DEFINITIONS	11
+3.1 Acronyms, Abbreviations, and Symbols	11
+4. MEDICAL EVALUATION, SELECTION, AND ANNUAL RECERTIFICATION - PROCESS AND GENERAL CONSIDERATIONS	14
+4.1 Medica l Evaluation - Genera lConsiderations	14
+4.1.1 Selection Medical Eva luation - General Considerations	14
+4.1.2 Annual Medica l Evaluation - General Considerations	14
+4.2 Medica l Evaluation and/or Certification by NASA's AMB	14
+4.3 Wa iver of Medical Standards	15
+5. MEDICAL EVALUATION, SELECTION, AND	16
+5.1 Medica l Screening of NASA Astronauts	16
+5.1.1 Medica l Evaluation Procedures for NASA Astronauts - Overview	16
+Table 2 - Overview of Medical Eva luation Procedures for NASA Astronauts	16
+5.1.2 Laboratory Testing	16
+Table 3 - Laboratory Tests on Selection of NASA Astronauts	17
+Table 3 - Laboratory Tests on Selection of NASA Astronauts Continued	18
+Table 4 - NASA Astronaut Candidate (ASCAN) First Annual Exam	19
+Table 5 - Laboratory Tests on Annua lRecertification of NASA Astronauts	20
+5.1.3 Specia list Assessments for Selection and Annual Recertification of NASA Astronauts	21
+Table 6 - Specia list Assessments for Selection and Annua lRecertification of NASA Astronauts	21
+Table 6 - Specia list Assessments for Selection and Annua lRecertification of NASA Astronauts Continued	22
+Table 6 - Specia list Assessments for Selection and Annua lRecertification of NASA Astronauts Continued	23
+Table 6 - Specia list Assessments for Selection and Annua lRecertification of NASA Astronauts Continued	24
+5.3 Medica l Conditions to Considerfor Selection and Annual Recertification of	25
+Table 7 - Disqualifying Medical Standards	26
+APPENDIX A	49
+REQUIREMENTS COMPLIANCE MATRIX	49
+APPENDIX B	51
+TUBERCULOSIS (TB) TESTING	51
+APPENDIX C	56
+MEDICAL CERTIFICATION SPECIFIC TOMISSIONS TO THE INTERNATIONAL SPACE STATION	56
+APPENDIX D	58
+Guidelines for Spaceflight Participants	58
+D.1.1 Overview	58
+D.1.2 Laboratory Tests for Selection and Annua l Recertification of Space Flight Participants	59
+D.1.3 Specia list Assessments for Selection and Annual Recertification of Space Flight Participants	61
+APPENDIX E	64
+REFERENCES	64
+E.1 PURPOSE	64
+E.1.1 References	64
+
+
+ NASA ASTRONAUT MEDICAL STANDARDS, SELECTION AND ANNUAL RECERTIFICATION
+
+1. SCOPE
+
+1.1 Purpose
+
+This NASA Technical Standard provides medical requirements and clinical procedures designed to ensure crew health and safety and occupational longevity of NASA career astronauts. This NASA Technical Standard used for selection and annual recertification of astronauts reflects the medical requirements to successfully complete specific mission tasks and the multifaceted training and performance required of an astronaut. These include, but are not limited to, flying in high performance aircraft, exposure to hypobaric and hyperbaric conditions, exposure to unique environments (e.g., microgravity), and conducting specialized operations (e.g., extra-vehicular activities, robotic arm operations). NASA policy for establishing standards to protect the health and safety of crew and for providing health and medical programs for astronauts during all phases of space flight is authorized by NPD 1000.3 - The NASA Organization, and by NPD 8900.5B - NASA Health and Medical Policy for Human Space Exploration.
+
+1.2 Applicability
+
+This NASA Technical Standard is applicable to NASA career astronaut candidate selection and annual recertification. For an overview of NASA's medical requirements and acceptance process for NASA career astronauts, please see Table 1 below.
+
+Health risk assessment is a complex and dynamic process, and the medical requirements and screening procedures take into account the fact that the risk for a medical event increases with mission duration. This NASA Technical Standard retains the flexibility for incorporation of new clinical procedures as a part of the health evaluation process in a preventive, diagnostic, or treatment capacity.
+
+Medical data, information, and records are managed in accordance with the Privacy Act of 1974, as amended, and consistent with the privacy provisions of the Health Insurance Portability and Accountability Act (HIPAA).
+
+This NASA Technical Standard is approved for use by NASA Headquarters and NASA Centers and Facilities, and applicable technical requirements may be cited in contract, program, and other Agency documents.
+
+Verifiable requirement statements are designated by the acronym "STD" (Standard), numbered, and indicated by the word "shall." This NASA Technical Standard contains 15 requirements. To facilitate requirements selection, a Requirements Compliance Matrix is provided in Appendix A. Explanatory or guidance text is indicated in italics beginning in section 4.
+
+
+Although the standards listed in this document address medical conditions presently known, it is fully intended that as knowledge accumulates, this NASA Technical Standard will be revised as appropriate. Any standard invalidated by new medical information may be appended by the Aerospace Medicine Board (AMB) with Chief Health and Medical Officer (CHMO) approval.
+
+Table 1 - NASA Medical Requirements, Disqualifying Criteria and Acceptance Process and Waiver Process for recertification for NASA Career Astronauts
+
+Medical RequirementsMedical Requirements for SelectionLaboratory Tests
+Section 5.1.2,
+Table 3,
+and Section 5.1.2,
+Table 4,
+Special Assessments
+Section 5.1.3,
+Table 6Medical Requirements for Annual RecertificationLaboratory Tests
+Section 5.1.2,
+Table 5,
+Special Assessments
+Section 5.1.3
+Table 6Disqualifying CriteriaDisqualifying CriteriaSection 5.3,
+Table 7NASA Review ProcessAMB ChairShall make recommendation on NASA astronaut medical status Section 4.2, STD 3CHMOShall make the final disposition on NASA astronaut medical status Section 4.2, STD 4MSMB ChairDetermines medical suitability and certification for ISSWaiver Process - Recertification Only*Examining physicianShall provide a detailed presentation to the AMB of all relevant medical data
+See Section 4.3 STD 7Examining
+physicianShall notify the NASA astronaut that his/her medical condition is being
+considered for waiver or disqualification from flight status.
+See Section 4.3 STD 8AMB ChairShall make recommendation on NASA astronaut medical waiver statusCHMOShall make the final disposition based on review of the AMB
+recommendations. See Section 4.3 STD 9
+* No waiver shall be granted on selection of NASA astronauts. See Section 4.3 STD 6
+
+2. APPLICABLE DOCUMENTS
+
+2.1 General
+
+2.1.1 The documents listed in this section contain provisions constituting requirements of this NASA Technical Standard as cited in the text.
+
+2.1.2 The latest issuances of cited documents apply unless specific versions are designated; use of a version other than as designated has to be approved by the delegated Technical Authority.
+
+2.1.3 Applicable documents may be accessed at https://standards.nasa.gov, https://nodis3.gsfc.nasa.gov/main_lib.cfm, or obtained directly from the Standards
+Developing Body or other document distributors. When not available from these sources, information for obtaining the document is provided.
+
+2.1.4 References are provided in Appendix D.
+
+2.2 Government Documents Federal
+Privacy Act of 1974, as amended
+(https://www.justice.gov/opcl/privacy-act-1974)Health Insurance Portability and Accountability Act (HIPAA) (https://www.hhs.gov/hipaa/for-professionals/security/laws- regulations/index.html)Centers for Disease Control and Prevention, Third National Health and Nutrition Examination Survey (NHANES III) (https://www.cdc.gov/nchs/nhanes/nh3data.htm)NCRP Reports No. 132National Council on Radiation Protection and Measurements, Radiation Protection Guidance for Activities in Low-Earth Orbit (https://ncrponline.org/publications/reports/ncrp-reports-132/)NASANPD 1000.3The NASA Organization
+NASA-STD-3001, Volume
+1, Revision A
+NASA Space Flight Human-System Standard Volume 1, Revision A: Crew Health
+2.3 Non-Government Documents
+
+The American Psychiatric Association
+
+Diagnostic and Statistical Manual of Mental Disorders (DSM) - Latest Version
+
+2.4 Order of Precedence
+
+2.4.1 The requirements and standard practices established in this NASA Technical Standard do not supersede or waive existing requirements and standard practices found in other Agency documentation, or in applicable laws and regulations unless a specific exemption has been obtained by the Office of the Chief Health and Medical Officer.
+
+2.4.2 Conflicts between this NASA Technical Standard and other requirements documents will be resolved by the delegated Technical Authority.
+
+3. ACRONYMS, ABBREVIATIONS, SYMBOLS, AND DEFINITIONS
+
+3.1 Acronyms, Abbreviations, and Symbols
+
+ºdegree%percentAGEarterial gas embolismAIDSacquired immune deficiency syndromeALARAas low as reasonably achievableALPalkaline phosphataseALSamyotrophic lateral sclerosisALTalanine aminotransferaseAMBAerospace Medicine BoardAMERDAstronaut Medical Evaluation Requirements DocumentAPC
+ASCANActivated protein C
+astronaut candidateASDatrial septal defectASTaspartate aminotransferaseAVatrioventricularBCGbacille Calmette-GuerinBRCAbreast cancer geneCDC CHMOCenters for Disease Control and Prevention Chief Health and Medical OfficerClchloridecmcentimeterCNScentral nervous systemCROMcervical range of motionCTcomputed tomographyCXRchest X-rayDdiameterDCIdecompression illnessDCSDecompression sicknessDODDepartment of DefenseDSMDiagnostics and Statistical ManualDXAdual energy X-ray absorptiometryECGelectrocardiogramEEGelectroencephalogramENTears, nose, and throatFMCFlight Medicine ClinicGGT
+HbA1cgamma-glutamyl transferase
+Hemoglobin A1ChCGHuman chorionic gonadotropinHCWhealth care workerHDLhigh-density lipoproteinsHIPAAHealth Insurance Portability and Accountability ActHIVhuman immunodeficiency virus
+
+hs-CRPhigh-sensitivity C-reactive proteinHSVherpes simplex virusHUShemolytic uremic syndromeIgAimmunoglobulin AIgGimmunoglobulin GIgMimmunoglobulin MIGRAInterferon Gamma Releasing AssayINF-?Interferon gammaIPInternational PartnerISSInternational Space StationITPidiopathic thrombocytopenic purpuraJSCJohnson Space CenterKpotassiumLASIKlaser-assisted in-situ keratomileusisLDHlactate dehydrogenaseLDLlow-density lipoproteinLROMlumbar range of motionLSAHLifetime Surveillance of Astronaut HealthLTBIlatent tuberculosis infectionMEDMedical Evaluation DocumentMGUSmonoclonal gammopathy of undetermined significanceminminutemmHgmillimeters of mercuryMMOPMultilateral Medical Operations PanelMMPBMultilateral Medical Policy BoardMOUMemorandum of UnderstandingMPBMedical Policy BoardMRImagnetic resonance imagingmsecmillisecondMSMBMultilateral Space Medicine BoardNasodiumNASANational Aeronautics and Space AdministrationNBLNeutral Buoyancy LaboratoryNCRPNational Council on Radiation Protection and
+MeasurementsNHANES IIIThird National Health and Nutrition Examination SurveyNPDNASA Policy DirectiveOCHMOOffice of the Chief Health and Medical OfficerPCpoint of convergencePDApatent ductus arteriosusPFOpatent foramen ovalePFTPulmonary function testsPIPpseudo-isochromatic platesPRKPhotorefractive KeratectomyPTprothrombin timePTTpartial thromboplastin time
+
+PVCpremature ventricular contractionsQFT-GQuantiFERON-TB GoldRPRrapid plasma reaginSBUsensitive but unclassifiedSCsickle hemoglobin-C diseaseSISystème InternationaleSPEserum protein electrophoresisSSsickle cellSSPSpace Shuttle ProgramSTDStandardSVTsupraventricular tachycardiaTBtuberculosisTIAtransient ischemic attackTMJtemporomandibular jointTSHthyroid stimulating hormoneTSTtuberculin skin testTTG
+TTPTissue transglutaminase
+thrombotic thrombocytopenic purpuraU.SUnited StatesVDRLvenereal disease research laboratoryVSDventricular septal defectVZVvaricella zoster virusWHOWorld Health OrganizationWPWWolff Parkinson White
+3.2 Definitions
+None.
+
+4. MEDICAL EVALUATION, SELECTION, ANDANNUAL RECERTIFICATION - PROCESS AND GENERAL CONSIDERATIONS
+
+4.1 Medical Evaluation - General Considerations
+
+Candidate astronauts undergo a comprehensive medical evaluation as part of their selection and annual recertification.
+
+The medical evaluation process includes an extensive medical history and physical examination by aeromedical physicians and clinical specialists, laboratory screening tests, special diagnostic tests, and psychiatric evaluation. This document defines the medical screening procedures and standards for medical certification upon selection, and annual recertification thereafter.
+
+In compliance with NPD 1382.17, NASA Privacy Policy and the Privacy Act of 1974, as amended, applicants are examined in accordance with approved medical procedures.
+
+
+4.1.1 Selection Medical Evaluation - General Considerations
+
+Candidates for selection as NASA astronauts are evaluated for early detection of diseases that may interfere with their abilities to perform in mission.
+
+The specific medical evaluation procedures used are designed to select and certify individuals who are free from medical conditions that may:
+
+a. Compromise the astronaut's health and safety,
+b. Compromise the completion of mission objectives, and
+c. Be seriously aggravated or progress as a result of the performance of duties during training (e.g., in the Neutral Buoyancy Laboratory [NBL] and U.S. Air Force T-38 aircraft) or space flight exposures.
+
+4.1.2 Annual Medical Evaluation - General Considerations
+
+The medical evaluation that is conducted annually for recertification is based on current NASA standards for space flight duties, piloting of NASA aircraft, or participation in flight activities only, as applicable.
+
+4.2 Medical Evaluation and/or Certification by NASA's AMB
+
+[STD 1] The examining physician shall present a candidate's evaluation results to the AMB.
+
+[STD 2] The AMB shall determine if the candidate does or does not meet medical standards or requires further evaluations before disposition can be made.
+
+[STD 3] The AMB will review the medical records of all NASA astronaut applicants at selection, and of each NASA astronaut annually, and shall recommend qualification, disqualification, or conditional qualification (waiver for active astronauts) to the CHMO.
+
+[STD 4] The Chief Health and Medical Officer (CHMO) shall make the final disposition on qualifications and disqualifications of NASA astronauts, based on review of the AMB recommendations.
+
+4.3 Waiver of Medical Standards
+
+A waiver may be requested for a NASA astronaut for recertification, who does not meet a medical standard. The waiver disposition may stipulate conditions for mission assignment (e.g. mission duration, location etc.)
+
+[STD 5] The term "waiver" shall be used when a disqualifying condition is waived and the NASA astronaut is conditionally medically certified.
+
+[STD 6] No waiver shall be granted on selection of NASA astronauts.
+
+[STD 7] For a NASA astronaut waiver request, the examining physician shall provide a detailed presentation to the AMB of all relevant medical data and also address the following:
+
+a. An evidence-based review with data derived from the medical and aeromedical literature, as well as specialist consultant opinions detailing the potential risks associated with the condition, complications, and sequelae.
+
+b. A thorough consideration of the potential consequences of related medical events on mission safety and mission completion and on the potential incremental health risk to the individual in the space environment.
+
+[STD 8] The examining physician shall notify the NASA astronaut that his/her medical condition is being considered for waiver or disqualification from flight status.
+
+[STD 9] The Chief Health and Medical Officer (CHMO) shall make the final disposition based on review of the AMB recommendations. The CHMO may delegate waiver decision authority to the AMB Chair for routine medication waiver renewal.
+
+5. MEDICAL EVALUATION, SELECTION, AND
+ANNUAL RECERTIFICATION - SPECIFIC CONSIDERATIONS
+
+5.1 Medical Screening of NASA Astronauts
+
+5.1.1 Medical Evaluation Procedures for NASA Astronauts - Overview
+
+[STD 10] The examining physician shall perform medical screening, including the procedures and consultations in Table 2, Medical Evaluation Procedures, at selection and for annual recertification as indicated.
+
+
+Table 2 - Overview of Medical Evaluation Procedures for NASA Astronauts
+- To be applied at selection and annually thereafter.
+
+Overview1. Comprehensive medical questionnaire12. Full aeromedical physical examination3. Special assessments and imaging procedures (as described in Table 6)4. Laboratory testing (as described in Tables 3, 4, and 5)
+1 - May be completed using the NASA Medical Survey or other similar questionnaire. The following areas should be included: Past medical history and background information; psychosocial and psychiatric history including DWI and drug-related convictions; personal habits/lifestyle issues; travel history (past year); medication review, including non-prescription and herbal medications, food supplements, vitamins and minerals; systems review; physical activities and sports.
+
+
+5.1.2 Laboratory Testing
+
+Laboratory testing for selection, shown in Table 3, Laboratory Tests on Selection; Table 4, NASA Astronaut Candidate (ASCAN) First Annual Exam; and Table 5, Laboratory Tests on Annual Recertification, are limited to those tests pertinent to the identification of the presence of, or predilection for disease states, that might compromise individual health, mission effectiveness, or safety.
+
+Clinical laboratory studies and special diagnostic tests are performed to establish baseline values and to aid in the detection of any disease process. Results of these tests are evaluated in the context of other clinical findings.
+
+The specific laboratory tests in Tables 3 and 4 reflect current standards of care.
+
+Table 3 - Laboratory Tests on Selection of NASA Astronauts
+
+Laboratory Tests on Selection of NASAAstronautsHematology/thrombophilia screen
+• Complete Blood Count - To include hemoglobin, hematocrit, red blood cell count, red blood cell indices, white blood cell count, differential count, platelet count
+• Reticulocyte count
+• Screening tests for thrombophilia: Prothrombin time (PT) and partial thromboplastin time (PTT)
+• Hemoglobin evaluation (A, A2, F, S, C, E)Biochemistry
+• Liver function - Aspartate aminotransferase (AST), alanine aminotransferase (ALT), gamma-glutamyl transferase (GGT), bilirubin, alkaline phosphatase (ALP), lactate dehydrogenase (LDH)
+• Total serum protein, albumin
+• Renal function - Urea, creatinine, electrolytes (Na [sodium], Cl [chloride], K [potassium]), uric acid
+• Endocrine - Thyroid stimulating hormone (TSH), free T4 (thyroxine), anti-thyroid antibodies
+• Fasting blood glucose, HbA1C
+• Cardiovascular profile - Fasting total cholesterol, high-density lipoproteins (HDL), low-density lipoprotein (LDL), triglycerides, high-sensitivity C-reactive protein (hs-CRP)
+• Calcium, magnesium, inorganic phosphate
+• Ionized calcium
+• Prostate specific antigen (males over age 40)
+• Serum ferritin, iron, total iron binding capacity, transferrin saturationInfectious Disease Screen
+• Serologic screen for syphilis (VDRL or RPR or equivalent)
+• Hepatitis B (Hepatitis B surface antigen, Hepatitis B core antibody, Hepatitis B surface antibody)
+• Hepatitis C
+• HIV• Tuberculosis (TB) screening utilizing a tuberculin skin test (TST) or interferon gamma releasing assay (IGRA) (either QFT-G or T- SPOT). Refer to Appendix B for detailed Tuberculosis screening and management guidance.
+Continued on following page
+Table 3 - Laboratory Tests on Selection of NASA Astronauts Continued
+
+Laboratory Tests on Selection of NASAAstronautsUrinalysis
+• Routine (specific gravity, glucose, protein, pH, ketones, blood), microscopic
+• Human chorionic gonadotropin (hCG) (females) (urine)Special studies
+• Prolactin
+• Carbohydrate Deficient Transferrin
+• Ethyl glucuronide
+• Tissue transglutaminase (TTG) IgG
+• Tissue transglutaminase(TTG) IgADrug screening, urine
+• Drug screen in-house for drugs of abuse
+• Expanded drug screen
+Table 4 - NASA Astronaut Candidate (ASCAN) First Annual Exam
+
+NASA Astronaut Candidate (ASCAN) First Annual ExamABO Group & Rh Type
+Cytomegalovirus IgG Antibody
+Epstein-Barr Virus IgG Antibody to Nuclear AntigenEpstein-Barr Virus IgG Antibody to Viral Capsid AntigenHerpes Simplex Virus (HSV) Type 1/2 Combined IgG Antibody
+Toxoplasma gondii IgG Antibody
+VZV IgG AntibodyImmunocap Mouse Epithelium AntibodyImmunocap Mouse Urine IgE Antibody
+Measles (Rubeola) IgG Antibody
+Mumps IgG AntibodyRubella IgG AntibodyH. Pylori Breath TestHepatitis A antibodyG6PDSerum Protein ElectrophoresisQuantitative Immunoglobulins (IgG, IgA, IgM)Calculi Risk Assessment, UrineVenous Thromboembolism Panel: Cardiolipin IgG Antibody
+B2 glycoprotein 1 IgM/IgG Antibody
+Activated Protein C (APC) Resistance
+Prothrombin Nucleotide 20210 G/A Gene Mutation (Factor II) Protein C
+Protein S
+Anti-Thrombin
+
+Table 5 - Laboratory Tests on Annual Recertification of NASA Astronauts
+
+Laboratory Tests on Annual Recertification of NASA AstronautsHematology
+• Complete Blood Count - To include hemoglobin, hematocrit, red blood cell count, red blood cell indices, white blood cell count, differential count, platelet count
+• Reticulocyte countBiochemistry
+• Liver function - Aspartate aminotransferase (AST), alanine aminotransferase (ALT), gamma-glutamyl transferase (GGT), bilirubin, alkaline phosphatase (ALP), lactate dehydrogenase (LDH)
+• Total serum protein, albumin
+• Renal function - Urea, creatinine, electrolytes (Na [sodium], Cl [chloride], K [potassium]), uric acid
+• Endocrine - Thyroid stimulating hormone (TSH), free T4 (thyroxine),
+• Fasting blood glucose, HbA1C
+• Cardiovascular profile - Fasting total cholesterol, high-density lipoproteins (HDL), low-density lipoprotein (LDL), triglycerides, high-sensitivity C-reactive protein (hs-CRP)
+• Calcium, magnesium, inorganic phosphate
+• Ionized calcium
+• Prostate specific antigen (males over age 40)
+• Serum ferritin, iron, total iron binding capacity, transferrin saturation
+• Vitamin DInfectious Disease Screen
+• Hepatitis B (unless immunization has been confirmed with antibody titers)
+• HIV
+• Tuberculosis screening utilizing a tuberculin skin test (TST) or IGRA (either QFT-G or T-SPOT). Refer to Appendix B for detailed Tuberculosis screening and management guidance.Urinalysis
+• Routine (specific gravity, glucose, protein, pH, ketones, blood), microscopic
+5.1.3 Specialist Assessments for Selection and Annual Recertification of NASA Astronauts
+
+Specialty examinations are performed to further detect and identify any potential disorders within a specific area. Throughout the selection and subsequent annual examinations, emphasis is placed on the early detection of latent pathological processes, and suitability for space flight and the physiological effects of reduced-gravity exposure.
+
+Table 6 - Specialist Assessments for Selection and Annual Recertification of NASA Astronauts
+
+Ophthalmology
+Specialist assessment (optometrist)SelectionAnnualVisual acuity (Snellen or Landolt-C)??Near vision??Color vision (computer-based test, Ishihara, or equivalent pseudo-isochromatic plates [PIPs] to include red-green and blue-yellow)??2Cycloplegic refraction??Phorias??Tonometry??Perimetry??Fundoscopic examination??Retinal photographs??Corneal topography?Otolaryngology/ENTSelectionAnnualAudiometry (pure tone audiogram and speech audiogram, if indicated)??Tympanogram??Computed tomography (CT) scan or magnetic resonance imaging (MRI) of sinuses?Continued on following page
+
+Table 6 - Specialist Assessments for Selection and Annual Recertification of NASA Astronauts Continued
+
+DentalSelectionAnnualSpecial Assessment by Dentist??Full orthopantomogram or full mouth X-ray series)?
+CardiopulmonarySelectionAnnualResting 12-lead electrocardiogram (ECG)??Direct or indirect measurement of cardiorespiratory fitness (CRF) in ml/kg/min or METS) on maximum exercise stress test??Echocardiogram, Doppler, and color flow study?* Within the last 5 years?24-Hour ECG monitoring?Pulmonary function testing?Cardiovascular Risk Prediction??Coronary calcium scoring?Within the last 5 years?
+GastroenterologySelectionAnnualColonoscopy?* At or over 50: within the last 5 years?* At or over 40: within the last 5 years if family history positive for colon cancer?Continued on following page
+
+Table 6 - Specialist Assessments for Selection and Annual Recertification of NASA Astronauts Continued
+
+NeurologySelectionAnnualMRI of brain, MRI angiogram?Carotid Ultrasound Study (to include intima- medial thickness and/or carotid plaque area)?* Age 50 and over (Within the last 2 years)?Behavioral Health EvaluationSelectionAnnualPsychodiagnostic Assessment• Based on the most recent edition of the Diagnostic and Statistical Manual of Mental Disorders, the American Psychiatric Association.??Psychological Suitability Assessment??
+GynecologicalSelectionAnnualGynecological Evaluation (Cervical Cancer Screening using Current Guidelines)??
+Continued on following page
+
+
+Table 6 - Specialist Assessments for Selection and Annual Recertification of NASA Astronauts Continued
+
+
+Radiological /Ultrasound ProceduresSelectionAnnualChest X-ray (PA and lateral)?• Within the last 5 years?Thyroid ultrasound?• Within the last 5 years?Abdominal and pelvic ultrasound?• Within the last 5 years?Bone mineral density - dual energy x-ray absorptiometry (DXA) scan?• Within the last 3 years?Breast Imaging for females beginning at age 40?• Within the last 2 years
+MRI should be used in lieu of mammography for female astronauts, if identified to be at high or intermediate risk (based on family history, breast cancer gene (BRCA) positive, heterogeneous, or dense breast tissue).?
+RadiationSelectionAnnualRadiation History Assessment (Includes research exposure, space flight and aviation exposure, and previous occupational exposure) - Pertains to NASA (career) astronauts only??
+5.3 Medical Conditions to Consider for Selection and Annual Recertification of NASA Astronauts
+
+Table 7, Disqualifying Medical Standards, details those medical conditions that are medically disqualifying for the selection and retention of NASA astronauts, or that may require further testing and evaluation to assess medical suitability. In general, all conditions are worded as disqualifying. The term "unless" is used when specific exceptions are listed. Annual medical recertification ensures the individual has not developed any new medical conditions that would preclude safe performance of training and/or space flight duties or participation. This section pertains to all NASA astronauts.
+
+[STD 11] The examining physician shall determine the suitability for selection and retention of NASA astronauts, using the conditions for disqualification specified in Table 7.
+
+
+Table 7 - Disqualifying Medical Standards
+
+7A GENERAL1. Any medical condition that, in the judgment of the AMB, may compromise mission operations, performance of duties, or crew health or safety.2. All injuries, contusions, fractures, or surgery unless healed and not associated with functional deficit that could interfere with the performance of duties.3. History of heat stroke, temperature intolerance, or environmental injuries associated with significant sequelae that could interfere with performance of duties.4. History of sensitivity or demonstrated allergy of sufficient severity so as to interfere with the performance of duties.5.  Habitual use of tobacco products.6.  Chronic use of any medication requires AMB review.7. All malignancies or history of malignancies, except those permitted within the medical standards.8. Any foreign body or implant, unless considered not to be a hazard during the performance of duties.9. Any condition or situation that precludes completion of the NASA medical evaluation process.10. Sarcoidosis, all forms.11. Decompression Illness (DCI):
+A. Type II decompression sickness (DCS) or Arterial Gas Embolism (AGE) (involving the central nervous system, spinal cord, pulmonary DCS, or cardiovascular collapse) unless all signs and symptoms resolve with treatment. Such cases require specialist evaluation.
+B. Type I DCS involving joint pain, the peripheral nervous system, or skin is not disqualifying if adequately treated and completely resolved.12. Presence or history of systemic exertion intolerance disease or myalgic encephalomyelitis (previously known as chronic fatigue syndrome) and fibromyalgia.13. Autoimmune disorders, including conditions such as systemic lupus erythematosus and dermatomyositis.14. Any standard invalidated by new medical information may be appended by the AMB with CHMO approval.
+
+7B HEAD, FACE, AND NECK1. Deformities (e.g., scars, depressions, or exostoses) or chronic muscular contractions or spasms (e.g., torticollis) of the skull/head, face, and neck that interfere with wearing equipment/headgear and/or performance of duties.2.  Loss or congenital absence of bony substance of the skull.3. Maxillofacial skeletal deformities (e.g., benign tumors, large birthmarks, large hairy moles, extensive scars or mutilations due to injuries or surgery, ulcerations, fistulae, and atrophy or paralysis of part of the face or head) that interfere with the performance of duties or wearing of equipment.4. Temporomandibular disorders (e.g., chronic temporomandibular joint (TMJ) arthritis, complete or partial ankylosis, recurrent dislocation, or chronic myofascial pain).5. Congenital branchial cleft or thyroglossal duct cysts, unless greater than 1 year post-surgical resection and without evidence of residual cysts or tracts.6.  Chronic draining fistulae, regardless of cause.7.  Cervical ribs with signs or symptoms of thoracic outlet compression.7C NOSE, SINUSES, MOUTH, AND THROAT1. Deformities, injuries, or destructive diseases of the mouth, nose, throat, pharynx, or larynx that interfere with breathing, speech, mastication, and/or the swallowing of ordinary food, unless surgically corrected with normal function restored.2. Deviation of the nasal septum, enlarged turbinates, or other obstructions to ventilation that significantly restrict nasal breathing, unless medically or surgically corrected with normal function restored.3. Chronic rhinitis of any cause that may interfere with the performance of duties.4. Perforation of the nasal septum if accompanied by recurrent epistaxis, an intrusive whistling sound, or if a sign of organic disease.5. Sino-nasal polyps or a history of sino-nasal polyps, unless at least 1 year after surgical removal and without evidence of recurrence.6.  Anosmia.7. Chronic sinusitis (persistent sinus infection for more than 3 months), unless treated without evidence of recurrence for at least 3 years.8.  Cleft lip and/or palate unless satisfactorily repaired.9. Loss or mutilation of a lip in whole or part, unless satisfactorily repaired and does not interfere with the performance of duties or wearing of equipment.10. Partial loss, atrophy, hypertrophy, benign tumors, or other malformations of the tongue if these conditions interfere with mastication, speech, swallowing, or appear to be progressive.
+
+11. Presence or history of marked stomatitis, leukoplakia, or severe recurrent ulcerations of the mouth that may interfere with the performance of duties.12. Ranulae, which might interfere with the performance of duties.13. Salivary fistula, unless surgically corrected.14. Presence of enlarged tonsils, adenoids, or redundant soft tissue of the oral pharynx that interfere with speech, swallowing, breathing, or are associated with recurrent otitis media.15. Recurrent calculi of any salivary gland or duct, unless surgically corrected.16. Obstructive sleep apnea.17. Any disorder or defect that affects the clarity of speech to the extent that it impairs the performance of duties (e.g., chronic or recurrent laryngitis, vocal cord paralysis).18. Tracheostomy or tracheal fistula, unless surgically repaired.19. Recurrent epistaxis, unless from a benign lesion that has been corrected.20. Any chronic disorder or defect that interferes with normal ventilation of paranasal sinuses or middle ear.21. Zenker's diverticulum, unless surgically corrected.7D EARS1. Any diseases of the ear or mastoid with residual auditory or vestibular dysfunction sufficient to interfere with performance of duties.2. Congenital deformation of the external meatus or canal that interferes with hearing or performance of duties.3. Tumors of the external auditory canal, unless benign or surgically removed. Small exostoses are not disqualifying.4.  Chronic external otitis.5.  Chronic otitis media, suppurative or serous.6.  Persistent perforation of the tympanic membrane.7.  History of stapedectomy.8. Chronic mastoiditis, mastoid fistula, or mastoidectomy, unless complete recovery from simple mastoidectomy.9. History or presence of abnormal labyrinthine function (e.g., vestibular neuronitis), unless an isolated, remote episode with full recovery.10. History or presence of Meniere's disease.11. Chronic inability to equalize the pressure of the middle ear (Valsalva's maneuver).12. Tinnitus that interferes with the performance of duties.
+
+13. Hearing Standards:
+A. History of acute or sudden sensorineural hearing loss, unless due to trauma with complete recovery.
+B. Inability to meet the pure tone audiometry hearing thresholds in Table 11, Pure Tone Audiometry Hearing Thresholds.
+
+Table 11 - Pure Tone Audiometry Hearing ThresholdsFrequency Hz5001000200030004000Astronaut candidate selectionBoth Ears3025253550Annual examination or mission selectionBetter Ear Poorer Ear30
+3525
+5025
+5035
+7550
+75C. Inability to meet above hearing standards in pure tone audiometry on the annual examination requires a word recognition score of 92% or better in the better ear and 88% or better in the poorer ear.7E EYES1. Disease, defect, or deformity of either eye or supporting structure that may interfere with the performance of duties.2. Lids and Ocular Adnexae:
+A. Any condition of the eyelids that impairs normal eyelid function.
+B. Chronic blepharitis
+C. Blepharospasm.
+D. Ptosis, unless a benign etiology that is not progressive and does not interfere with vision in any field of gaze or direction.
+E. Growths on the eyelid unless small, asymptomatic, non-progressive, and benign.
+F. Dacryocystitis or history of dacryocystitis.3. Conjunctivae:
+A. Chronic or recurrent conjunctivitis requires specialist evaluation.
+B. History of trachoma requires specialist evaluation.
+C. Dry eye syndromes requiring treatment, including xerophthalmia, requires specialist evaluation.
+D. Pterygium that encroaches on the cornea more than 2 millimeters or recurs after two operative procedures (evaluation will be performed no earlier than 6 months post- operatively).4. Cornea:
+A. Chronic or recurrent keratitis requires specialist evaluation.
+B. History of corneal ulcer or erosion requires specialist evaluation.
+C. Herpetic ulcer or history of herpetic ulcer.
+D. Vascularization, haze, or opacification of the cornea from any cause when it is progressive or interferes with vision.
+
+E. Corneal dystrophy of any type, including keratoconus of any degree.
+F. History of orthokeratology treatments within the previous 6 months.
+G. History of penetrating or lamellar keratoplasty.
+H. Refractive surgical procedures other than Photorefractive Keratectomy (PRK) (or other excimer laser surface procedures) or laser-assisted in-situ keratomileusis (LASIK). Wavefront guided procedures with a femtosecond laser are preferred. The following criteria apply:
+i. All standard accepted clinical eligibility criteria for the procedure are met (e.g., corneal thickness).
+ii. Pre-operative cycloplegic refractive error is between +4.00 to -8.00 sphere, and
+astigmatism is 3.00 or less in minus cylinder format.
+iii. At least 6 months since last refractive/augmenting procedure, with no ongoing active ophthalmologic treatment or need for ophthalmic medications.
+iv. Post-operative refraction stable as demonstrated by two separate refractions = 1
+month apart differing by = +/-0.50 diameter (D) (sphere) and = +/-0.25 D (cylinder).
+v. Post-operative manifest refractive errors within applicant standards.
+vi. No demonstrated adverse sequelae, including contrast sensitivity, glare, or night vision problems. All other vision standards are met.5. Uveal Tract:
+A. Acute, chronic, or recurrent inflammation of the uveal tract (iris, ciliary body, choroid).
+B. History of uncomplicated post-traumatic iritis requires specialist evaluation.6. Retina and Vitreous:
+A. History or evidence of retinal detachment, unless traumatic with no sequelae, retinal tears, or edema.
+B. Retinal hole with presence of fluid or vitreous traction. Other retinal holes require specialist evaluation.
+C. Degeneration or dystrophies of the central or peripheral retina, including lattice degeneration, require specialist evaluation.
+D. Pigmentary degenerations require specialist evaluation.
+E. Retinitis, chorioretinitis, or other inflammatory conditions of the retina, unless single episode that has healed and does not impair central or peripheral vision.
+F. Hemorrhages, exudates, or other retinal vascular conditions that potentially impair vision require specialist evaluation.
+G. Vitreous opacities or conditions that may cause loss of central acuity or peripheral visual field require specialist evaluation.
+H. Previous retinal treatment of any type requires specialist evaluation.7. Optic Nerve:
+A. Any history of optic nerve disease, including but not limited to, optic nerve inflammation, optic nerve swelling, or optic nerve atrophy.
+B. Any optic nerve anomaly requires specialist evaluation.8. Lens:
+A. Aphakia.
+B. Lens opacities that interfere with vision or are considered progressive require specialist evaluation.
+
+C. Lens dislocation, partial or complete.
+D. Intraocular implants or intraocular contact lenses.9. Malignancy, and Other Defects and Disorders:
+A. History or presence of malignant tumors of the eye or orbit.
+B. Resected basal cell cancers or benign tumors require specialist evaluation.
+C. Exophthalmos, anophthalmos, or microphthalmos.
+D. Pathologic nystagmus.
+E. Abnormal pupil(s) or loss of normal pupillary reflexes requires specialist evaluation.
+F. Coloboma.10. Refractive standards-inability to meet the following refractive requirements:
+A. Distance or near visual acuity not correctable to 20/20 in each eye.
+B. Refractive error (distant vision):
+(1) Cycloplegic refractive error of more than +5.50 or -5.50 diopters in any meridian.
+(2) Astigmatism requiring more than 3.00 diopters of cylinder correction.
+(3) Anisometropia of more than 3.50 diopters.11. Visual Fields: Any visual field defect, whether active, inactive, or migrainous requires specialist evaluation.12. Extraocular muscle balance:
+A. Esophoria greater than 10 prism diopters measured at 6 meters or 20 feet.
+B. Exophoria greater than 10 prism diopters measured at 6 meters or 20 feet.
+C. Hyperphoria greater than 2 prism diopters measured at 6 meters or 20 feet.
+D. Any heterotropia measured at any distance.
+E. Point of convergence (PC) greater than 100 millimeters.
+F. Paralysis of ocular motion in any of gaze.
+G. Diplopia, suppression, or a history of diplopia or suppression.13. Depth Perception: Lack of adequate depth perception on objective testing, with a minimum of 40 arcseconds.14. Abnormal night vision, including retinitis pigmentosa, requires specialist evaluation.15. Color Vision Deficiency: Greater than mild deficiency on red-green or blue-yellow color vision testing.16. Intraocular Pressure:
+A. History of glaucoma, ocular hypertension, pre-glaucoma, or glaucoma suspect.
+B. Pigmentary Dispersion Syndrome requires specialist evaluation.17. Medically required use of a contact lens.7F	LUNGS AND CHEST WALL1. Any condition of the lungs, pleura, mediastinum, and chest wall that could interfere with performance of duties.2. Pneumothorax or pneumomediastinum:
+A. History of spontaneous pneumothorax or pneumomediastinum unless surgically corrected with apical pleurodesis or pleurectomy and free of complications, with full
+
+expansion of lungs on chest X-ray (CXR), normal pulmonary function tests (PFTs), and thin-cut CT showing no pathology predisposing to recurrence. This requires specialist evaluation.
+B. Presence or history of traumatic pneumothorax, unless total resolution and free of complications, with full expansion of lungs on CXR, normal PFTs, and thin-cut CT showing no pathology predisposing to recurrence. This requires specialist evaluation.3. Chronic pulmonary processes:
+A. Chronic obstructive pulmonary disease (chronic bronchitis or emphysema) with evidence of pulmonary dysfunction and causing impairment or increased risk for pulmonary barotrauma.
+B. Chronic pulmonary processes such as interstitial pneumonias, pulmonary injury, neuropulmonary disorders, hypersensitivity, and pneumoconiosis are disqualifying.
+C. Abnormal pulmonary function tests require specialist evaluation.4.  Bronchiectasis. History of childhood bronchiectasis requires specialist evaluation.5. Asthma:
+A. Current asthma of any degree.
+B. History of asthma will require provoked bronchoconstriction testing and specialist evaluation.6.  Pulmonary blebs, bullae, or cysts.7.  History of lung abscess requires specialist evaluation.8. Granulomatous inflammation:
+A. Non-infectious granulomatous inflammation (such as sarcoidosis, Wegener's, allergic, or bronchocentric).
+B. History of infectious causes, including mycotic infection (such as coccidioidomycosis, histoplasmosis) or protozoal infection (such as dirofilariasis, pneumocystis) requires specialist evaluation.9. History of intrathoracic surgery requires specialist evaluation:
+A. History of lobectomy or multiple segmental resections with normal pulmonary function requires specialist evaluation.
+B. Removal of more than one lobe is cause for rejection.10. Any malignant tumor of the trachea, bronchi, lungs, pleura, or mediastinum: History of a benign tumor requires specialist evaluation.11. History of suppurative periostitis, osteomyelitis, or necrosis of the ribs, sternum, clavicle, scapulae, or vertebrae with complete resolution and normal lung function requires specialist evaluation.12. Chronic or recurrent mastitis.13. Benign tumor or surgery of the breast or chest wall that interferes with the performance of duties.14. History of unprovoked or recurrent pulmonary embolus. History of single provoked pulmonary embolus requires specialist evaluation.
+
+15. History of empyema or sinus tracts of the chest wall require specialist evaluation.16. History of surgically corrected tracheoesophageal fistula requires specialist evaluation.17. History of pleural effusion of unknown etiology.18. History of hemoptysis requires specialist evaluation.19. History of breast cancer.7G	CARDIOVASCULAR1.  Any condition of the cardiovascular system that interferes with the performance of duties.2. Cardiomyopathy such as hypertrophic or right ventricular cardiomyopathy (other than physiologic heart changes). History of acquired cardiomyopathy if recovered and left ventricular ejection fraction is > 50% requires specialist evaluation.3. Hypertension, as defined by sustained systolic blood pressure of 140 mmHg or greater or diastolic of 90 mmHg or greater.4. Recurrent syncope or symptomatic orthostatic intolerance (e.g., medication-induced, autonomic dysfunction, or other causes not otherwise specified), excepting post-space flight orthostasis. Recurrent neurally mediated syncope with clear precipitating factors requires specialist evaluation.5. History of pericarditis, myocarditis, and endocarditis without residual dysfunction requires specialist evaluation.6. Congenital abnormalities:
+A. History or findings of major congenital abnormalities of the heart and vessels.
+B. History of atrial septal defect (ASD), ventricular septal defect (VSD), or patent ductus arteriosus (PDA), that has been surgically repaired requires specialist evaluation.
+C. A patent foramen ovale (PFO) requires specialist evaluation.7. Clinical evidence (angiographic, imaging, symptoms, history of prior event) of coronary artery disease.8. Electrocardiographic abnormalities: Any cardiac dysrhythmia, conduction defect, or other ECG abnormalities on resting ECG, ambulatory ECG monitor, or any monitoring ECG rhythm strips require specialist evaluation.
+A. Supraventricular arrhythmias:
+i. Require AMB review and may be disqualifying:
+(1) Supraventricular tachycardia (SVT) assessed at least 6 months after ablation.
+(2) Atrial fibrillation/flutter assessed at least 6 months after ablation.
+(3) Presence or history of SVT or atrial fibrillation/flutter > 5 seconds.
+(4) Atrial ectopy (premature atrial complexes) > 1% and = 20% of total beats on ambulatory ECG.
+(5) Presence of sustained (> 1 hour) sinus tachycardia at rest > 130 beats/min not related to physical activity during evaluation.
+ii. Disqualifying (other than those due to identifiable, reversible causes):
+
+(1) Presence or history of SVT or atrial fibrillation/flutter that is recurrent after intervention.
+(2) Presence of SVT with hemodynamic compromise.
+(3) Presence or history of atrial ectopy (premature atrial complexes)
+> 20% of total beats on ambulatory ECG.
+B. Ventricular arrhythmias:
+i. Require AMB review and may be disqualifying:
+(1) Presence or history of ventricular tachycardia of 11 beats or greater without hemodynamic compromise.
+(2) Presence or history of frequent ventricular ectopy (frequent premature ventricular
+contractions [PVC]) > 1% and = 20% of total beats on ambulatory ECG.
+(3) Right ventricular outflow tract tachycardia at least 6 months after ablation.
+ii. Disqualifying (other than those due to identifiable, reversible causes), presence or history of:
+(1) Ventricular tachycardia > 11 beats with ventricular dysfunction.
+(2) Ventricular tachycardia > 30 seconds.
+(3) Ventricular tachycardia with hemodynamic compromise.
+(4) Ventricular flutter/fibrillation or sudden cardiac arrest requiring resuscitation.
+(5) Frequent ventricular ectopy (frequent premature ventricular complexes) > 20% of total beats on ambulatory ECG.
+C.  Conduction/repolarization defects:
+i. Require AMB review and may be disqualifying:
+(1) First degree atrioventricular (AV) block > 300 msec.
+(2) Right bundle branch block with axis deviation or atrial enlargement.
+(3) Left bundle branch block.
+(4) Wolff Parkinson White (WPW) ECG pattern.
+(5) WPW syndrome after successful ablation.
+(6) Prolonged QT > 470 msec for men and > 480 msec for women in the absence of drugs known to prolong QT interval.
+(7) Brugada ECG pattern.
+(8) Prolonged sinus pause > 3 seconds or heart rate < 30 beats per minute not during sleep.
+ii. Disqualifying:
+(1) WPW syndrome.
+(2) Third-degree AV block and Mobitz type 2 AV block.
+(3) Prolonged QT > 500 msec.
+(4) Brugada syndrome.9. Cardiac tumors. Benign cardiac tumors successfully resected and without residual cardiac disease require specialist evaluation.10. All valvular disorders of the heart require specialist evaluation:
+A. Require AMB review and may be disqualifying:
+i. Greater than mild mitral, tricuspid, or pulmonic regurgitation.
+ii. Aortic valve regurgitation greater than trace.
+iii. Mitral valve prolapse with greater than mild mitral regurgitation.
+iv. Bicuspid aortic valve.
+
+B. Disqualifying:
+i. Any degree of valvular stenosis other than trivial.
+ii. History of valve replacement or repair.11. Venous and lymphatic disorders such as chronic venous insufficiency, varicose veins, and lymphedema that impair performance of duties.12. Abnormalities of the arteries, including aneurysms, atherosclerosis, and arteritis. Includes intermittent claudication or any condition associated with inadequate blood flow to any extremity. Arterial wall thickening (including carotids), focal plaque, or calcifications detected with imaging studies require specialist evaluation.13. Primary Raynaud's disease or other symptomatic vasospastic disorders require specialist evaluation.7H	HEMATOLOGY1. Red cell disorders:
+A. Anemias require specialist evaluation.
+B. Hemoglobin sickle cell (SS) and sickle-hemoglobin C (SC) disease.
+C. Hemoglobin S trait with a history of complications such as renal papillary necrosis, pulmonary sequestration, or splenic infarct condition.
+D. Hemoglobinopathies other than hemoglobin SS or SC disease, or S trait (example: thalassemias) require specialist evaluation for physiologic impairment (such as magnitude of anemia, level of anaerobic impairment, splenomegaly).
+E. Hemolytic anemia with laboratory evidence of hemolysis or physiologic impairment.
+F. Polycythemia requires specialist evaluation.
+G. Miscellaneous red cell disorders (example, hereditary spherocytosis) require specialist evaluation for physiologic impairment. Glucose-6-phosphate dehydrogenase deficiency is not disqualifying.2. White cell disorders:
+A. Absolute leukopenia and absolute leukocytosis require specialist evaluation.
+B. History of leukemia.
+C. History of Hodgkin or non-Hodgkin lymphoma.
+D. History of lymphoproliferative disorders.
+E. Plasma cell dyscrasias, including monoclonal gammopathy of undetermined significance (MGUS), require specialist evaluation.
+F. Lymphadenopathy requires specialist evaluation.3. Platelet disorders:
+A. Thrombocytopenia requires specialist evaluation.
+B. History of idiopathic thrombocytopenic purpura (ITP), unless isolated episode in childhood with complete recovery.
+C. History of thrombotic thrombocytopenic purpura (TTP) or hemolytic uremic syndrome (HUS).
+D. Thrombocytosis requires specialist evaluation.4.  History of chronic myeloproliferative diseases or myelodysplastic syndromes.
+
+5. Hypercoagulable disorders:
+A. Vascular thrombosis or embolism requires specialist evaluation.
+B. Two or more episodes of deep venous thrombosis are disqualifying.6. Disorders of hemostasis:
+A. Personal history of bleeding disorder requires specialist evaluation.
+B. Hemophilias.7. Splenic disorders:
+A. Splenomegaly requires specialist evaluation.
+B. Hyposplenism or post-splenectomy state requires specialist evaluation.8. Other hematologic or reticuloendothelial disorders that could interfere with the performance of duties.7I	ABDOMEN AND DIGESTIVE SYSTEMS1. Chronic diseases or disorders of the gastrointestinal tract that interfere with the performance of duties.2. Wounds, injuries, scars, or weaknesses of the muscles of the abdominal wall sufficient to interfere with function.3. Abdominal wall hernias other than small asymptomatic umbilical hernias unless surgically corrected.
+A. Relaxed inguinal ring or a diastasis recti without herniation is not disqualifying.
+B. Any other herniations of clinical significance require specialist evaluation.4. Sinus or fistula of the abdominal wall that is associated with underlying disease or is not surgically corrected.5. Diseases of the esophagus such as strictures or Barrett's esophagus.
+A. Diverticula, rings, or webs unless corrected.
+B. History of mild reflux esophagitis requires specialist evaluation.6. Chronic abdominal pain is disqualifying unless asymptomatic for 5 years and after specialist evaluation.7. History of gastric or duodenal ulcers. Medication or H. pylori-induced ulcers, unless resolved and documented by endoscopy.8.  Chronic dependence on acid-reduction medication.9.  History of gastrointestinal surgery for malignant or recurrent conditions.10. Benign gastrointestinal neoplasm that is likely to enlarge or show malignant potential, unless removed.11. History of intestinal obstruction due to any chronic or potentially recurrent disease. Surgery to relieve childhood pyloric stenosis, intussusception, volvulus, or Meckel's diverticulum is not disqualifying if there are no sequelae.12. Adhesive disease. Asymptomatic adhesive disease requires specialist evaluation.
+
+13. Inflammatory bowel disease such as Crohn's disease and ulcerative colitis.14. Functional bowel disorder that interferes with the performance of duties.15. Malabsorption syndromes:
+A. Celiac Disease.
+B. Food sensitivities/intolerances are not considered malabsorption syndromes but require specialist evaluation.16. Chronic diarrhea.17. Chronic constipation requiring chronic or continuous medication or therapy.18. History of diverticulitis. Diverticulosis requires specialist evaluation.19. Gastrostomy, ileostomy, or colostomy unless surgically corrected and resulting in no postoperative dysfunction.20. History of gastrointestinal bleeding from any cause except for post-traumatic bleeding, medication-induced gastritis, or minor bleeding (such as hemorrhoids or resolved infectious colitis).21. Acute or chronic diseases of the rectum or anus. External or internal hemorrhoids that cause marked symptoms that could interfere with the performance of duties.22. Liver:
+A. History of non-viral or self-limited hepatitis (e.g., drug-induced) within the previous year requires specialist evaluation.
+B. Benign liver tumors such as hemangiomas that are under 2 cm and demonstrated to be stable with serial scanning for 2 years require specialist evaluation.
+C. Benign non-infectious hepatic cysts require specialist evaluation.
+D. Any chronic, recurrent, or progressive liver disease.
+E. See infectious disease conditions in this table (Table 10, paragraph 4.25.6), for hepatitis B and hepatitis C.23. Pancreas:
+A. History of acute pancreatitis is disqualifying, unless due to trauma, medication, or due to surgically corrected cholecystitis with no further episodes and requires specialist evaluation.
+B. Chronic, recurrent, or progressive pancreatic disorders (e.g., pseudocyst).24. Biliary tract:
+A. Cholecystitis, cholelithiasis, or acalculous cholecystitis, until surgically corrected and resulting in no postoperative dysfunction.
+B. Any chronic, progressive biliary tract disorder.7J	ENDOCRINE1.  Any endocrine disease or disorder that may affect the performance of duties.2. Presence or history of diseases of the hypothalamus or pituitary gland. History of prolactin secreting pituitary adenoma 5 years after surgical resection requires specialist evaluation.
+
+3. Diseases of the thyroid gland:
+A. Presence or history of multi-nodular goiter, autoantibodies, benign cysts, or palpable nodules of the thyroid require specialist evaluation.
+B. History of toxic adenoma 1 year after surgical resection requires specialist evaluation.4. Diseases of the parathyroid gland. Parathyroid adenoma after surgical resection requires specialist evaluation.5. Diseases of the adrenal medulla or cortex. Adrenal androgen excess requires specialist evaluation.6. Metabolic disorders:
+A. Diabetes mellitus, type 1 or 2.
+B. Presence or history of gout or pseudogout.
+C. Familial hyperlipidemias.
+D. Inborn errors of metabolic pathways (except for Gilbert's disease):
+i. Acquired errors of metabolic pathways with potential pathologic sequelae require specialist evaluation.
+E. Metabolic syndrome, in accordance with established guidelines.7.  Presence or history of malignant endocrine tumor.8.  Carcinoid syndrome: History of carcinoid tumors requires specialist evaluation.9.  Pancreatic endocrine tumors (e.g., islet cell tumor or gastrinoma).7K	GENITOURINARY1.  Any disorder of the genitourinary tract that may interfere with the performance of duties.2. Anatomical abnormalities of one or both kidneys and lower urinary tract producing functional impact to the urogenital system:
+A. A duplicated collecting system is considered a variant of normal anatomy and is not disqualifying unless associated with other pathology (e.g., hydronephrosis, nephrolithiasis, or recurrent episodes of infection).
+B. Loss or absence of one or both kidneys.3.  Polycystic kidney disease.4. Acute nephropathy or history of chronic nephropathy (e.g., hypertensive nephrosclerosis, diabetic nephropathy, and glomerulonephritis).5.  Autoimmune parenchymal disorders.6.  Vascular renal disorders.7. History of tubular necrosis from any cause if associated with residual renal dysfunction that may interfere with the performance of duties.8. Presence or history of urinary calculus (crystalline concretion within the urine-collecting system).9.  History of recurrent (= 3 per year) infections of the urinary tract require specialist evaluation.
+
+10. Bladder, prostate, or urethral diseases that result in urinary retention, or interfere with micturition. History of the above requires specialist evaluation.11. Hydrocele or varicocele that is symptomatic or interferes with the performance of duties.12. Any disorders of the testes, genitalia, or associated anatomical structures that interfere with the performance of duties. Penile prosthetic implants.13. History of primary or secondary neoplastic disorders of the urinary tract (kidneys, ureter, and bladder) and male genitals (testes, scrotal contents, prostate, and seminal vesicles).7L	MUSCULOSKELETAL DISORDERS1. Any disorder of the bone, joint, muscle, or supporting structure that may interfere with the performance of duties.2. Arthritic disorders:
+A. Chronic osteoarthritis with functional disability that may interfere with the performance of duties.
+B. Presence or history of inflammatory arthropathies requires specialist evaluation.3. Infections:
+A. Active infections of bone, joint, muscle, tendon, or supporting structures.
+B. History of recurrent osteomyelitis.4.  History of non-traumatic avascular necrosis.5.  Presence or history of musculoskeletal malignancy.6.  Benign tumors or cysts of the bone require specialist evaluation.7. Cartilaginous/Intra-articular disorders:
+A. Osteochondromatosis or multiple cartilaginous exostoses that interfere with performance of duties.
+B. History of osteochondromatosis or multiple cartilaginous exostoses that have been successfully surgically excised require specialist evaluation.
+C. Intra-articular loose bodies in any joint (osteocartilaginous or foreign objects) that interfere with performance of duties.
+D. History of intra-articular loose bodies in any joint surgically removed with no residual dysfunction requires specialist evaluation.8. Joint instability:
+A. Joint instability (recurrent subluxations or dislocations of an articulation).
+B. History of joint instability that has been medically or surgically corrected requires specialist evaluation.9. Fractures:
+A. Non-union of fractures.
+B. Mal-union of fractures that interferes with performance of duties.10. Retained orthopedic hardware requires specialist evaluation.
+
+11. Range of Motion: Deviations from the following range of motion or unexplained asymmetry requires specialist evaluation:
+A. Shoulder:
+i. Forward elevation to 170º-180º.
+ii. Abduction to 170º-180º.
+iii. Adduction 30º-40º.
+iv. Extension to 50º-60º.
+v. Internal rotation in abduction to 60º-90º or in neutral to 45º.
+vi. External rotation in abduction to 60º-104º or in neutral to 40º-60º.
+B. Elbow:
+i. Flexion to 135º-150º.
+ii. Extension to 0º in males and = -5º in females.
+iii. Forearm supination in neutral to 80º-90º.
+iv. Forearm pronation in neutral to 80º-90º.
+C. Wrist:
+i. Dorsal extension to 65º-85º.
+ii. Palmar flexion to 70º-80º.
+iii. Ulnar deviation in neutral to 30º-45º.
+iv. Radial deviation in neutral 15º-20º.
+D. Hand/fingers: Any limitation in range of motion, strength, or dexterity that impairs functional performance requires evaluation by a specialist:
+i. Limitation in full composite grip.
+ii. Limitation in full finger extension, i.e., palm flat on table.
+iii. Atrophy of intrinsic hand muscles or thenar eminence.
+iv. Inability to fully oppose thumb and fingers.
+E. Hip:
+i. Flexion to 125º-130º.
+ii. Extension to 10º-20º.
+iii. Abduction to 30º-45º.
+iv. Adduction to 20º-30º.
+v. Internal rotation at 90º hip flexion to 40º-50º.
+vi. External rotation at 90º hip flexion to 30º-45º.
+F. Knee:
+i. Extension to 0º in males and = -10º in females.
+ii. Flexion to 125º-135º.
+G. Ankle:
+i. Dorsiflexion to 10º.
+ii. Plantar flexion to 45º.
+iii. Inversion 50º-60º.
+iv. Eversion 20º-30º.
+H. Spine:
+i. Cervical Range of Motion (CROM):
+(1) Forward flexion between 50º-60º.
+(2) Extension between 65º-75º.
+(3) Lateral bending between 35º-45º.
+(4) Rotation between 70º-80º.
+
+ii. Lumbar Range of Motion (LROM):
+(1) Forward flexion from the waist to 70º-80º.
+(2) Extension from the waist to 30º-40º.
+(3) Lateral bending from the waist to 30º-45º.
+(4) Rotation from the waist to 25º-40º.12. Spine disorders:
+A. Symptomatic disorders of the spine, including but not limited to, herniated nucleus pulposus, spondylolisthesis, spina bifida, fractures and dislocations, scoliosis, kyphosis, or lordosis.
+B. History of ankylosing spondylitis.
+C. History of disorders of the spine that are asymptomatic, including but not limited to, osteoarthritis, herniated nucleus pulposus, spondylolisthesis, spina bifida occulta,
+fractures and dislocations, scoliosis, kyphosis, and lordosis require specialist evaluation.
+D. Presence or history of herniated nucleus pulposus, fractures, or dislocations of the spine resulting in persistent neurologic deficit.
+E. History of recurrent mechanical spinal or sacroiliac pain with disabling episodes of pain, muscle spasm, postural deformities, or chronic limitation of motion of the spine (range of motion) or pelvis requires specialist evaluation.13. Any amputation that interferes with the performance of duties.14. Hand disorders:
+A. Hyperdactyly.
+B. Syndactyly (webbed fingers) that interferes with the performance of duties or wearing of equipment.
+C. Scars and deformities of the fingers or hand that impair dexterity, grip strength,
+circulation, are symptomatic, interfere with the performance of duties, or preclude the wearing of equipment.15. Chronic or recurrent bursitis, tendinitis, and synovitis sufficient to interfere with the performance of duties.16. Lower extremity disorders:
+A. Disorders of the foot that compromise the wearing of equipment or are associated with chronic pain, including but not limited to, clubfoot, pes planus, pes cavus, hammer toes, hallux valgus, overriding digits, hallux rigidus, and bunions.
+B. Varus or valgus deformities that interfere with the performance of duties.
+C. Leg length discrepancy of more than 3.0 cm (from the anterior superior iliac spine to the distal tip of the medial malleolus).17. Disqualifications for Abnormal Bone Mineral Density:
+A. Osteoporosis, defined as the presence or history of a fragility fracture or T-score
+< -2.5 at the femoral neck, total hip, or lumbar spine using the female, white, age 20 -29 years Third National Health and Nutrition Examination Survey (NHANES III) database as the reference population standard.
+B. Bone mineral density below the expected range for age (Z-score < -2.0) at the femoral neck, total hip, or lumbar spine without evidence of normal bone strength.
+
+7M	SKIN DISORDERS1. Presence or history of disorders of the skin or nails, acute or chronic, that is severe enough to interfere with the performance of duties or the wearing of flight equipment.2. Extensive or deep scars, burns, keloids, or body piercings that interfere with muscular movements or with the wearing of equipment or that show a tendency to break down.3. Acne, furunculosis, atopic dermatitis, eczema, or other chronic dermatitis that interferes with the wearing of equipment.4. Cysts, nevi, or benign tumors of the skin of a size or location that interfere with the wearing of equipment, unless surgically corrected.5. Hyperhidrosis, if chronic or severe that may interfere with the performance of duties.6. Infections of the skin if communicable, extensive, or not amenable to treatment. Chronic tinea pedis and onychomycosis require specialist evaluation.7. Primary malignancies of the skin or secondary cutaneous manifestations of systemic malignancies:
+A. Basal cell carcinoma that has been adequately excised is not disqualifying.
+B. Squamous cell carcinoma that has been adequately excised requires specialist evaluation.8.  Neurofibromatosis.9. Pilonidal sinus:
+A. History of inflammation or discharging sinus in the preceding 2 years.
+B. History of pilonidal sinus with surgery without postoperative signs or symptoms indicative of residual disease for > 6 months requires specialist evaluation.10. Presence or history of psoriasis, unless limited to < 1% total body surface area and asymptomatic.11. Presence or history of pemphigus vulgaris, bullous pemphigoid, dermatitis herpetiformis, or other bullous disorders: History of secondary bullous disorders that are resolved require specialist evaluation.7N	NEUROLOGICAL1. Any neurological disorders that may interfere with the performance of duties.2. Primary or secondary malignancies of the nervous system. Benign tumors or history of benign tumors of the nervous system, including acoustic neuromas, require specialist evaluation.3. Vascular disorders of the nervous system (e.g., arteriovenous malformation, intracranial aneurysms, Moya-Moya disease). Cavernous angiomas require specialist evaluation.4. History of a cerebrovascular accident (stroke, transient ischemic attack [TIA], subarachnoid hemorrhage). Asymptomatic disease of the carotid or vertebral arteries requires specialist evaluation.
+
+5. History of infection of the nervous system within 2 years, or with residual neurologic defects that may compromise performance of duties:
+A. Uncomplicated viral meningitis and other central nervous system infections without residual neurologic sequelae are evaluated on a case-by-case basis.
+B. History of encephalitis is disqualifying.6. Peripheral or central nervous system demyelinating disease (e.g., multiple sclerosis). Acute inflammatory demyelinating polyneuropathy without neurologic sequelae after 5 years requires specialist evaluation.7. History of metabolic, toxic, or nutritional disorders of the nervous system without residual neurologic sequela requires specialist evaluation.8.  History of elevated intracranial pressure.9. Congenital or developmental abnormalities of the nervous system that interfere with the performance of duties.10. Personal history of diseases of hereditary neurologic disorders or hereditary disorders with neurologic features (e.g., neurofibromatosis, Huntington's chorea, hepato-lenticular degeneration, spinocerebellar ataxia, muscular dystrophy, familial periodic paralysis, and congenital lower spastic paraparesis). Family history of neurologic disorders or hereditary disorders with neurologic features such as the above unless it is determined that such disorders have not been transmitted to or will not be expressed in a given subject and requires specialist evaluation.11. History of seizure disorders:
+A. Febrile convulsions before the age of 5 years are not disqualifying.
+B. History of single seizure without neurologic sequelae after 5 years requires specialist evaluation.
+C. Benign age-related seizures (e.g., Juvenile Myoclonic Epilepsy) require specialist evaluation.12. History of craniotomy or skull defects that interfere with the performance of duties. Craniotomy performed more than 5 years earlier with no skull defects requires specialist evaluation.13. History of traumatic brain injury associated with any of the following:
+A. Any loss of consciousness or amnesia requires specialist evaluation.
+B. Intracerebral and/or subdural hemorrhage.
+C. Penetrating injuries or laceration of the brain.
+D. Skull fractures require specialist evaluation.
+E. Imaging evidence of retained intracranial metallic or bony fragments.
+F. Absence of bony substance of skull.
+G. Parenchymal central nervous system injury with persistent neurologic deficits.
+H. Cerebral leptomeningeal cysts, aerocele, brain abscess, traumatic central nervous system (CNS) infections, or arteriovenous fistula.
+I. Transient cerebrospinal fluid rhinorrhea or otorrhea requires specialist evaluation.
+J. Post-traumatic syndrome manifested by changes in personality, deterioration of higher
+intellectual functions, anxiety, headaches, or disturbances of equilibrium for more than 3
+
+months is disqualifying, and for less than 3 months may be disqualifying and requires specialist evaluation.14. Migraine headache with visual or motor involvement, or any continuous or incapacitating headache:
+A. History of acephalgic migraine requires specialist evaluation.
+B. History of chronic headaches without recurrence for 10 years requires specialist evaluation.15. History of electroencephalogram (EEG) abnormalities with historical, clinical, or supporting laboratory evidence of a neurologic abnormality requires specialist evaluation.16. Disorders or injuries of peripheral nerves that interfere with performance of duties:
+A. Uncomplicated Bell's palsy without sequelae after 6 months is considered on a case-by-case basis.
+B. Cervical or lumbar radiculopathy. History of cervical or lumbar radiculopathy requires specialist evaluation.17. Movement disorders (e.g., Tourette's syndrome, dystonia, or chorea). Essential tremor requires specialist evaluation.18. Disorders of neuromuscular transmission (e.g., myasthenia gravis) and myopathies.19. Neurodegenerative disorders (e.g., Parkinson's and related disorders or amyotrophic lateral sclerosis [ALS]).20. History of chronic pain syndromes requiring medical intervention or medical therapy within last 10 years is disqualifying; if greater than 10 years prior, requires specialist evaluation.7O	PSYCHIATRIC DISORDERS AND SUITABILITY FOR SPACE FLIGHT1. The NASA Clinical Psychiatrist/Psychologist ensures, based on available data, that a past or present diagnosis of a psychiatric disorder meets the criteria established in the most recent edition of DSM-5, Diagnostic and Statistical Manual of Mental Disorders (DSM):
+A. Any behavior or mental condition that, in the opinion of the examiner, makes or is likely to make, the individual a hazard to flight safety, crew coordination, or mission execution.
+B. Neurodevelopmental disorders that interfere with social or occupational functioning or that require ongoing treatment.
+C. Presence or history of schizophrenia spectrum and other psychotic disorders.
+D. Presence or history of bipolar and related disorders.
+E. Presence or history of depressive disorders.
+F. Presence or history of anxiety disorders.
+G. Presence or history of obsessive-compulsive and related disorders.
+H. Presence of trauma- and stressor-related disorders, or history of trauma- and stressor-related disorders that may interfere with the performance of duties.
+I. Presence or history of dissociative disorders.
+
+J. Presence or history of somatic symptom and related disorders.
+K. Presence or history of feeding and eating disorders.
+L. Presence of sleep-wake disorders or a history of sleep-wake disorders that may interfere with the performance of duties.
+M. Presence of dysphoria, affective distress, or other affective states (e.g., elevated mood) of any etiology that may interfere with the performance of duties.
+N. Presence or history of disruptive, impulse-control and conduct disorders, present or history of substance-related and addictive disorders.
+O. Presence of neurocognitive disorders or history of neurocognitive disorders if there is a likelihood of recurrence or evidence of residual deficits of cognition, memory, judgment, insight, or behavior.
+P. Presence or history of personality disorders (an inflexible, maladaptive, and enduring pattern of personal interaction that has been present since early adulthood).
+Q. Presence or history of paraphilic disorders.
+R. Presence or history of abuse or neglect of a child or adult.
+S. Other conditions that may be a focus of clinical attention (V-Codes) that may interfere with the performance of duties.2. The NASA Psychologist/Psychiatrist ensures, based on available evidence from comprehensive assessment of mission-relevant space flight psychological competencies such as performance under stress, group living, self-management, teamwork, communication, judgment, and decision-making that an individual is deemed suitable for space flight:
+A. An individual can be deemed unsuitable for space flight for characterological behaviors or personality traits that represent lower levels of signs and symptoms than those required for a disorder under Table 10, paragraph 4.22.1, if in the opinion of the examiner, such characteristics present risks to crew cohesion, flight safety, or mission execution. A determination of unsuitability is not a medical diagnosis.
+B. Difficulties functioning as a team member or crewmate in an operational setting. A history of poor or unstable work or interpersonal relationships or personality traits that interfere with the forming and maintenance of social connections or functioning cooperatively with others as a teammate or astronaut. This may include personality traits or characteristics such as self-centeredness (egocentrism), lack of concern for others, arrogance, entitlement, lack of empathy, insensitivity, and social avoidance or withdrawal.
+C. Poor self-management or regulation. A pattern of behavior or traits that suggest poor impulse control. Examples may include a history of arrests, illicit drug use, social "acting out," or other misconduct or irresponsible behaviors that indicate poor impulse control, lack of judgment, difficulty with authority, or disregard for social norms and rules; maladaptive internalizing behaviors such as self -damaging behaviors, and substance misuse.
+D. Limited or poor stress tolerance. A history of physical or psychological problems when under stress, evidence of poor stress-coping skills or resilience, emotional instability, or other traits or behaviors that suggest an impaired capacity to adapt to stressful situations.
+E. Poor self-awareness or emotion management. Poor insight or awareness into one's
+impact on others such as deficiencies in self -knowledge and emotional awareness, or in
+
+the ability to understand or manage emotions that disrupt personal relationships or team or crew cohesion and effectiveness.7P	OBSTETRICS AND GYNECOLOGY1.  Any disorder of the gynecologic system that may interfere with the performance of duties.2. Any acute or chronic disorder of the uterus and/or adnexa that may interfere with the performance of duties (e.g., endometriosis). History of any chronic disorder of the uterus and/or adnexa that is adequately managed requires specialist evaluation.3. Dysmenorrhea or other irregularities of the menstrual cycle such as premenstrual syndrome that may interfere with performance of duties.4. History of recurrent abnormal uterine bleeding or menorrhagia may require specialist evaluation.5. Chronic or recurrent infections or inflammation of the endopelvic organs. History of a single episode of pelvic inflammatory disease requires specialist evaluation.6. History of gynecological malignancies. History of carcinoma in situ of the cervix requires specialist evaluation.7. History of recurrent, symptomatic ovarian cysts or history of recurrent corpora hemorrhagica unless definitively resolved.8. Any menstrual abnormality caused by polycystic ovarian conditions, anovulation, or disorders of the hypothalamic-pituitary-ovarian axis requires specialist evaluation.9. Any chronic dermatologic condition of the vulva and/or vestibule requires specialist evaluation.10. Obstetrical:
+A. All candidates are examined while not pregnant. Pregnancy itself will not be cause to deny appointment as a candidate.
+B. Pregnancy is disqualifying for space flight until complete post-partum recovery.7Q	DENTAL1. Any dental defects that interfere with clear speech or cause changes in the contours of the face that interfere with the performance of duties.2. Complete edentulism in either the mandible and/or maxilla or insufficient number of natural healthy teeth to masticate a normal diet or enunciate clearly.3. Dental prostheses:
+A. Any removable dental prosthesis, which if lost or broken, would not leave enough natural healthy teeth to masticate a normal diet or enunciate clearly.
+B. Any unilateral removable dental prosthesis that could be swallowed.
+
+4. Diseases and abnormalities of the jaws or associated structures, including periodontal disease, that are not easily remedied or may interfere with the performance of duties.5. Severe malocclusion that interferes with the mastication of a normal diet or clear enunciation.6. Any dental defects such as dental caries, dental dysplasia, enamel dysplasia, symptomatic cracked teeth, defective restorations, defective prosthesis, and defective implants until resolved.7. Partially erupted or impacted third molar teeth with the potential to cause erosion of adjacent teeth, pericoronitis, or periodontal defect until corrected.8.  Infections of endodontic or periodontic origin until resolved.9. Active orthodontic treatment requires dental consultation. Active orthodontic treatment is disqualifying for space flight duties.7R	INFECTIOUS DISEASE1. Acute or chronic infectious disease until appropriately treated that might compromise mission operations, performance of duty, or crew health and safety.2. Tuberculosis:
+A. Active tuberculosis.
+B. History of active tuberculosis, unless 2 years have elapsed following appropriate therapy (as per current Centers for Disease Control and Prevention [CDC] guidelines) and evaluations show the individual free from active disease.
+C. Documented conversion of the Tuberculin Skin Test or positive Interferon Gamma
+Releasing Assay (IGRA). Specialist evaluation required following treatment with anti- tuberculosis drugs as per current CDC guidelines.3.  History of malaria or other blood-borne parasites, unless adequately treated and cured.4. Clinical or laboratory evidence of HIV infection or Acquired Immune Deficiency Syndrome (AIDS).5.  Lyme disease, unless adequately treated.6. Viral hepatitis:
+A. History of hepatitis B, unless laboratory evidence of seroconversion and at least 1 year has passed since full recovery. Chronic hepatitis B carrier state is disqualifying.
+B. History of hepatitis C until 1 year after completion of CDC-approved treatment with eradication of viral load.7. Herpes simplex virus type I or type II that may interfere with performance of duties or compromise crew health.8. History of Herpes zoster, unless resolved for greater than 1 month and without post-herpetic neuralgia.9.  H. pylori carrier state, until adequately treated.
+
+10. Syphilis, gonorrhea, and chlamydia, unless adequately treated without sequelae.11. Non-immune status or lack of documented vaccination status against the following: Measles, mumps, rubella, tetanus, polio, diphtheria, pertussis, meningococcus, and pneumococcus.7S	RADIATION1. Per NASA-STD-3001, Volume 1, Revision A, section 4.2.10, the short-term radiation exposure limits shown in Table 12, NASA Short-term Ionizing Radiation Exposure Limits, have not been exceeded for any NASA astronaut. The current values are based on the use of Gray-Equivalents (Gy-eq) and relative biological effectiveness values provided by the National Council on Radiation Protection and Measurements (NCRP) Reports No. 132, Radiation Protection Guidance for Activities in Low-Earth Orbit.
+
+
+Table 12 - NASA Short-term Ionizing Radiation Exposure Limits
+
+
+
+
+
+
+
+Short-term exposure limits are designed to prevent deterministic effects resulting from acute exposure. Each planned exposure is managed in adherence to the as low as reasonably achievable (ALARA) principle, which directs that exposures always be maintained as low as reasonably achievable.2. Per NASA-STD-3001, Volume 1, Revision A, section 4.2.10, occupationally related sources of exposure throughout the career of any NASA astronaut result in no more than 3% probability of lifetime excess cancer mortality risk. NASA will ensure that these limits are not exceeded at a 95% confidence level based on a statistical assessment of the uncertainties.7T	ANTHROPOMETRY CRITERIA1. Failure to satisfy anthropometric criteria, including height and weight, which should be compatible with human factors for crewed space vehicles.
+
+APPENDIX A
+
+REQUIREMENTS COMPLIANCE MATRIX
+
+A.1	Purpose
+
+Due to the complexity and uniqueness of space flight, it is unlikely that all of the requirements in a NASA technical standard will apply. The Requirements Compliance Matrix below contains this NASA Technical Standard's technical authority requirements and may be used by programs and projects to indicate requirements that are applicable or not applicable. Follow the process for waiver in section 4.7 in this NASA Technical Standard. Enter "Yes" in the "Applicable" column if the requirement is applicable to the program or project or "No" if the requirement is not applicable to the program or project. The "Comments" column may be used to provide specific instructions on how to apply the requirement or to specify proposed waiver.
+
+
+Section
+Description
+Requirement in this StandardApplicable (Enter Yes
+or No)
+Comments4.2AMB Evaluation and
+Certification[STD 1] The examining physician shall present a candidate's evaluation results to the
+AMB.4.2AMB Evaluation and
+Certification[STD 2] The AMB shall determine if the candidate does or does not meet medical
+standards or requires further evaluations beforedisposition can be made.4.2AMB Evaluation and Certification for NASA
+(career) astronauts[STD 3] The AMB will review the medical records of all NASA (career) astronaut applicants at selection, and of each NASA (career) astronaut annually, and shall
+recommend qualification, disqualification, or conditional qualification (waiver for active astronauts) to the CHMO.4.2CHMO Final Disposition for
+NASA (career) astronauts[STD 4] The Chief Health and Medical Officer (CHMO) shall make thefinal disposition
+on qualifications and disqualifications of NASA (career) astronauts, based on review of the AMB recommendations.
+OCHMO-STD-100.1A
+
+
+
+Section
+Description
+Requirement in this StandardApplicable (Enter Yes
+or No)
+Comments4.3Waiver of Requirements[STD 5] The term "waiver" shall be used when a disqualifying condition is waived and
+the NASA (career) astronaut is conditionally medically certified.4.3Waiver of Requirements[STD 6] No waiver shall be granted on selection of career astronauts.4.3Waiver of Requirements[STD 7] For a NASA (career) astronaut waiver request, the examining physician shall
+provide a detailed presentation to the AMB of all relevant medical data and also address the following:
+
+a. An evidence-based review with data derived from themedical and
+aeromedical literature, as well as specialist consultant opinions detailing the potential risks associated with the condition, complications, and sequelae.
+
+b. A thorough consideration of the potential consequences of related medical events on mission safety and mission completion and on thepotential incremental health risk to the individual in the space/microgravity environment must be conducted.4.3Waiver of Requirements[STD 8] The examining physician shall notify the NASA (career) astronaut that his/her medical condition is being considered for waiver or disqualification from flight status.4.3Waiver of Requirements[STD 9] The Chief Health and Medical Officer (CHMO) shall make thefinal disposition on qualifications and disqualifications based on review of the AMB recommendations.
+The CHMO may delegate waiver decision authority to the AMB Chair for routine medication waiver renewal.5.1.1Medical Screening NASA
+Astronauts[STD 10] The examining physician shall perform medical screening, including the
+procedures and consultations in Table 2, Medical Evaluation Procedures, at selection and for annual recertification as indicated.5.3Medical Conditions to
+Consider for Selection and
+Annual Recertification of NASA Astronauts[STD 11] The examining physician shall determinethe suitability for selection and
+retention of NASA astronauts, using the conditions for disqualification specified in Table 7.
+        APPENDIX B TUBERCULOSIS (TB) TESTING
+B.1 PURPOSE
+This Appendix provides guidance regarding TB testing and a flowchart summarizing the recommendations. This includes guidance on BCG vaccination information, IGRA and TST considerations, and recommendations on TST and IGRA.
+
+B.2 TUBERCULOSIS SCREENING & MANAGEMENT GUIDANCE
+
+IGRA assays detect the secretion of interferon-? (INF-?) by T-lymphocytes which are stimulated by TB-specific antigens. Every effort should be made to confirm positivity (i.e., latent or active TB) before undertaking a treatment regimen.
+* If prior BCG vaccination, the initial screening test should be with IGRA, not TST.
+* If no prior BCG, initial screening test can be with either TST or IGRA.
+* If the initial IGRA is positive, to rule out a false positive (and thus avoid unnecessary treatment), a follow-up with TST or a different IGRA is required.
+* If the initial TST is positive, perform a confirmatory IGRA to rule out false positives from non-tuberculous mycobacterial infection within 3 days of TST placement. (This timing is to prevent boosting and false positives on the post-TST IGRA).
+
+B.3 TUBERCULOSIS SCREENING & MANAGEMENT FLOWCHART
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abbreviations
+BCG - Bacillus Calmette-Guérin CXR - chest X-ray
+IGRA - Interferon gamma release assay TB - tuberculosis
+TST - tuberculin skin test
+
+B.4 ASSUMPTIONS
+* Astronauts are comparable to health care workers (HCWs) in the articles addressing the challenges of latent tuberculosis infection (LTBI) testing in these low risk populations.
+* Astronauts are unlikely to be infected with Mycobacterium TB.
+* Astronauts will be undergoing serial testing in the absence of known exposure.
+* The majority of newly positive TSTs and IGRAs are due to false positive tests3.
+
+B.5 BCG VACCINATION
+* Consensus is to use IGRAs for determining TB infection status in BCG-vaccinated individuals because BCG vaccination reduces the specificity of TST11.
+
+B.6 IGRA CONSIDERATIONS
+* Among health care workers tested serially for LTBI, conversions from negative to positive and reversions from positive to negative are more commonly identified with IGRA than with TST1,5,11.
+o Routine serial testing of HCWs at low risk for TB infection is likely to result in FP conversions, which occur 6-9 times more frequently with IGRAs than with TST, and must be balanced against any logistical advantages from using IGRAs3.
+o More concerned about false positive seroconversion in low-risk populations6 sub-bullet.
+o Instability of IGRA results in annual retesting of HCWs and other low-risk cohorts2,4.
+
+B.7 TST CONSIDERATIONS
+
+* Cut-off matters: TST specificity is 99.3% when using the 15-mm cut-off for positive test results recommended by the CDC for persons at low risk of exposure or 96.8% when using the 10-mm cut-off7.
+
+B.8 DIAGNOSIS
+* The diagnosis of pulmonary TB should be suspected in patients with relevant clinical manifestations (cough > 2 to 3 weeks' duration, lymphadenopathy, fevers, night sweats, weight loss) and relevant epidemiologic factors (history of prior TB infection or disease, known or possible TB exposure, and/or past or present residence in or travel to an area where TB is endemic).
+
+B.9 RECOMMENDATONS ON TST AND IGRA
+* Annual or serial testing of astronauts: To standardize the interpretation of results, the same test should be used for the baseline and the later tests.
+* Unless astronaut has had BCG immunization, recommend TST for serial testing because of decreased likelihood of false positive conversions8.
+
+o Use a 15-mm cut-off for a positive TST7.
+* Because the prevalence of LTBI is very low in our populations, all positive TST and IGRA tests should be confirmed to reduce the likelihood of a false positive test diagnosis.
+o If initial test is IGRA and the result is positive, either repeat IGRA or perform a TST to confirm positive results before initiating treatment for LTBI.
+o If initial test is a TST and the result is positive, perform IGRA within 3 days of the TST to minimize boosting the IGRA results. The person is considered infected only if both tests are positive2,6.
+o Modify the up-to-date table "Approach to diagnosis of latent tuberculosis infection (tuberculosis screening) in individuals who require serial testing"8
+* If TST is positive with > 15 mm induration.
+* Perform IGRA within 3 days of the TST.
+* If IGRA is positive, treat for LTBI after excluding active TB.
+* If IGRA is negative, the TST is most likely a false positive result.
+
+B.10 BIBLIOGRAPHY
+1CDC (http://www.cdc/tb)
+o TB Elimination Interferon-Gamma Release Assays (IGRAs) - Blood Tests for TB Infection: https://www.cdc.gov/tb/publications/factsheets/testing/IGRA.pdf.
+o TB Publication Fact Sheets https://www.cdc.gov/tb/publications/factsheets/testing.htm.
+o Testing Health Care Workers: https://www.CDC.Gov/tb/topic/testing/healthcareworkers.htm.
+o Latent Tuberculosis Infection: A Guide for Primary Health Care Providers https://www.cdc.gov/tb/publications/ltbi/default.htm.
+
+2Collins, L.F., et al. "Diagnosis of Latent Tuberculosis Infection: Too Soon to Pull the Plug on the Tuberculin Skin Test." Ann Intern Med. 2016 Jan 19;164(2):122-4. doi: 10.7326/M15-1522. Epub 2016 Dec 8.
+
+3Dorman, S.E. "Interferon-? Release Assays and Tuberculin Skin Testing for Diagnosis of Latent Tuberculosis Infection in Healthcare Workers in the United States." Am J Respir Crit Care Med Vol 189, Iss 1, pp 77-87, Jan 1, 2014.
+
+4Gamsky, T.E., et al. https://www.atsjournals.org/doi/pdf/10.1513/AnnalsATS.201508-532OC Cumulative False-Positive QuantiFERON-TB Interferon-g Release Assay Results.
+
+5Getahun, H., et al. "Latent Mycobacterium Tuberculosis Infection." N Engl J Med 2015;2127- 35.
+
+6Lewinsohn, D.M., et al. "Official American Thoracic Society/Infectious Diseases Society of America/Centers for Disease Control and Prevention Clinical Practice Guidelines: Diagnosis of Tuberculosis in Adults and Children" https://www.ncbi.nlm.nih.gov/pubmed/28052967
+
+
+• Check W. CAPtodayonline.com/check-latest-tb-testing-guide-set-forth-by-ats-cdc-idsa/
+
+7Mancuso, J.D., et al. "Discordance among Commercially Available Diagnostics for Latent Tuberculosis Infection." Am J Respir Crit Care Med. Vol 185, Iss. 4, pp 427-434, Feb 15, 2012.
+
+8Menzies, D. https://www.uptodate.com/contents/approach-to-diagnosis-of-latent-tuberculosis- infection-tuberculosis-screening-in- adults?search=latent%20tb%20diagnosis&source=search_result&selectedTitle=1~150&u sage_type=default&display_rank=1#H1234054939. Topic last updated: Jan 24, 2020.
+
+9Quigen Manufacturer document. FAQs for Health Professionals QuantiFERON-TB Gold Plus. https://www.quantiferon.com/wp-content/uploads/2017/10/PROM-11178- 001_1107769_BRO-QFT-TB-Gold-Plus-FAQ-HCPs-0717-US.pdf.
+
+10USPSTF Recommendation Statement on screening for latent Tuberculosis Infection in Adults.
+JAMA.2016;316(9):962-969.
+
+11World Health Organization (WHO)
+o WHO Latent tuberculosis infection: Updated and consolidated guidelines for programmatic management. Executive Summary and Chapter 4, Testing for latent tuberculosis infection. http://www.who.int/tb/publications/2018/latent-tuberculosis- infection/en.
+o https://www.who.int/tb/publications/2018/executivesummary_consolidated_guideline s_ltbi.pdf?ua=1.
+
+APPENDIX C
+
+MEDICAL CERTIFICATION SPECIFIC TO MISSIONS TO THE INTERNATIONAL SPACE STATION
+
+The following is provided for informational purposes as an overview of the international certification process that is followed when NASA (career) astronauts or private individuals sponsored for flight by a government space agency, fly to the International Space Station.
+
+A set of international medical policy boards govern international space flight medical oversight activities. These boards and their organization are described in the Memorandum of Understanding (MOU) between NASA and the International Partners (see Article 11.4).
+
+The Multilateral Medical Operations Panel (MMOP) develops the medical requirements for selection and certification of all ISS astronauts (NASA career astronauts and International Partner government astronauts), space flight participants (SFPs), and astronauts training at international facilities. Please note that the definition of space flight participant as used in these international documents is different from its definition in this NASA-STD-3300, and is as follows:
+
+"ISS SFPs are individuals who are transported either by Soyuz or Space Transportation System (STS, Space Shuttle) to the ISS for commercial visitation or other purposes for short-term habitation (less than 30 days). Such individuals are generally fare-paying passengers. SFPs will not have primary operational duties or assignments, but may, in conjunction with supporting ISS agencies, be involved in short-term research activities. They will be trained in all applicable emergency and egress procedures".
+
+The following standards and requirements are used for international medical selection and evaluation for the ISS:
+
+      a. SSP 50667, Medical Evaluation Document (MED), Volume A, Medical Standards for ISS Crewmembers-an international document that contains the ISS selection and retention standards for government career astronauts (NASA or International Partner).
+
+      b. SSP 50667, Medical Evaluation Document (MED), Volume B, Preflight, In-flight, and Postflight Medical Evaluation Requirements for Increment-Assigned ISS Crewmembers-the international document that contains the pre-, in-, and postflight medical testing and evaluations for long-duration missions.
+
+      c. SSP 50667, Medical Evaluation Document (MED), Volume C, Medical Standards and Certification Procedures for Space Flight Participants-the international document that contains the medical standards and certification procedures for short-duration space flight participant missions.
+
+The Multilateral Space Medicine Board (MSMB) reviews the pertinent medical information for all individuals assigned to or visiting the ISS or training at international facilities and determines individual medical certification.
+
+A waiver or restriction may also be assigned, if appropriate.
+
+All International Partners (IPs) may follow their own procedures in conducting selection, annual, and pre- and post-flight medical evaluations for ISS astronauts and long-duration candidates, as long as the evaluation requirements and standards outlined in SSP 50667, MED, Volumes A, B, and C, are followed.
+
+Medical certification by the MSMB is valid for a period of 1 year following the last medical examination. Temporary extensions of MSMB medical certification may be authorized for a period of up to 90 days by CHMO.
+
+APPENDIX D
+
+Guidelines for Spaceflight Participants
+
+D.1 PURPOSE
+This Appendix provides guidance for testing of spaceflight participants on selection and annual recertification. Spaceflight participants as defined for this appendix are not NASA career astronauts and do NOT perform safety critical tasks (e.g. piloting of a vehicle, EVAs, robotic operations etc.) and are in mission for a limited time period (e.g. 30 days or less).
+
+D.1.1 Overview
+
+Medical Evaluation Procedures for Private Astronaut Space Flight Participants
+
+Space Flight Participants Overview1
+1. Comprehensive medical questionnaire2. Full aeromedical physical examination (FAA or Equivalent)3. Special assessments and imaging procedures (as described in Table x)4. Laboratory testing (as described in Table x)
+
+1 - May be completed using the NASA Medical Survey or other similar questionnaire. The following areas should be included: Past medical history and background information; psychosocial and psychiatric history including DWI and drug-related convictions; personal habits/lifestyle issues; travel history (past year); medication review, including non-prescription and herbal medications, food supplements, vitamins and minerals; systems review; physical activities and sports.
+
+
+D.1.2 Laboratory Tests for Selection and Annual Recertification of Space Flight Participants
+
+The following laboratory tests are recommended for spaceflight participants:
+
+Hematology/thrombophilia screenSelectionAnnualComplete Blood Count - To include hemoglobin, hematocrit, red blood cell count, red blood cell indices, white blood cell count, differential count, platelet count??Screening tests for thrombophilia: Prothrombin time (PT) and partial thromboplastin time (PTT)?ABO Group & Rh Type?
+BiochemistrySelectionAnnualLiver function - Aspartate aminotransferase (AST), alanine aminotransferase (ALT), gamma-glutamyl transferase (GGT), bilirubin, alkaline phosphatase (ALP)??Renal function - Urea, creatinine, electrolytes (Na [sodium], Cl [chloride], K [potassium]), uric acid??Endocrine - TSH??Prostate specific antigen (males over age 40)??HbA1C, fasting blood glucose??Cardiovascular profile - Fasting total cholesterol, high-density lipoproteins (HDL), low-density lipoprotein (LDL), triglycerides, high-sensitivity C- reactive protein (hs-CRP)??Calcium, magnesium, inorganic phosphate??Ionized calcium??Continued on following page
+
+The following laboratory tests are recommended for spaceflight participants (continued)
+
+Infectious Disease ScreenSelectionAnnualHepatitis A?Hepatitis B (Hepatitis B surface antigen, Hepatitis B core antibody, Hepatitis B surface antibody)??Hepatitis C??Serologic screen for syphilis (VDRL or RPR or equivalent)?HIV?Tuberculosis (TB) screening utilizing a tuberculin skin test (TST) or interferon gamma releasing assay (IGRA) (either QFT-G or T- SPOT). Refer to Appendix B for detailed Tuberculosis screening and management guidance??Vaccine immune status??H. Pylori breath test?
+UrinalysisSelectionAnnualRoutine (specific gravity, glucose, protein, pH, ketones, blood), microscopic??Human chorionic gonadotropin (hCG) (females) (urine)?
+Drug screening, urineSelectionAnnualDrug screen in-house for drugs of abuse?
+D.1.3 Specialist Assessments for Selection and Annual Recertification of Space Flight Participants
+
+The following are recommended specialist assessments for Selection and Annual Recertification of Space Flight Participants:
+
+
+Ophthalmology
+Specialist assessment (optometrist)SelectionAnnualVisual acuity (Snellen or Landolt-C)??Near vision??Color vision (computer-based test, Ishihara, or equivalent pseudo-isochromatic plates [PIPs] to include red-green and blue-yellow)??Cycloplegic refraction??Tonometry??Perimetry??Fundoscopic examination??
+Otolaryngology/ENTSelectionAnnualAudiometry (pure tone audiogram and speech audiogram, if indicated)??Tympanogram??
+DentalSelectionAnnualSpecial Assessment by Dentist??Full orthopantomogram or full mouth X-ray series)?Continued on following page
+
+The following are recommended specialist assessments for Selection and Annual Recertification of Space Flight Participants (continued):
+
+
+CardiopulmonarySelectionAnnualResting 12-lead electrocardiogram (ECG)??Direct or indirect measurement of cardiorespiratory fitness (CRF) in ml/kg/min or METS) on maximum exercise stress test??24-Hour ECG monitoring?Coronary calcium scoring (>50 yrs old)?* Within the last 5 years?GastroenterologySelectionAnnualColonoscopy (as clinically indicated)?* At or over 50: within the last 5 years?* At or over 40: within the last 5 years if family history positive for colon cancer?
+
+NeurologySelectionAnnualMRI of brain, MRI angiogram?Carotid Ultrasound Study (to include intima- medial thickness and/or carotid plaque area)?Continued on following page
+
+The following are recommended specialist assessments for Selection and Annual Recertification of Space Flight Participants (continued):
+
+
+Behavioral Health EvaluationSelectionAnnualPsychodiagnostic Assessment* Based on the most recent edition of the Diagnostic and Statistical Manual of Mental Disorders, the American Psychiatric Association.??Psychological Suitability Assessment??Radiological /Ultrasound ProceduresSelectionAnnualChest X-ray (PA and lateral)?* Within the last 5 years?Thyroid ultrasound (as clinically indicated)o* Within the last 5 years?Abdominal and pelvic ultrasound?* Within the last 5 years?Bone mineral density - dual energy x-ray absorptiometry (DXA) scan
+(as clinically indicated)oo Clinically indicated
+
+APPENDIX E
+
+REFERENCES
+
+E.1 PURPOSE
+
+This Appendix provides references to guidance documents related to this NASA Technical Standard.
+
+E.1.1 References
+
+Memorandum of Understanding (MOU) between NASA and the International Partners (Article 11.4)
+
+NPD 1382.17, NASA Privacy Policy
+
+SSP 50667, Medical Evaluation Document (MED), Volume A, Medical Standards for ISS Crewmembers
+
+SSP 50667, Medical Evaluation Document (MED), Volume B, Preflight, In-flight, and Postflight Medical Evaluation Requirements for Increment-Assigned ISS Crewmembers
+
+SSP 50667, Medical Evaluation Document (MED), Volume C, Medical Standards and Certification Procedures for Space Flight Participants
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

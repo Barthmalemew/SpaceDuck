@@ -1,0 +1,619 @@
+JSC 22538
+
+Flight Crew Health Stabilization Program
+Human Health and Performance Directorate
+
+
+
+
+Revision F
+
+
+
+
+July 2021
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+National Aeronautics and Space Administration Lyndon B. Johnson Space Center
+Houston, Texas
+
+
+NASA APPROVAL SHEET
+Flight Crew Health Stabilization Program Human Health and Performance Directorate
+
+
+CONCURRED:				
+Joel Montalbano	DATE
+Manager, International Space Station Program
+
+
+
+
+Steve Stich	DATE
+Manager, Commercial Crew Program
+
+
+
+Tom Whitmeyer	DATE
+Deputy Associate Administrator
+Common Exploration Systems Development
+
+
+
+
+David Tipton, M.D.	DATE
+Chief Medical Officer, Kennedy Space Center
+
+
+
+Robert Mulcahy, M.D., M.P.H.	DATE Lead Surgeon, Health Stabilization Program
+
+
+
+
+Gary Beven	DATE
+Chief, Space Medicine Operations Division
+NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
+Lyndon B. Johnson Space Center Houston, Texas
+
+
+
+NASA APPROVAL SHEET
+  Flight Crew Health Stabilization Program Human Health and Performance Directorate
+
+
+APPROVED BY:				
+John T. Sims	DATE
+Director, Human Health and Performance Directorate
+
+
+
+
+
+Terrance Taddeo, M.D.	DATE
+Chief Medical Officer, Johnson Space Center
+
+
+
+
+Reid Wiseman	DATE
+Chief, Astronaut Office
+
+
+
+
+
+Norman Knight	DATE
+Director, Flight Operations Directorate
+
+
+NATIONAL AERONAUTICS AND SPACE ADMINISTRATION
+Lyndon B. Johnson Space Center Houston, Texas
+
+REVIEW AND CHANGE PROCESS
+The Health Stabilization Program (HSP) team within the Human Health & Performance Directorate (HH&P) coordinates reviews of this document every 5 years or as needed, in accordance with JSC quality management system practices.
+CHANGE HISTORY
+
+RevisionDateOriginator / PhoneDescriptionJSC 11852Feb 1987Richard JenningsShuttle Health Stabilization Program for the Orbital Flight TestJSC 22538Mar 1988Karen MathisHealth Stabilization Program for the Space Transportation SystemRev. BFeb 1993Karen MathisHealth Stabilization Program for the Space Shuttle ProgramRev. CMar 2005  Christina Stevens/46142Flight Crew Health Stabilization ProgramRev. DFeb 2010  Christina Stevens/46142
+Flight Crew Health Stabilization Program
+
+Rev. D includes additional sections on Influenza, Occurrence and Variances, Roles and Responsibilities, Temporary PC clearance, Aircraft flight crew clearance and educational briefing content.Rev. ENov 2016    James Pattarini/46843
+Flight Crew Health Stabilization Program
+
+Rev. E reflects updates to site responsibility descriptive language for return to U.S. Crewed Vehicle support at KSC with CCP integration, and updates stabilization plan contact group designations and quarantine guidelines to align with MMOP approved SSP 50480-ANX1Rev. FJan 2021    Robert Mulcahy/27972
+Flight Crew Health Stabilization Program
+
+Rev. F includes extensive updates based on implementation experience from early CCP launches.
+
+TABLE OF CONTENTS
+
+PURPOSE	7
+SCOPE	7
+AUTHORITY DOCUMENTS	7
+APPLICABLE DOCUMENTS	7
+REFERENCE DOCUMENTS	8
+5.1 RUSSIAN REFERENCE DOCUMENTS	8
+HSP IMPLEMENTATION FOR U.S LAUNCHES	8
+PERSONNEL GROUPS	9
+7.1 GENERAL REQUIREMENTS	9
+7.2 GROUP A	11
+7.3 GROUP B	12
+7.4 GROUP C	13
+7.5 GROUP D	13
+7.6 IMMUNIZATIONS	14
+7.7 REQUIREMENTS SUMMARY	15
+7.8 REQUIREMENTS TIMELINE	16
+7.9 QUARANTINE ENTRY OPTIONS FOR GROUPS A & B	16
+7.9.1 OPTION 1 - ENTRY AT L-14 DAYS	16
+7.9.2 OPTION 2 - ENTRY AFTER L-14 DAYS	16
+ROLES AND RESPONSIBILITIES	17
+8.1 INFECTIOUS DISEASE CONTROL TEAM	17
+8.2 HSP LEAD SURGEON/DESIGNATED LEAD OF INFECTIOUS DISEASE CONTROL TEAM (DL- IDCT)	18
+8.3 HSP COORDINATOR	18
+8.4 VITO CHIEF	18
+8.5 CREW SURGEON(S) AND COMMERCIAL PROVIDER/INTERNATIONAL PARTNER/PRIVATE ASTRONAUT MISSION CREW SURGEON(S)	19
+8.6 LAUNCH FACILITY MEDICAL REPRESENTATIVE(S)	19
+8.7 BEHAVIORAL HEALTH AND PERFORMANCE ADVISOR(S)	19
+8.8 QUARANTINE FACILITY REPRESENTATIVE(S)	19
+8.9 COMMERCIAL PROVIDER REPRESENTATIVE(S)	20
+
+
+8.10 INTERNATIONAL PARTNER REPRESENTATIVE(S)	20
+8.11 PRIVATE ASTRONAUT MISSION REPRESENTATIVE(S)	20
+8.12 RESTRICTED ACCESS FACILITY MANAGER(S)	20
+8.13 LAUNCH FACILITY MEDICAL PROVIDER(S)	21
+8.14 FOOD SERVICE WORKERS	21
+8.15 PROTECTIVE SERVICES	21
+FACILITIES	22
+9.1 QUARANTINE FACILITIES	22
+9.2 RESTRICTED ACCESS FACILITIES	22
+9.3 GENERAL ACCESS FACILITIES	23
+DEVIATIONS, OCCURRENCES, AND VARIANCES	23
+10.1 PRE-FLIGHT: WAIVER PROCESS	23
+10.2 POST-FLIGHT: DEVIATIONS, OCCURRENCES, AND VARIANCES REPORTING	23
+DORMANCY AND REACTIVATION	24
+APPENDICES
+APPENDIX A.	ACRONYMS AND ABBREVIATIONS	25
+APPENDIX B.	OPEN WORK	27
+
+
+ PURPOSE
+
+This document establishes requirements for the United States (U.S.) Human Space Flight Program relating to the Flight Crew Health Stabilization Program (HSP) for launches from the
+U.S. The HSP constitutes the U.S. implementation of internationally approved health stabilization guidelines for the prevention of infectious disease specified in SSP 50480-ANX1.
+
+SCOPE
+This document delineates the medical operations requirements for the NASA HSP. The HSP goals are accomplished through an awareness campaign and procedures such as limiting access to crewmembers, medical screening, vaccinations, and restriction of crewmember activities.
+The medical operations requirements baselined in this document are applicable to crewed space flight vehicles launched from the U.S. for NASA missions, or that involve NASA assets such as NASA astronauts, the International Space Station (ISS), or other orbital resources such as the Orion Vehicle, and Advanced Exploration Systems (AES) Programs' vehicles, including but not limited to, Gateway and Human Landing System (HLS) vehicles.
+AUTHORITY DOCUMENTS
+NASA Policy Directive (NPD) 8900.1, Medical Operations Responsibilities in Support of Human Space Flight Programs; NPD 8900.3, Astronaut Medical and Dental Observation Study and Care Program; and NASA Procedural Requirement (NPR) 1800.1, NASA Occupational Health Program Procedure, authorize the specific provision of medical service.
+APPLICABLE DOCUMENTS
+The following documents include specifications, models, standards, guidelines, handbooks, and other special publications. These documents are applicable to the extent specified within this document.
+
+DOCUMENT NUMBERTITLEJSC 67627Pre-Launch and Post-Landing Food Service Operational ProceduresNO NUMBERPrivacy Act of 1974, as amendedNO NUMBERHealth Insurance Portability and Accountability Act of 1996 (HIPAA)NO NUMBERHSP Cleaning InstructionsNO NUMBERHSP Immunization MatrixNPD 8900.1Medical Operations Responsibilities in Support of Human Space Flight ProgramsNPD 8900.3Astronaut Medical and Dental Observation Study and Care Program
+
+
+NPR 1800.1NASA Occupational Health Program ProceduresSSP 50480-ANX1Guidelines and Procedures for the Prevention of Infectious Disease Transmission to ISS Crewmembers
+REFERENCE DOCUMENTS
+The following documents contain supplemental information to guide the user in the application of this document. These reference documents may or may not be specifically cited within this document.
+
+DOCUMENT NUMBERTITLEESD 10024Exploration Systems Development Medical Operations Requirements Document (MORD)SSP 50260International Space Station Medical Operations Requirements DocumentSSP 50667Medical Evaluation Documents (MED) Volumes A and B
+5.1 RUSSIAN REFERENCE DOCUMENTS
+
+DOCUMENT NUMBERTITLENO NUMBERRegulations on Space Mission Pre-Launch and Post-Flight Sanitary, Hygienic and Anti-epidemic Support, 2001NO NUMBERGuide for Medical Support of Manned Space FlightsNO NUMBERCosmonaut Healthcare Methodologic InstructionNO NUMBERRegulations for Cosmonaut Training Center's Operational Group at the Cosmodrome
+HSP IMPLEMENTATION FOR U.S LAUNCHES
+NASA's Human Space Flight Program uses strategic risk mitigation to achieve mission success while protecting crew health and safety. Infectious diseases can compromise crew health and mission success, especially in the immediate preflight period. The primary purpose of the HSP is to mitigate the risk of occurrence of infectious disease among astronaut crews during the mission. Infectious diseases are spread through person-to-person contact, via vectors, and through contact with infectious material in the environment. The HSP establishes several controls to minimize crew exposure to infectious agents and to maintain immune status.
+
+
+As applicable, biomedical data on crewmembers and HSP participants becomes a protected part of their individual medical record. Provisions of the Privacy Act of 1974 as amended and Health Insurance Portability and Accountability Act of 1996 (HIPAA) regarding control of records, information exchange, and release of health information to the public are strictly followed.
+
+PERSONNEL GROUPS
+Individuals who must have close contact (within 6 feet / 2 meters for any duration) with the crew or will enter quarantine facilities during the quarantine period are identified as HSP participants. HSP participants may also be referred to as Primary Contacts (PCs). Astronaut crewmembers are HSP participants. The Flight Operations Directorate (FOD) authorizes HSP participant status based on the job duties during the pre-launch quarantine period.
+Alternatively, for Private Astronaut Missions (PAM) without NASA crew, the PAM provider may authorize HSP participant status. Individuals without HSP participant status are not permitted close contact with crew or access into quarantine facilities during the quarantine period unless authorized by the HSP Lead Surgeon. The type and duration of interaction dictates the specific requirements for HSP participants.
+Personnel Groups - Approximate Historical Correlation
+
+HSP REV DSSP-50480-ANX1HSP REV EHSP REV FPrimary Contact (PC)Operational Group (OG)OG Option AGroup ACrew FamilyPersonal ContactsCrew Family & Personal ContactsGroup APCOGOG Option BGroup BPCStaff with Access to Crew Quarters, without Crew ContactStaff With Access To Crew Quarters Or Crew Vehicle, Without Crew ContactGroup CExtended Family & Guests & VIPsGuests & VIPsSpecial Guests & VIPsGroup D7.1 GENERAL REQUIREMENTS
+These requirements apply to the HSP participant groups described in sections 7.2-7.4 (Groups A-C). Additional group-specific details are identified in the subsequent sections.
+
+
+A. Education - All HSP participants shall complete annual HSP training. Training may be delivered by means of computer-based training, written document, or presentation. This educational training shall include discussion, and where applicable, demonstration of specific preventive techniques. The NASA HSP team will provide training materials for all NASA personnel. Other organizations such as Commercial Providers or International Partners may provide their own educational briefings to satisfy this requirement. NASA shall assess whether the education materials provided satisfy the education requirement.
+B. Medical Screening - Shall be performed per the group-specific requirements in the subsequent sections. Initial and periodic screening may be required. If temperature is measured, fever is defined as 100.4º F or greater.
+C. Immunization - Appropriate immunization provides a high degree of protection against specific pathogens. Immunizations shall be verified per the group-specific requirements in the subsequent sections.
+D. Quarantine Period - The quarantine period begins at close of business fourteen days prior to launch (L-14 days). The quarantine period ends after launch (once the spacecraft departs the launchpad with astronauts onboard). However, if vehicle, weather, or other factors cause a significant delay, HSP Lead Surgeon will determine whether to extend the quarantine period or terminate until a new launch date is established.
+E. Quarantine Measures
+1. Social Distancing - Limit close contact (definition in section 7.0) with others to the greatest extent possible.
+2. Respiratory Hygiene - Use respiratory Personal Protective Equipment (PPE). Cough or sneeze into a sleeve or tissue. Follow with immediate hand hygiene.
+3. Hand Hygiene - Frequently clean hands using alcohol-based sanitizer (minimum alcohol content = 60%) or soap & water. Clean hands after touching surfaces or other people.
+4. Limitation of Exposure - Minimize exposure to infectious disease threats (avoid crowds, sick contacts, etc.). Symptomatic or sick personnel shall not participate in quarantine until determined to be no longer infectious by HSP Lead Surgeon.
+5. Self-Monitoring - Monitor for signs or symptoms of infectious disease. Report concerns to supervisor and HSP team. Do not report to work if potentially unwell.
+F. PPE - When required, PPE nominally consists of a surgical mask or better. Gloves may be utilized, but thorough hand hygiene is considered to be a higher priority. In circumstances requiring the use of a mask to protect others, or an N95 respirator to protect the wearer, cloth face coverings shall not be used as a substitute. Masks or respirators with valves shall not be used.
+G. Identification - Within the quarantine period, HSP participants shall be visually identifiable, either by badging or similar means such as badge placards or stickers.
+H. Duration of Contact - Shall minimize duration of interpersonal contact with HSP
+
+
+participants and non-HSP personnel. For non-quarantine facility residents, shall minimize time in quarantine facilities.
+I. Responsibility - Shall carry personal responsibility for infectious disease prevention and undertake every available measure to protect their health.
+J. Emerging Threats or Other Concerns - HSP Lead Surgeon may implement measures or modifications to mitigate risk posed by emerging pathogens/threats, geographically- prevalent infectious disease, or other concerns. Measures may include (but are not limited to) targeted training, additional screening or testing, new immunizations, stricter quarantine measures, or vector control (eradication of pathogen-carrying organisms such as mosquitos).
+7.2 GROUP A
+BRIEF DESCRIPTION: Close contact without PPE.
+DEFINITION: Personnel who will live in quarantine facilities with the astronaut crewmembers, or who will have frequent close contact with the crew, their families, or others living in quarantine facilities. This group encompasses personnel who are included in the Operational Group (OG) in SSP 50480-ANX1.
+EXAMPLES: Crew, crew families, quarantine facility residents (e.g. CB chief, crew surgeons, FOD director, Vehicle Integration & Test Office [VITO] chief), immediate family escorts, and family services coordinators.
+REQUIREMENTS:
+A. Education - Shall complete the standard briefing.
+B. Medical Screening - Shall undergo pre-quarantine medical screening that may take place in person or electronically (per examining physician's discretion). Shall undergo periodic medical screening on a daily basis while residing in a quarantine facility. Periodic medical screening may also be required by HSP Lead Surgeon while residing outside of a quarantine facility.
+C. Immunization - Shall have up-to-date immunizations per 7.6. Exceptions are unlikely but shall be considered by the HSP Lead Surgeon on a case-by-case basis.
+D. Limitation of Exposure - Shall minimize infectious disease threats during the quarantine period by adhering to quarantine measures.
+1. Shall not visit stores or restaurants. Shall utilize delivery or contactless pick-up services instead.
+2. May perform in-person job duties that are related to the launch. For example, may meet with HSP participants for mission-related briefings, but shall not participate in unrelated in-person activities such as Neutral Buoyancy Laboratory (NBL) training or a Public Affairs Office (PAO) event.
+3. Commercial air travel is considered a break in quarantine. If traveling via private aircraft with non-HSP personnel, shall make every effort to separate HSP and non-HSP personnel on the ground and in-flight.
+
+
+E. Housing - Shall be billeted in sequestered accommodation such as the quarantine facilities described in 9.1. Home quarantine is permissible if the HSP requirements and these additional requirements can be met:
+1. Cohabitants shall not perform in-person work, school, or other activities.
+F. PPE - Shall utilize PPE while in close contact with personnel outside of this group.
+G. Late Entry - Permissible via pathway described in 7.9.2.
+7.3 GROUP B
+BRIEF DESCRIPTION: Close contact with PPE.
+DEFINITION: Personnel who may have close contact with the crew or Group A personnel, but who will not live in the quarantine facilities. Like Group A, this group encompasses personnel who are included in the OG in SSP 50480-ANX1.
+EXAMPLES: Commercial provider medical personnel, commercial provider suit technicians, food service workers, HSP team, suit room personnel, medical and nursing personnel working in Astronaut Crew Quarters (ACQ)/Crew Exam Facility (CEF), medical personnel supporting crew immediate families.
+REQUIREMENTS:
+A. Education - Shall complete the standard briefing.
+B. Medical Screening - Shall undergo pre-quarantine medical screening that may take place in person or electronically (per examining physician's discretion). Periodic medical screening may be required by HSP Lead Surgeon.
+C. Immunization - Shall have up-to-date immunizations per 7.6. Exceptions shall be considered by the HSP Lead Surgeon on a case-by-case basis.
+D. Limitation of Exposure - Shall minimize infectious disease threats during the quarantine period by adhering to quarantine measures.
+1. Shall not nominally visit stores or restaurants. Shall utilize delivery or contactless pick-up services instead when feasible. Shall limit store or restaurant visits to those required for HSP support when delivery is not feasible.
+2. May perform in-person job duties that are related to the launch. For example, may meet HSP participants for mission-related briefings, but shall not participate in unrelated in-person activities such as NBL training or a PAO event.
+3. Commercial air travel is considered a break in quarantine. If traveling via private aircraft with non-HSP personnel, shall make every effort to separate HSP and non-HSP personnel on the ground and in-flight.
+E. Housing - Home quarantine is permissible and expected if the HSP requirements can be met.
+F. PPE - Shall utilize PPE while in quarantine facilities or in close contact with HSP participants.
+G. Late Entry - Permissible via pathway described in 7.9.2. HSP Lead Surgeon may authorize late entry for members of this group without an observation period on a case-
+
+
+by-case basis.
+7.4 GROUP C
+BRIEF DESCRIPTION: Social distance and PPE.
+DEFINITION: Personnel who may access quarantine facilities but will not have close contact with the crew or Group A/B personnel.
+EXAMPLES: Quarantine facility administrative assistants, quarantine facility housekeeping, pad workers, Protective Services personnel who provide access control but do not come into close contact with the crew or Group A/B personnel.
+REQUIREMENTS:
+A. Education - Shall complete the standard briefing.
+B. Medical Screening - Shall undergo pre-quarantine medical screening that may take place in person or electronically (per examining physician's discretion). Periodic medical screening may be required by HSP Lead Surgeon.
+C. Immunization - Shall have up-to-date immunizations per 7.6. Exceptions shall be considered by the HSP Lead Surgeon on a case-by-case basis. Other vaccines not required for this group per 7.6 are strongly recommended.
+D. Limitation of Exposure - Shall minimize infectious disease threats during the quarantine period by adhering to quarantine measures.
+E. Housing - Home quarantine is permissible and expected, but these requirements shall be met:
+1. Shall not nominally visit stores or restaurants unless absolutely necessary. Strongly encourage delivery or contactless pick-up services instead.
+F. PPE - Shall utilize PPE while in quarantine facilities or when in close contact with HSP participants.
+G. Late Entry - Permissible without special restrictions.
+7.5 GROUP D
+BRIEF DESCRIPTION: Behind-the-glass (visit performed across a glass partition), or social distance and PPE.
+DEFINITION: Personnel do not meet the criteria for inclusion in the HSP, but in whom the HSP has an interest due to infrequent access to quarantine facilities, or behind-the-glass or socially distanced encounters with the crew. These personnel are not considered to be HSP participants and are not nominally subject to the requirements described in 7.1, but must meet the criteria described below before encounters.
+EXAMPLES: Aircrew and ramp workers involved in transportation of HSP participants, non-HSP crew family members, special guests, or Very Important Persons (VIPs) who meet with the crew
+
+
+via behind-the-glass or socially-distanced encounters, maintenance workers who must enter a quarantine facility to fix an issue.
+REQUIREMENTS:
+A. Education - N/A.
+B. Medical Screening - Shall undergo symptom and temperature screening prior to encounters (as applicable).
+C. Immunization - N/A.
+D. Limitation of Exposure - N/A.
+E. Housing - N/A.
+F. PPE - Shall utilize PPE during encounters.
+G. Late Entry - N/A.
+H. Duration of Contact - Shall minimize duration of encounters with crew and other HSP participants. Direct contact with crew or HSP participants such as handshakes or embraces is prohibited.
+I. Responsibility - Shall report suspected illness to HSP Lead Surgeon prior to any encounter with the crew or crew environments (as applicable).
+7.6 IMMUNIZATIONS
+All immunizations shall be administered by 14 days prior entry into quarantine to allow for effective immunity by the start of quarantine. Refer to the HSP Immunization Matrix for the individual requirements for each vaccine.
+For the purposes of the HSP, Flu Season begins on November 1 and ends on April 30. For launches scheduled outside but near this timeframe, HSP Lead Surgeon may require influenza vaccinations be received prior to or after Flu Season if vaccine is available.
+
+
+7.7 REQUIREMENTS SUMMARY
+
+REQUIREMENTGROUP AGROUP BGROUP CGROUP DEducationYYYNPre-Quarantine Medical Screening (Electronic or In- Person)YYYNPeriodic Medical Screening (Electronic or In-Person)Y
+(Daily screening required while residing in quarantine facility)Per HSP Lead SurgeonPer HSP Lead SurgeonY
+(In-person screening before encounters)ImmunizationsY
+(Exception unlikely)Y
+(Exception case-by- case)Y
+(Limited; Exception case-by-case)NSequestered HousingYNNNPPEN
+(Except when in close contact with personnel outside of Group A)YYYSocial DistancingNNYYQuarantine Entry After L-14 days AllowedY
+(With Observation Period)Y
+(With Observation Period, or Case-by- Case Without Observation Period)Y
+(Without Observation Period)N/A
+
+7.8 REQUIREMENTS TIMELINE
+
+TIMEFRAMEREQUIREMENTL-120 daysPreliminary Participant List Submission from Each Organization*L-45 daysMedical Forms DueL-28 daysImmunization CompletionL-21 daysTraining CompletionL-21 to L-14 daysPre-Quarantine Medical ScreeningL-14 to L-0 daysPeriodic Medical Screening (As Applicable)L-14 daysQuarantine BeginsL-0 daysQuarantine Ends After Launch*Changes to the HSP participant list are expected after the preliminary submission date and are handled on a case-by-case basis dependent upon the time of addition and individual ability to complete the HSP requirements on schedule. Submission of a preliminary list at this date provides adequate time for the HSP, VITO, and clinic teams to authorize HSP participation, enroll the participants in training, verify immunization status, and perform any necessary remediation steps while maintaining other ongoing non-HSP functions (e.g. fitness-for-duty exams in the clinics).
+7.9 QUARANTINE ENTRY OPTIONS FOR GROUPS A & B
+7.9.1 OPTION 1 - ENTRY AT L-14 DAYS
+A. Asymptomatic participants age 12 and older may enter quarantine via the nominal process.
+B. Children under the age of 12 are considered on a case-by-case basis upon request of the crewmember and in coordination with the sponsoring Agency. Assessment of infectious disease risk shall include evaluation for ability to adhere to control measures. An accompanying behavioral control person (e.g. family member in quarantine besides the crewmember, crew surgeons, or manager) shall be available. For ISS missions, additional criteria described in SSP 50480-ANX1 shall be met.
+7.9.2 OPTION 2 - ENTRY AFTER L-14 DAYS
+A. Asymptomatic participants age 12 and older entering quarantine after L-14 days shall complete a 7-day observation period before direct interactions with crewmembers or HSP participants. At a minimum, participants in an observation period shall receive a medical assessment at the start and end of the period, continuously self-monitor for
+
+
+symptoms of an infectious condition, and follow all quarantine measures. During the observation period, direct contact with crewmembers or HSP participants is restricted, but interactions across a glass partition and/or with social distancing are permitted.
+Following the observation period, and once approved by the HSP Lead Surgeon, participants may join the appropriate HSP participant group.
+B. Children under the age of 12 shall not enter quarantine after L-14 days, in accordance with SSP 50480-ANX1 (as applicable).
+C. Crew contact with additional measures such as PPE and/or social distancing may be allowed by HSP Lead Surgeon for critical encounters.
+D. Agencies sponsoring personal contacts are encouraged to arrange for travel prior to L- 14 days to avoid the requirements for observation or enhanced precautions.
+ROLES AND RESPONSIBILITIES
+The HSP Lead Surgeon, HSP Coordinator, Crew Surgeons, other medical providers, and FOD have the authority to revoke HSP participant status at any time to protect the health of the crewmembers or HSP participants.
+8.1 INFECTIOUS DISEASE CONTROL TEAM
+Oversight of infectious disease control will be implemented through the Infectious Disease Control Team (IDCT) in accordance with this document, and as applicable, SSP 50480-ANX1.
+The IDCT shall be comprised of the following representatives:
+1. HSP Lead Surgeon / Designated Lead of Infectious Disease Control Team (DL-IDCT)
+2. HSP Coordinator
+3. VITO Chief
+4. Crew Surgeon(s) and Commercial Provider/International Partner/Private Astronaut Mission Crew Surgeon(s)
+5. Launch Facility Medical Representative(s)
+6. Behavioral Health and Performance (BHP) Advisor(s)
+7. Quarantine Facility Representative(s)
+8. Commercial Provider Representative(s) (As Applicable)
+9. International Partner (IP) Representative(s) (As Applicable)
+10. Private Astronaut Mission (PAM) Representative(s) (As Applicable)
+HSP Lead Surgeon has decision authority on matters within the scope of the IDCT. Decisions are coordinated with the IDCT (as applicable) and are generally made by consensus of parties involved. For ISS operations, SSP 50480-ANX1 describes the process if consensus is not attained. For PAM operations, with NASA concurrence, IDCT roles that would nominally be filled by non- PAM personnel may be adapted or condensed to fit PAM provider staffing arrangements if the HSP requirements can be met.
+
+
+8.2 HSP LEAD SURGEON/DESIGNATED LEAD OF INFECTIOUS DISEASE CONTROL TEAM (DL- IDCT)
+1. Oversight of and responsibility for implementation of the HSP requirements in the pre-launch phase.
+2. Delegate appropriate duties to HSP Coordinator.
+3. Interface with BHP advisors regarding behavioral health aspects of infectious disease control activities for launching crewmembers.
+4. Arrange for implementation of medical screening of HSP participants and issuance of clearances for crewmember contact.
+5. Shall consult with the IDCT regarding visitation approval in off-nominal situations on a case-by-case basis.
+6. For ISS missions, HSP Lead Surgeon is an ad-hoc member of the Integrated Medical Group (IMG) and is accountable to the Multilateral Medical Operations Panel (MMOP) through IMG for implementation of these requirements per SSP-50480-ANX1.
+7. Receive names of personnel requiring HSP participant status from appropriate organizations, maintain HSP participant list, and provide list to stakeholders such as the Launch Facility Medical Providers (as applicable).
+8. Coordinate and/or provide annual and mission-specific HSP training, and record completion.
+9. Verify and record immunization status for each HSP participant (as applicable).
+10. Serve as an interface for program efforts and as the initial contact point for questions and concerns.
+11. Provide educational briefings to the crew, their families, and necessary employee groups.
+12. Attend the Initial and Final Medical Operations Readiness Reviews for each launch to report on HSP activities.
+13. Investigate and adjudicate any potential exposures, infectious disease symptoms, or breaks in quarantine.
+14. Review and recommend updates to this document.
+8.3 HSP COORDINATOR
+1. Coordinate implementation of the HSP requirements in the pre-launch phase.
+2. Perform duties as delegated by HSP Lead Surgeon.
+8.4 VITO CHIEF
+1. Share oversight of and responsibility for implementation of the HSP requirements in the pre-launch phase with HSP Lead Surgeon.
+2. Provide HSP Lead Surgeon with comprehensive list of HSP participants (plus alternates).
+3. Manage real-time changes to HSP participant list and inform HSP Lead Surgeon.
+4. Interface with and inform HSP Lead Surgeon of any potential exposures, infectious disease symptoms, or breaks in quarantine.
+5. Fulfills the role of the OG Lead per SSP 50480-ANX1 (as applicable).
+
+
+8.5 CREW SURGEON(S) AND COMMERCIAL PROVIDER/INTERNATIONAL PARTNER/PRIVATE ASTRONAUT MISSION CREW SURGEON(S)
+1. Support the HSP Lead Surgeon as required.
+2. Responsible to the HSP Lead Surgeon for infectious disease matters regarding their crewmember's interface with agency approved contacts.
+3. Interface with HSP Lead Surgeon to manage infectious disease control for their crewmember(s).
+4. Oversee infectious disease control issues with respect to personnel visiting their crewmember(s). In off-nominal circumstances, the Flight Surgeon may be required to provide a written medical conclusion to support the final judgment of the IDCT for issuance of clearance for visitors from their Agency, including children.
+5. Assist the HSP Lead Surgeon and the Crew Family Support personnel in communicating HSP responsibilities to the families of the crew.
+6. Maintain self-quarantine by adherence to the HSP guidelines.
+7. Attend the Initial and Final Medical Operations Readiness Reviews for each launch to report on provider HSP activities.
+8.6 LAUNCH FACILITY MEDICAL REPRESENTATIVE(S)
+1. Interface with HSP Lead Surgeon and other IDCT members for status updates.
+2. Receive HSP participant list from HSP Lead Surgeon or designee.
+3. Coordinate and/or participate in HSP participant medical screening.
+4. Track HSP participants cleared for late entry into quarantine via an observation period. Clearance shall be communicated to the HSP Lead Surgeon.
+5. Report departures from the quarantine criteria or HSP participant status changes to the HSP Lead Surgeon.
+6. Provide and enforce PPE use.
+7. Attend the Initial and Final Medical Operations Readiness Reviews for each launch to report on HSP activities and readiness.
+8.7 BEHAVIORAL HEALTH AND PERFORMANCE ADVISOR(S)
+1. Provide input to the IDCT as needed regarding the behavioral health aspects of implementation of these Guidelines within L-14 days.
+2. Advise interested parties regarding BHP issues related to infectious disease control.
+8.8 QUARANTINE FACILITY REPRESENTATIVE(S)
+1. Role may be fulfilled by VITO Chief.
+2. Ensure facilities are appropriately cleaned prior to and during use.
+3. Enforce PPE use.
+4. Restrict access to facilities to personnel with mission-required purposes for entry.
+5. Provide the access list to Protective Services to use as access control.
+6. Oversee visitation with crewmembers.
+7. Direct individuals who require temporary/immediate access to facilities or crew to the
+
+
+designated medical representative for screening and clearance.
+8. Ensure that any maintenance that needs to be conducted while the crew is in the facility be coordinated in compliance with the requirements in this document.
+9. Ensure that hand hygiene facilities (both soap & water and alcohol-based hand sanitizer) are available.
+8.9 COMMERCIAL PROVIDER REPRESENTATIVE(S)
+1. Provide HSP Lead Surgeon with comprehensive organization HSP participant list (plus alternates).
+2. Coordinate and/or provide annual and mission-specific HSP training for organization personnel, and record completion.
+3. As applicable, provide medical questionnaires and vaccination status verification for organization personnel.
+4. As applicable, provide confirmation of medical screening completion for organization personnel. Provide timely confirmation of medical screening completion for organization personnel cleared for late entry into quarantine via an observation period. Medical screening may be performed by the organization, or by NASA personnel.
+5. Provide a location and personnel for medical screenings if not utilizing a NASA medical facility.
+6. Manage real-time changes to organization HSP participant list and inform HSP Lead Surgeon.
+7. Interface with and inform HSP Lead Surgeon of any potential exposures, infectious disease symptoms, or breaks in quarantine amongst organization personnel.
+8. Provide and enforce PPE use.
+9. Ensure that organization personnel meet the HSP travel and quarantine guidelines. Provide timely reports of this information to the HSP Lead Surgeon.
+8.10 INTERNATIONAL PARTNER REPRESENTATIVE(S)
+1. Perform duties identical to Commercial Provider Representative for all IP HSP participants.
+8.11 PRIVATE ASTRONAUT MISSION REPRESENTATIVE(S)
+1. Perform duties identical to Commercial Provider Representative for all PAM HSP participants.
+2. May also perform duties of other IDCT members for missions that do not include NASA crewmembers (with exception of VITO Chief and Quarantine Facility Representative(s) if NASA quarantine facilities are utilized).
+8.12 RESTRICTED ACCESS FACILITY MANAGER(S)
+1. Ensure facilities are appropriately cleaned prior to and during use.
+2. Provide and enforce PPE use.
+3. Restrict access to facilities to personnel with mission-required purposes for entry.
+
+
+4. Provide the access list to Protective Services to use as access control.
+5. Direct individuals who require temporary/immediate access to facilities or crew to the designated medical representative for screening and clearance.
+6. Ensure that any maintenance that needs to be conducted while the crew is in the facility be coordinated in compliance with the requirements in this document.
+7. Ensure that hand hygiene facilities (both soap & water and alcohol-based hand sanitizer) are available.
+8.13 LAUNCH FACILITY MEDICAL PROVIDER(S)
+1. Receive HSP participant list from HSP Lead Surgeon or designee.
+2. Perform medical screening for HSP participants.
+3. Track HSP participants cleared for late entry into quarantine via an observation period. Clearance shall be communicated to the HSP Lead Surgeon via the IDCT Launch Facility Medical Representative(s).
+4. Report departures from the quarantine criteria or HSP participant status changes to the HSP Lead Surgeon via the IDCT Launch Facility Medical Representative(s).
+5. Provide and enforce PPE use.
+6. Coordinate with facility managers to provide appropriately-placed hand hygiene & PPE stations.
+8.14 FOOD SERVICE WORKERS
+1. All foods, including off-the-shelf processed ambient, refrigerated, fresh, fresh-frozen, and precooked frozen foods shall be purchased, stored and prepared under controlled conditions as outlined in JSC 67627 Pre-Launch and Post-Landing Food Service Operational Procedures.
+2. Individuals who prepare and serve the food shall be trained as specified in JSC 67627 Pre-Launch and Post-Landing Food Service Operational Procedures, possess valid food- handling permits, and be designated as HSP participants. As applicable, Kennedy Space Center (KSC) shall provide facilities to support the HSP food service at KSC.
+3. Shall prepare the crewmembers' food during quarantine.
+4. Shall follow all applicable local, state, and federal health regulations. Furthermore, shall meet the requirements described for Food Depot personnel in NPR 1800.1D, Appendix C, Primary Crew Contact.
+8.15 PROTECTIVE SERVICES
+1. Shall control access to quarantine and restricted access facilities at all times.
+2. Shall only grant access to those individuals on the approved access list, or as otherwise permitted by the Facility Manager.
+3. Additional security responsibilities may be assigned by the Facility Manager or VITO Chief through coordination with the Chief, Protective Services Office.
+
+
+ FACILITIES
+9.1 QUARANTINE FACILITIES
+Dedicated quarantine facilities are the crewmembers' primary residence during the quarantine period. These facilities, which include their personal home, Astronaut Quarantine Facility (AQF) at JSC, ACQ at KSC, or other HSP-approved similar facilities, provide a quiet, clean, comfortable living environment where the crewmembers can prepare for the upcoming mission in a sequestered setting. Access to these facilities is limited to authorized personnel.
+Regardless of planned occupancy, quarantine facilities shall be available at the start of the quarantine period. If illness develop among family members that necessitates placing crewmembers in quarantine prematurely, or if home quarantine conditions are broken, crewmembers may need to relocate to these dedicated quarantine facilities prior to L-14 days.
+Simultaneous use of quarantine facilities for separate operations (e.g. overlapping launch and landing) is discouraged. However, should this become necessary, the separate groups shall maintain best-effort social distancing at all times (e.g. reside in different wings, dine at separate times). Furthermore, in this situation, all quarantine residents shall observe the requirements in section 7.0.
+Quarantine facilities shall be cleaned prior to the commencement of each quarantine period. Facility Managers shall inspect the quarantine facilities to ensure they are sufficiently clean per HSP Cleaning Instructions. Additionally, facility inspections shall include water pathogen testing (as appropriate), and air handling unit testing for pathogens (as appropriate) within the past year. Quarantine facilities shall have ample locations for hand hygiene and PPE.
+The interior of the spacecraft is also considered to be a quarantine facility, and personnel entering it during the quarantine period shall participate in the HSP.
+9.2 RESTRICTED ACCESS FACILITIES
+Quarantined crewmembers require access to a number of mission-related facilities whose access is limited to authorized personnel only during the quarantine period. Crewmember use of restricted access facilities does not violate HSP policy provided that facility staff follow HSP requirements. These facilities include:
+A. Johnson Space Center
+1. Columbia Center (Building 26)
+2. Neutral Buoyancy Lab
+3. Baseline Data Collection (BDC) Facilities
+4. Onsite Training Facilities
+5. Offsite Training Facilities (e.g. commercial provider)
+B. Kennedy Space Center
+1. Beach House
+2. Launch Pad(s)
+
+
+C. Cape Canaveral Space Force Station Launch Pad(s)
+D. Other similar facilities as defined by HSP Lead Surgeon
+9.3 GENERAL ACCESS FACILITIES
+Crewmembers may transit through general access facilities during the quarantine period, where contact with the general population can occur. Such facilities include guard stations, airfield operations facilities and flight lines. There are no quarantine-specific facility requirements in these areas.
+Protective Services is responsible for sequestering non-quarantined individuals out of close contact with HSP participants during visits to general access facilities.
+DEVIATIONS, OCCURRENCES, AND VARIANCES
+Deviations from the requirements established in this document, process escapes, and/or symptoms of infectious disease that occur amongst HSP participants during the quarantine period shall be promptly reported to the HSP Lead Surgeon for assessment of risk to the crew and mission.
+10.1 PRE-FLIGHT: WAIVER PROCESS
+Upon identification of any deviation or escape from health stabilization requirements and/or symptoms of infectious disease among the HSP participants during the quarantine period, the HSP Lead Surgeon shall assess the risk to the crew and mission.
+HSP Lead Surgeon is the decision authority for waivers and shall make determinations in consultation with the crew surgeons, IDCT, and VITO Chief. As appropriate, HH&P management and other entities (e.g. Flight Directors, FOD management, NASA Mission Management Team, NASA ISS Mission Management Team, NASA leadership, IP representatives) may be briefed to ensure that the correct mission objectives are accounted for.
+HSP Lead Surgeon may impose stricter mitigation measures that may include (but are not limited to) additional screening or testing, immunizations, stricter quarantine measures, or vector control (eradication of pathogen-carrying organisms such as mosquitos).
+10.2 POST-FLIGHT: DEVIATIONS, OCCURRENCES, AND VARIANCES REPORTING
+HSP Lead Surgeon shall work with the appropriate programs and organizations to ensure that all deviations, occurrences, and variances are reported for record and included in mission- specific lessons learned.
+HH&P and FOD shall include appropriate information in post-flight lessons learned reports to the affected program(s) per their established processes.
+If infectious transmission to crewmembers occurs, the HSP Lead Surgeon shall generate a report summarizing the results of any investigative efforts to identify the factors that led to the
+
+
+infection. This report shall be shared with HH&P management, and the appropriate programs, organizations, and parties.
+DORMANCY AND REACTIVATION
+The HSP is nominally in continuous effect while U.S. launches are occurring on a regular basis. The HSP may enter dormancy after a launch if no U.S. launches are planned within 12 months. The HSP shall be reactivated from dormancy no later than 6 months prior to the first scheduled launch.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+APPENDIX A. ACRONYMS AND ABBREVIATIONS
+
+
+
+ACQAstronaut Crew QuartersAESAdvanced Exploration SystemAQFAstronaut Quarantine FacilityBDCBaseline Data CollectionBHPBehavioral Health and PerformanceCBAstronaut OfficeCCPCommercial Crew ProgramCEFCrew Exam FacilityDL-IDCTDesignated Lead of Infectious Disease Control TeamFODFlight Operations DirectorateHH&PHuman Health and PerformanceHIPAAHealth Insurance Portability and Accountability Act of 1996HLSHuman Landing SystemHSPHealth Stabilization ProgramIDCTInfectious Disease Control TeamIMGIntegrated Medical GroupISSInternational Space StationIPInternational PartnerJSCLyndon B. Johnson Space CenterKSCJohn F. Kennedy Space CenterL-Launch minusMEDMedical Evaluation DocumentsMMOPMultilateral Medical Operations PanelNASANational Aeronautics and Space AdministrationNBLNeutral Buoyancy LaboratoryNPRNASA Procedural RequirementNPDNASA Policy DirectiveOGOperational GroupPAMPrivate Astronaut MissionPAOPublic Affairs OfficePCPrimary ContactPPEPersonal Protective EquipmentU.S.United StatesVIPVery Important PersonVITOVehicle Integration & Test Office
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+APPENDIX B. OPEN WORK
+
+
+
+TO BE DETERMINED
+Table B-1 lists the specific To Be Determined (TBD) items in the document that are not yet known. The TBD is inserted as a placeholder wherever the required data is needed and is formatted in bold type within brackets. The TBD item is numbered based on the section where the first occurrence of the item is located as the first digit and a consecutive number as the second digit (i.e., <TBD 4-1> is the first undetermined item assigned in Section 4 of the document). As each TBD is solved, the updated text is inserted in each place that the TBD appears in the document and the item is removed from this table. As new TBD items are assigned, they will be added to this list in accordance with the above described numbering scheme. Original TBDs will not be renumbered.
+TABLE B 1	TO BE DETERMINED ITEMS
+
+TBDSectionDescriptionNoneTO BE RESOLVED
+Table B-2 lists the specific To Be Resolved (TBR) issues in the document that are not yet known. The TBR is inserted as a placeholder wherever the required data is needed and is formatted in bold type within brackets. The TBR issue is numbered based on the section where the first occurrence of the issue is located as the first digit and a consecutive number as the second digit (i.e., <TBR 4-1> is the first unresolved issue assigned in Section 4 of the document). As each TBR is resolved, the updated text is inserted in each place that the TBR appears in the document and the issue is removed from this table. As new TBR issues are assigned, they will be added to this list in accordance with the above described numbering scheme. Original TBRs will not be renumbered.
+TABLE B 2	TO BE RESOLVED ISSUES
+
+TBRSectionDescriptionNoneFORWARD WORK
+Table B-3 lists the specific forward work items identified during this document's Change Request (CR) review and evaluation. Each item is given a sequential number (i.e., <FWD 001>. For each item, in the CR/CE field enter the specific number of the CR followed by the comment number from the Change Evaluation (CE) i.e., GSDO-C0345/CE-10, GSDO-C0345/CE-27. Do not include a placeholder for forward work items in the body of the document; list them only in Table B-3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

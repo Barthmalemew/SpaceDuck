@@ -1,0 +1,171 @@
+ISS Training Best Practices and Lessons Learned
+Human Research Program - Human Factors and Behavioral Performance Donna L. Dempsey (PI)1, Immanuel Barshi2
+NASA, Johnson Space Center (JSC)1, NASA, Ames Research Center (ARC) 2
+ABSTRACT
+Training our crew members for long-duration Deep Space Transport (DST) missions will have to be qualitatively and quantitatively different from current training practices. However, there is much to be learned from the extensive experience NASA has gained in training crew members for missions on board the International Space Station (ISS). Furthermore, the operational experience on board the ISS provides valuable feedback concerning training effectiveness. Keeping in mind the vast differences between current ISS crew training and training for DST missions, the needs of future crew members, and the demands of future missions, this ongoing study seeks to document current training practices and lessons learned. The goal of the study is to provide input to the design of future crew training that takes as much advantage as possible of what has already been learned and avoids as much as possible past inefficiencies. Results from this study will be presented upon its completion.
+
+By researching established training principles, examining future needs, and by using current practices in spaceflight training as test beds, this research project is mitigating program risks and generating templates and requirements to meet future training needs.
+
+Current ISS Astronaut Training Program
+
+The Training Continuum
+
+Preassigned Training
+
+Assigned Training
+
+
+
+NASA's unique expertise in spaceflight training is extensive and encompasses all aspects of a training program, from the management of training resources, including training personnel and training facilities, to the design and implementation of training across the entire training continuum for crew (astronauts), flight controllers, and analysts (see Figure 1). This research is scoped specifically to those best practices and lessons learned within the crew training program that lead to effective skill acquisition, retention (recall/memory), and transfer (generalization to new situations or tasks) and thus effective onboard performance. An overview of the ISS crew training continuum is presented here.
+
+
+
+
+
+Figure 1. This research encompasses the entire training continuum, from selection through pre-flight training to onboard and post flight training.
+
+Selection
+Training astronauts for missions to the International Space Station (ISS) begins with the selection of the astronaut candidates (ASCANs), as there are specific skills and knowledge that are selected for rather than trained as part of astronaut training (e.g., pilot astronauts are required to have at least 1,000 hours of pilot-in- command time in jet aircraft).
+
+ASCAN Training
+ASCAN training is the initial training provided to newly hired NASA astronaut candidates. The two-year ASCAN training flow is a compilation of multiple system and discipline flows that include general introductory lessons on NASA and spaceflight in addition to the technical and team skills necessary for spaceflight. The Astronaut Office in NASA's Flight Operations Directorate (FOD) has graduation requirements that ASCANs must meet in eight technical and team discipline areas, selected to ensure that the ASCANs can be successfully trained for a spaceflight mission. After meeting all graduation requirements, ASCANs achieve astronaut status.
+
+The preassigned training flow is designed to maintain proficiency in skills trained in the ASCAN flow until the astronaut is assigned to a mission. Proficiency training includes optional participation in analog missions (Figures 2 and 3).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 2 (top). Photo jsc2013e053810 Courtesy of NASA. The NASA Extreme Environment Mission Operations (NEEMO) analog mission provides effective teamwork and leadership training.
+Figure 3 (bottom). Photo jsc2010e096169 Courtesy of NASA. NEEMO is conducted in the Aquarius Reef Base underwater laboratory owned by Florida International University.
+
+Assigned crew training for an ISS increment is a multi- lateral effort in which each International Partner is responsible for training crewmembers on their modules or segment of the ISS and on their Earth-to-orbit vehicles; NASA is additionally responsible for training integrated emergency response. The training flow is designed to produce crewmembers trained to the requirements defined for an ISS increment.
+
+Assigned crew training is designed in the same manner as ASCAN training, in that the overall flow is a compilation of multiple system and discipline flows (see Figure 4). At the completion of each NASA system or discipline initial training flow, crewmembers are evaluated in mastery lessons.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure	4. Average	breakdown	of	US	systems	by percentage of assigned crew training provided by JSC.
+
+
+After qualifying in a system, proficiency training and consultations are used to maintain skills and knowledge trained in the initial flows. Proficiency training includes team training events such as routine operations simulations, malfunction scenarios, and integrated emergency response (Figure 5).
+
+While NASA does not require a final summative evaluation across all disciplines, Russia does conduct a final summative evaluation of all crewmembers conducted in both their Russian Segment training modules and in their Soyuz training module. Crewmembers normally launch within a few weeks of this final evaluation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 5. Photo jsc2015e004471 Courtesy of NASA. Expedition 46 crew members Tim Kopra of NASA, left, and Tim Peake of the European Space agency, engage in emergency scenario training.
+
+
+Onboard Training
+Onboard training is designed to refresh high-risk, critical skills including emergency response, robotics operations, and entry and landing. Just-in-time training is provided for complex tasks often as self-studies or via conferences with the Mission Control Center.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figure 6. Photo iss036e026287 Courtesy of NASA. European Space Agency astronaut Luca Parmitano, participates in an onboard training activity in preparation for the grapple and berthing of a Japanese cargo vehicle, HTV-4 .
+
+
+
+Future Long-Duration, Deep Space Transport (DST) Mission Training Needs
+
+ISS crew training produces highly skilled and effective crewmembers for Earth-reliant operations (i.e., continuous real-time ground support is critical to the success of ISS missions). Because of the limited communication infrastructure associated with DST missions (including more than 20 minutes time delays each way when communication is available), real-time ground support is not possible. An DST crew training program, along with enhanced performance support tools, will need to produce highly skilled and effective crewmembers for Earth- independent, autonomous, and semi-autonomous operations.
+
+For DST training, it is unclear which topics are best trained pre-flight and which should be trained in flight or in
+
+situ. This distribution will also be dependent on our ability to properly simulate tasks on systems being developed concurrently with training protocols. Furthermore, without knowing the likely decay function of knowledge and skills in space operations, we have no basis upon which to set requirements and intervals for recurrent/refresher training.
+
+We cannot predict all the tasks crewmembers may be required to perform during such missions, and thus cannot design pre-flight training to address tasks about which we do not yet know. This lack of knowledge requires a shift from task-based training typical of past and current space missions to skill-based training that focuses on the long- term retention and generalizability or transferability of acquired skills and knowledge. However, we do not know
+
+the types of skills and knowledge that can be retained and generalized across tasks expected under different design reference missions (DRMs).
+
+Even with a shift to skills-based training, long-duration missions will still require on-board training systems, beyond the capabilities that currently exist on the ISS. Thus, we need to ensure that DST training methods and tools encompass the full training continuum, including effective onboard and in-situ training.
+
+Implications:
+Results from this study have direct implications to various NASA requirements and guidance documents.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+POC: Dr. Immanuel Barshi, ARC/TH
+Email: Immanuel.Barshi@nasa.gov Phone: 650-604-3921

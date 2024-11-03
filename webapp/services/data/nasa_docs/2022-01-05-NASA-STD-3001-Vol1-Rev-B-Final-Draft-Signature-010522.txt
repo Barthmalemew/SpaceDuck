@@ -1,0 +1,1301 @@
+METRIC/SI (ENGLISH)
+
+NASA TECHNICAL STANDARD
+NASA-STD-3001, VOLUME 1, REVISION BNational Aeronautics and Space AdministrationApproved: 2022-01-05Superseding NASA-STD-3001,
+Volume 1, Revision A w/Change 1
+
+
+
+
+
+
+
+
+NASA SPACE FLIGHT HUMAN-SYSTEM STANDARD: VOLUME 1: CREW HEALTH
+APPROVED FOR PUBLIC RELEASE-DISTRIBUTION IS UNLIMITED PER STRIVES #2010025361
+
+DOCUMENT HISTORY LOG
+
+StatusDocument RevisionChange NumberApproval DateDescriptionBaseline2007-03-05Initial ReleaseRevisionA2014-07-302013 Revision
+This is a complete revision with the following major changes:
+
+Radiation (Standard Updates) Decompression Sickness (New Standard)
+Aerobic Capacity (Standard Updates) Orthostatic Hypotension (New Standard)Change12015-02-12Administrative Change: Corrected two typos on page 22 in Table 1:
+
+Last row column 3 from: 1,00 to 100
+Last row column 4 from: 2,50 to 250 These edits provide the correct values and return the listed limits to what appeared in the baseline version of NASA-STD-3001. Corrected two typos on page 76 in Table 7:
+
+Title from (mSv to Sv)
+Row 3, column 3, from 0.06 Sv to 0.6 Sv.RevisionB2022-01-05This is a complete revision with the following major changes:
+
+Section 3 -The Levels of Care have been replaced with Health and Medical Care Standards.
+
+Section 4 - Aerobic Capacity Standards to account for celestial surface conditions during EVAs.
+
+Addition of Muscle Strength and Function Performance Standards.
+DOCUMENT HISTORY LOG (Continued)
+
+StatusDocument RevisionChange NumberApproval DateDescriptionRevisionBYYYY-MM-DDContinued
+Updates to Bone Mineral Density Standards to reflect new evidence.
+
+Updates and additions to the Radiation Standards, including a new standard addressing Crew Radiation Limits for Nuclear technologies.
+
+Many Standards have been deleted as their information has been captured in the New Health and Medical Care Standards section (section 3).
+
+A new PRA appendix has been added clarifying the process of medical conditions screening and treatment development.
+FOREWORD
+
+This NASA Technical Standard is published by the National Aeronautics and Space Administration (NASA) to provide uniform engineering and technical requirements for processes, procedures, practices, and methods endorsed as standard for NASA programs and projects, including requirements for selection, application, and design criteria of an item. This NASA Technical Standard provides uniform technical requirements for the design, selection, and application of hardware, software, processes, procedures, practices, and methods for human- rated systems.
+
+This NASA Technical Standard is approved for use by NASA Headquarters and NASA Centers and Facilities, including Component Facilities and Technical and Service Support Centers; applicable technical requirements may be cited in contract, program, and other Agency documents. It may also apply to the Jet Propulsion Laboratory (A Federally Funded Research and Development Center [FFRDC]), other contractors, recipients of grants and cooperative agreements, and parties to other agreements only to the extent specified or referenced in applicable contracts, grants, and agreements.
+
+This NASA Technical Standard establishes Agency-wide requirements that minimize health and performance risks for flight crew in human space flight programs. This NASA Technical Standard applies to space vehicles, habitats, facilities, payloads, and related equipment with which the crew interfaces during space flight and lunar and planetary, e.g., Mars, habitation.
+
+In this NASA Technical Standard, the Office of the Chief Health and Medical Officer establishes NASA's space flight crew health requirements for the pre-mission, in-mission, and post-mission phases of human space flight. These requirements apply to all NASA human space flight programs and are not developed for any specific program.
+
+Requests for information should be submitted via "Feedback" at https://standards.nasa.gov. Requests for changes to this NASA Technical Standard should be submitted via MSFC Form 4657, Change Request for a NASA Engineering Standard.
+
+
+	 01-05-2022
+
+J. D. Polk, DO, MS, MMM, CPE, FACOEP, FAsMA
+NASA Chief Health and Medical Officer NASA HeadquartersApproval Date
+
+TABLE OF CONTENTSSECTIONPAGEDOCUMENT HISTORY LOG ..........................................................................................2FOREWORD .......................................................................................................................4TABLE OF CONTENTS ....................................................................................................5LIST OF APPENDICES.....................................................................................................7LIST OF FIGURES.............................................................................................................7LIST OF TABLES...............................................................................................................71.SCOPE ..................................................................................................................81.1Purpose...................................................................................................................81.2Applicability...........................................................................................................91.3Tailoring.................................................................................................................101.4Authority ................................................................................................................102.APPLICABLE DOCUMENTS...........................................................................112.1General...................................................................................................................112.2Government  Documents  ........................................................................................112.3Non-Government  Documents ................................................................................112.4Order of Precedence...............................................................................................113.HEALTH AND MEDICAL CARE STANDARDS...........................................123.1Health and Medical Care Standards.......................................................................123.1.1Medical Management ............................................................................................133.1.2Selection and Recertification .................................................................................133.1.3Pre-Mission Preventive Health Care......................................................................143.1.4In-Mission Preventive Health Care........................................................................153.1.5In-Mission Medical Care .......................................................................................163.1.6Medical Training for In-Mission Medical Care Providers ....................................183.1.7Medical Evacuation ...............................................................................................193.1.8In-Mission Evacuation to Definitive Medical Care Facilities ...............................193.1.9Palliative Comfort Care .........................................................................................193.1.10Termination of Care...............................................................................................203.1.11Capability to Handle Deceased Crewmembers .....................................................203.1.12Terrestrial Launch/Landing Medical Support........................................................213.1.13Terrestrial Launch/Landing - Definitive Medical Care Facility ...........................213.1.14Certification of Training Plans for Launch/Landing Medical Team .....................223.1.15Post-Mission Health Care ......................................................................................223.1.16Post-Mission Reconditioning.................................................................................233.1.17Post-Mission Long-Term Monitoring....................................................................23
+
+TABLE OF CONTENTS (Continued)SECTIONPAGE4.STANDARDS FOR HUMAN PERFORMANCE ............................................234.1Fitness-for-Duty Aerobic Capacity........................................................................244.2Fitness-for-Duty Sensorimotor ..............................................................................254.3Fitness-for-Duty Behavioral Health and Cognition...............................................264.4Fitness-for-Duty Hematology and Immunology....................................................264.5Permissible Outcome Limit for Nutrition ..............................................................274.6Permissible Outcome Limit for Muscle Strength ..................................................274.7Permissible Outcome Limit for Microgravity-Induced Bone Mineral Density
+Loss ........................................................................................................................284.8Space Permissible Exposure Limit for Space Flight Radiation Exposure.............295.TRAINING ...........................................................................................................345.1Medical Training....................................................................................................345.2Astronaut Training .................................................................................................345.3Crew Surgeon Training..........................................................................................355.4Medical Operations Flight Controller Training .....................................................355.5Support Personnel Training ...................................................................................355.6Psychological Mission Training ............................................................................355.7Physiological Exposure Mission Training .............................................................366.MEDICAL  OPERATIONS  ................................................................................366.1Circadian Shifting Operations and Fatigue Management......................................366.2Private Medical Communications (PMC) .............................................................366.3Behavioral Health and Performance......................................................................376.4Extravehicular Activities (EVAs)..........................................................................376.5Medical and Survival Kits .....................................................................................376.6Crew Health Operations Concept ..........................................................................37
+7.CREW HEALTH RECORDS ............................................................................387.1Crew Health Results ..............................................................................................387.2Crew Records Communication .............................................................................387.3Crew Records Storing ...........................................................................................38
+
+TABLE OF CONTENTS (Continued)LIST OF APPENDICESAPPENDIXPAGEAReference Documents ..........................................................................................39BAcronyms, Abbreviations, and Symbols..............................................................41CDefinitions............................................................................................................44DHealth and Medical Care......................................................................................47ERequirements Compliance Matrix .......................................................................54
+
+
+
+LIST OF FIGURESFIGUREPAGE1Health and Medical Care Standards Overview ....................................................132Effective Dose (mSv per Mission Day) Variation with Solar Cycle ...................343Outline for the Use of PRA Data to Aid in the Generation of a Medical
+Conditions List.....................................................................................................53
+
+LIST OF TABLESTABLEPAGE1Required Minimum In-Mission VO2max and Pre-mission VO2max Recommendations................................................................................................242Pre-Mission Muscle Strength Requirements.......................................................283Dose Limits for Short-Term or Career Non-Cancer Effects................................304Relative Biological Effectiveness (RBE) for Non-Cancer Effects of the Lens, Skin, BFO, and Circulatory Systems ...................................................................305Design Reference SPE Environment Proton Energy Spectrum...........................326Recommended Shielding Guidelines for SPEs ....................................................327Sample IMM Output ............................................................................................488
+
+9Medical Conditions Considered of High Likelihood or High Consequence for Space Flight Missions ..........................................................................................
+Requirements Compliance Matrix .......................................................................
+49
+54
+NASA SPACE FLIGHT HUMAN SYSTEM STANDARD VOLUME 1: CREW HEALTH
+
+1. SCOPE
+
+The scope of this NASA Technical Standard is restricted to human space flight missions and includes activities affecting crew in all phases of the life cycle (design, development, test, operations, maintenance), both inside and outside the spacecraft in space and on lunar and planetary surfaces.
+
+1.1 Purpose
+
+This NASA Technical Standard provides uniform technical requirements for the design, selection, and application of hardware, software, processes, procedures, practices, and methods for human-rated systems.
+
+NASA-STD-3001, Space Flight Human-System Standard, is a two-volume set of National Aeronautics and Space Administration (NASA) Agency-level standards established by the Office of the Chief Health and Medical Officer, directed at minimizing health and performance risks for flight crews in human space flight programs. Volume 1 of NASA- STD-3001, Crew Health, sets standards for fitness for duty, space permissible exposure limits, permissible outcome limits, levels of medical care, medical diagnosis, intervention, treatment and care, and countermeasures. Volume 2 of NASA-STD-3001, Human Factors, Habitability, and Environmental Health, focuses on human physical and cognitive capabilities and limitations and defines standards for spacecraft (including orbiters, habitats, and suits), internal environments, ground processing, facilities, payloads, and related equipment, hardware, and software systems with which the crew interfaces during space operations.
+
+Volume 1 of NASA-STD-3001 considers human physiologic parameters as a system, much as one views the engineering and design of a mechanical device. Doing so allows the human-system to be viewed as an integral part of the overall vehicle design process, as well as the mission reference design, treating the human-system as one system along with the many other systems that work in concert to allow the nominal operation of a vehicle and successful completion of a mission. In Volume 2, the focus turns to human-system integration where the context is about how the human crew interacts with other systems, including the habitat and the environment. The focus is on performance issues during a mission-whether the human and the system can function together (within the environment and habitat) and accomplish the tasks necessary for mission success.
+
+NASA's policy for establishing requirements to protect the health and safety of crew and for providing health and medical programs for crewmembers during all phases of space flight, is authorized by NPD 1000.3, The NASA Organization, and NPD 8900.5, NASA Health and Medical Policy for Human Space Exploration. NPD 8900.1, Medical Operations Responsibilities
+
+in Support of Human Space Flight Programs, and NPD 8900.3, Astronaut Medical and Dental Observation Study and Care Program, authorize the specific provision of health and medical programs for crewmembers. NASA's policy is to establish requirements for providing a healthy and safe environment for crewmembers and to provide health and medical programs for crewmembers during all phases of space flight. Standards are established to optimize crew health and performance, contributing to overall mission success, and preventing negative long-term health consequences related to space flight. In this NASA Technical Standard, the Office of the Chief Health and Medical Officer (OCHMO) establishes NASA's space flight crew health requirements for the pre-mission, in-mission, and post-mission phases of human space flight.
+
+All requirements are based on the best available scientific and clinical evidence, as well as operational experience from Apollo, Skylab, Shuttle, Shuttle/Mir (Russian space station), and International Space Station (ISS) missions and Commercial Crew Program (CCP). Requirements are periodically and regularly reviewed, especially as the concept of operations and mission parameters for a program become defined and may be updated as new evidence emerges.
+
+Human-system standards are established to guide and focus the development of the crew health requirements as a means of protecting spacefaring crews. The requirements presented in this NASA Technical Standard are intended to complement the overall set of human standards for space flight, which also includes NASA-STD-3001, Volume 2: Human Factors, Habitability and Environmental Health; OCHMO-STD-100.1A, NASA Astronaut Medical Standards Selection and Annual Recertification; and current medical standards of clinical practice. Combined, these standards provide Agency technical requirements for an appropriate environment for human habitation, certification of human participants, the necessary level of medical care, and risk- mitigation strategies against the deleterious effects of space flight. The requirements described in this NASA Technical Standard include health and medical care standards, space permissible exposure limits, fitness-for-duty criteria, and permissible outcome limits as a means of defining successful operating criteria for the human system. These requirements help ensure mission completion, limit morbidity, and reduce the risk of mortality during space flight missions.
+Medical Operations Requirements Document (MORD) details the medical requirements for the program and is consistent with the overall crew health operations concepts. A MORD is developed for each program. A crew health operations concept is developed and documented for each program.
+
+1.2 Applicability
+
+The technical requirements specified in this volume:
+
+a. Apply to all space exploration programs and activities involving crewmembers.
+
+      b. Apply to internationally provided space systems as documented in distinct separate agreements such as joint or multilateral agreements.
+
+      c. Are to be made applicable to contractors only through contract clauses, specifications, or statements of work in conformance with the NASA Federal Acquisition Regulation (FAR) supplement and not as direct instructions to contractors.
+
+This NASA Technical Standard is approved for use by NASA Headquarters and NASA Centers and Facilities, and applicable technical requirements may be cited in contract, program, and other Agency documents. It may also apply to the Jet Propulsion Laboratory (a Federally Funded Research and Development Center [FFRDC]), other contractors, recipients of grants and cooperative agreements, and parties to other agreements only to the extent specified or referenced in their contracts, grants, or agreements.
+
+This NASA Technical Standard applies to all internationally provided space systems only if required and documented in distinct separate agreements such as joint or multilateral agreements.
+
+The NASA Technical Authorities-Health and Medical Technical Authority (HMTA), Engineering Technical Authority (ETA), and Safety and Mission Assurance Technical Authority (SMATA)-assess NASA programs and projects for compliance with NASA-STD-3001. If the program or project does not meet the provisions of this NASA Technical Standard, then the associated risk to the health, safety, and performance of the crew is evaluated by the Technical Authorities.
+
+Verifiable requirement statements are designated by the acronym "V1" (Volume 1), numbered, and indicated by the word "shall." To facilitate requirements selection by NASA programs and projects, a Requirements Compliance Matrix is provided in Appendix E. Explanatory or guidance text is indicated in italics beginning in section 3.
+
+1.3 Tailoring
+
+In accordance with NPR 7120.5, NASA Space Flight Program and Project Management Requirements, tailoring is the process used to adjust or seek relief from a prescribed requirement to accommodate the needs of a specific task or activity (e.g., program or project). The tailoring process results in the generation of deviations and waivers depending on the timing of the request. The tailoring of the requirements from this NASA Technical Standard for application to a specific program or project is acceptable when documented in program or project requirements and formally approved by the NASA Chief Health and Medical Officer or delegated Program Representative.
+
+1.4 Authority
+
+NASA policy for establishing standards to provide health, performance, and medical programs for crewmembers during all phases of space flight and to protect the health, performance, and safety of the crew is set forth by NPD 1000.3, The NASA Organization, and NPD 8900.5, NASA Health and Medical Policy for Human Space Exploration.
+
+2. APPLICABLE DOCUMENTS
+
+2.1 General
+
+2.1.1 The documents listed in this section contain provisions that constitute requirements of this standard as cited in the text.
+
+2.1.2 The latest issuances of cited documents apply unless specific versions are designated.
+
+2.1.3 Non-use of a specifically designated version will be approved by the NASA Chief Health and Medical Officer.
+
+2.1.4 Applicable documents may be accessed at https://standards.nasa.gov or obtained directly from the Standards Developing Team or other document distributors. When not available from these sources, information for obtaining the document is provided, or user should contact the office of primary responsibility or Center Library.
+
+2.1.5 References are provided in Appendix A.
+
+2.2 Government Documents
+
+NASA
+
+OCHMO-STD-100.1A
+
+
+NPD 1000.3NASA Astronaut Medical Standards Selection and Annual Recertification
+
+The NASA Organization
+2.3 Non-Government Documents
+
+None.
+
+2.4 Order of Precedence
+
+2.4.1 The requirements and standard practices established in this NASA Technical Standard do not supersede or waive existing requirements and standard practices found in other Agency documentation, or in applicable laws and regulations unless a specific exemption has been obtained by the NASA Chief Health and Medical Officer.
+
+2.4.2 Conflicts between this NASA Technical Standard and other requirements documents will be resolved by the NASA Chief Health and Medical Officer.
+
+Note: ACRONYMS, ABBREVIATIONS, and SYMBOLS are provided in Appendix B.
+
+
+Note: DEFINITIONS are provided in Appendix C.
+
+3. HEALTH AND MEDICAL CARE STANDARDS
+
+3.1 Health and Medical Care Standards
+
+Astronaut health care starts at selection, is implemented throughout training, space flight missions, and post-mission reconditioning, and continues past retirement from the astronaut corps via the TREAT (To Research, Evaluate, Assess, and Treat) Astronauts Act, which authorizes NASA to monitor, diagnose, and treat medical and psychological conditions associated with space flight for NASA (U.S. government) astronauts. Deeply rooted in preventive medicine, aerospace medicine puts an emphasis on preventive care, while being prepared to respond to the known physiological and psychosocial challenges of space flight, as well as unexpected illness and injury that could afflict crewmembers due to their active lifestyles, their training for flight, their missions in space, and their post-mission recovery.
+
+The following requirements reflect this comprehensive approach to astronaut health and well- being, addressing screening, preventive health strategies, medical care, contingencies during launch and landing, and post-mission Healthcare, reconditioning and long-term monitoring. Refer to Figure 1 for an overview of the Health and Medical Care Standards.
+
+Of note, the term "in-mission" which is introduced in this section of this NASA Technical Standard covers all phases of the mission, from launch, through landing on a planetary body and all surface activities entailed, up to landing back on Earth. Appendix D provides additional information relative to health and medical care standards described in this section.
+
+
+
+
+
+Figure 1-Health and Medical Care Standards Overview
+
+3.1.1 Medical Management
+
+[V1 3000] All terrestrial and in-mission medical aspects included in this NASA Technical Standard shall be in accordance with current U.S. medical care standards, with limitations as imposed by mission constraints, and managed by the Flight Medicine team, which includes, but is not limited to, the Flight Medicine Clinic, Crew Surgeon, Deputy Crew Surgeon, and their designees, including the in-mission medical care providers (Crew Medical Officers).
+
+3.1.2 Selection and Recertification
+
+[V1 3001] Crewmembers shall be medically and psychologically selected and annually recertified following the guidance in OCHMO-STD-100.1A, NASA Astronaut Medical Standards Selection and Annual Recertification.
+
+[Rationale: Medical and psychological screening is required for all crewmembers that fly on/to NASA vehicles or otherwise interact with NASA crewmembers. Medical screening reduces crewmember health risks in-mission and post-mission, along with increasing mission success. The scope of initial screening may be influenced by mission duration, distance from Earth, and criticality of individual crewmember functions (pilot, extravehicular activities (EVAs), robotic operations, space flight participant, etc.). Similarly, mission-specific screening, if required, will consider mission duration, distance from Earth, radiation exposure, mental/behavior analysis, and criticality of individual crewmember functions (pilot, EVAs, robotic operations, space flight participant, etc.)].
+
+
+3.1.3 Pre-Mission Preventive Health Care
+
+[V1 3002] Pre-mission preventive strategies shall be used to reduce in-mission and long-term health medical risks, including, but not limited to:
+
+Flight surgeon monitoring of crewmembers during hazardous training and pre-flight science testing.
+
+a. Optimization of nutrition.
+
+b. Vitamin D supplementation.
+
+c. Triennial imaging of bone mineral density.
+
+d. Maintenance of optimal aerobic and strength physical fitness.
+
+e. Maintenance of flexibility, agility, and balance.
+
+f. Annual physicals.
+
+g. Preventive dental care.
+
+      h. Vaccinations (influenza, tetanus toxoid, varicella zoster vaccine, severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), etc.
+
+i. Behavioral health resiliency training.
+
+j. Total radiation dose control/monitoring.
+
+      k. Pre-mission Health-Stabilization Program (HSP) to reduce the likelihood of contracting an infectious disease before launch.
+
+      l. Assisted Reproductive Technology (ART) if desired by the crewmember to preserve gametocytes prior to missions with exposure to radiation.
+
+[Rationale: Preventive health care tests, procedures, and interventions are required to ensure health pre-mission, during the mission, as well as for the post-mission lifetime of the crewmember. The longer the mission and the farther from Earth (and therefore from definitive care) the greater the extent of preventive interventions that will need to be implemented.
+Preventive care starts at selection and continues throughout the astronaut's career, including during missions.]
+
+3.1.4 In-Mission Preventive Health Care
+
+[V1 3003] All programs shall provide training, in-mission capabilities, and resources to monitor physiological and psychosocial well-being and enable delivery of in-mission preventive health care, based on epidemiological evidence-based probabilistic risk assessment (PRA) that takes into account the needs and limitations of each specific design reference mission (DRM), and parameters such as mission duration, expected return time to Earth, mission route and destination, expected radiation profile, concept of operations, and more. In-mission preventive care includes, but is not limited to:
+
+Note: The term "in-mission" covers all phases of the mission, from launch, through landing on a planetary body and all surface activities entailed, up to landing back on Earth.
+
+a. Periodic monitoring of general health status.
+
+      b. Optimization and periodic monitoring of nutrition intake - To include caloric density and macro/micronutrients (including antioxidants, flavonoids, lycopene, omega-3 fatty acids, lutein, sterols, and prebiotics), to support multiple physiological systems such as immune function, bone and muscle health, effectiveness of radiation damage repair mechanisms, cognitive and mental well-being, microbiome, etc. Optimization of nutrition intake also includes such aspects as food palatability and food variety, to support psychological well-being and crew morale.
+
+c. Vitamin D supplementation - For bone and immune function.
+
+      d. Maintenance and periodic monitoring of aerobic and strength physical fitness - For maintenance of muscle strength and aerobic capacity (essential for performance of safety-critical physical tasks such as emergency vehicle egress), bone strength, immune system performance, sensorimotor function, stress relief, and reduction in renal stone formation.
+
+      e. Maintenance and periodic monitoring of flexibility, agility, and balance - For sensorimotor function (essential for performance of safety-critical physical tasks such as emergency vehicle egress).
+
+      f. Maintenance and monitoring of work/rest schedules and optimal sleep/circadian rhythm.
+
+      g. Maintenance and monitoring of environmental parameters at optimal levels for crew health and performance, as outlined in other requirements.
+
+      h. Prevention of decompression sickness by utilizing the appropriate prebreathe protocols.
+
+i. Hearing conservation and protection, including periodic monitoring.
+
+      j. Optimization and periodic monitoring of psychosocial countermeasures for team cohesion, privacy, social isolation, and sensory deprivation.
+
+      k. Preventive measures for orthostatic intolerance and neurovestibular challenges during g-transitions.
+
+      l. Space Flight Associated Neuro-Ocular Syndrome (SANS) periodic monitoring, and prevention with to-be-determined countermeasures (to be validated by research in the coming years).
+
+      m. Periodic monitoring of vascular motility and patency of venous drainage pathways in the neck as well as the deep veins in the lower extremities.
+
+      n. Optimization and periodic monitoring of immune function via implementation of a suite of multi-component countermeasures.
+
+      o. For missions that land on planetary bodies - Training, capabilities, and resources for rehabilitation on the planetary surface, analogous to the functions of the post-Earth-landing recovery team, rehabilitation team, and flight surgeon team to enable surface mission success.
+
+p. Maintenance and monitoring of any future risks as they emerge.
+
+3.1.5 In-Mission Medical Care
+
+[V1 3004] All programs shall provide training, in-mission medical capabilities, and resources to diagnose and treat potential medical conditions based on epidemiological evidence-based PRA, clinical practice guidelines and expertise, historical review, mission parameters, and vehicle- derived limitations. These analyses should consider the needs and limitations of each specific DRM and vehicles. The term "in-mission" covers all phases of the mission, from launch, through landing on a planetary body and all surface activities entailed, up to landing back on Earth. In- mission capabilities (including hardware and software), resources (including consumables), and training to enable in-mission medical care, are to include, but are not limited to:
+
+      a. Medical system architecture and infrastructure (i.e., electronic medical records, inventory monitoring/maintenance, medical stowage allocation [including pressurized or refrigerated volume], etc.).
+
+b. Medical equipment selected for ease-of-use.
+
+c. Configuring environment for medical care (including privacy considerations).
+
+d. Obtaining and recording history of medical encounter.
+
+e. Performing and recording the physical exam.
+
+      f. Assessing, recording, monitoring, and trending vital signs (including pulse oximetry and co-oximetry).
+
+      g. Conducting ancillary tests as needed, including imaging, laboratory analyses, and electrocardiography.
+
+h. Performing procedures.
+
+i. Providing physical restraints for the patient, caregiver, and medical equipment.
+
+j. Recording treatment plan.
+
+k. Administering and managing medications (both oral and parenteral) and intravenous
+(IV) fluids.
+
+l. Consumables.
+
+m. Capability to treat decompression sickness.
+
+n. Monitoring and altering work/rest schedule and balance.
+
+      o. Treating neurobehavioral disorders with medical devices and/or evidence-based asynchronous behavioral health treatment protocols available on electronic devices.
+
+      p. Private two-way audio and video communication with ground medical support, family, and crew support system.
+
+q. Private transmission of medical data (including imaging) to ground medical support.
+
+r. Means of providing autonomous medical care and advanced life support.
+
+s. Medical evacuation.
+
+t. Palliative care.
+
+[Rationale: Aspects to be considered in the PRA include, but are not limited to: Mission duration, destination, return-to-Earth capability, mission architecture, spacecraft design, launch/landing loads, crew selection standards, the program's Health Stabilization Program (HSP), and the need for autonomous-from-Earth medical capabilities.
+
+In-mission medical care will be in accordance with current U.S. medical care practices with limitations as imposed by mission constraints and managed by the Crew Surgeon, Deputy Crew Surgeon, or their designees. As each mission may be comprised of consecutive phases that occur in different vehicles, take place in different locations in space with varying distances from Earth, and last for different durations, coordination of onboard medical resources should occur
+
+between the medical providers of the different vehicles to ascertain comprehensive care capabilities that allow a successful mission from start to finish.
+
+For an overview of the PRA process and a representative non-exhaustive list of medical conditions considered of either high-likelihood or high-consequence for space flight missions, please see Appendix D, Table 8.]
+
+3.1.6 Medical Training for In-Mission Medical Care Providers
+
+[V1 3005] The level of training of in-mission medical care providers shall be commensurate with the complexity of anticipated medical, mental health, and behavioral conditions, taking into account such aspects as mission duration, destination, capabilities of the medical system, return- to-Earth capability, mission architecture, crew quantity, vehicle design, and the need for autonomous-from-Earth medical care. The term "in-mission" covers all phases of the mission, from launch, through landing on a planetary body and all surface activities entailed, up to landing back on Earth.
+
+[Rationale: The ability to monitor, screen, diagnose, treat, and manage in-mission medical conditions involves more than having physical resources such as medical equipment and medications. It includes knowledge, skills, and abilities that come from training and an experience base. Several considerations need to be taken into account when selecting the required level of medical training for crewmembers who will function as the onboard medical care providers during missions. Historically, non-physician crew medical officers have received EMT-level training and relied on ground-support from flight surgeons in the provision of onboard medical care during low-Earth orbit missions. However, missions farther away from Earth involve two conflicting scenarios. On the one hand, medical conditions (including traumatic injuries) are expected to occur with higher incidence with progressively longer missions, and the longer time to definitive care back on Earth may mean that an ill or injured crewmember's condition will be graver if and when evacuation back to Earth occurs. On the other hand, vehicle size and the significant constraint on the availability of medical resources will be greater compared to what is currently available on the ISS. The level of training of the onboard medical care provider can bridge the convergence of limited resources with the potential need for higher medical capability. Higher levels of medical training, such as a formally trained physician, will allow for a more prompt, more autonomous, and more reflexive yet holistic response from a medical provider who can utilize limited resources in an innovative and resourceful way. Of note, in this regard, mission architecture and orbital dynamics are more significant drivers of time to definitive care than the pure distance to Earth.]
+
+3.1.6.1 Crew Medical Officers Quantity
+
+[V1 3006] The program(s) shall train a minimum of two crewmembers per vehicle/platform as Crew Medical Officers (CMOs).
+
+[Rationale: It is critical to have two CMOs for each vehicle/platform and phase of a mission to ensure that a backup is available for medical treatment. Additional considerations are needed
+
+for missions that include multiple vehicles and varying locations. For example, if a vehicle launches with an initial crew complement and then part of that crew complement leaves for another destination, then it is critical that two CMOs are available at each location. Depending on total mission design, this may require more than two CMOs to be launched on a vehicle.
+Additionally, all other crewmembers should be familiar with the use of in-mission medical equipment and protocols. This can be further facilitated by choosing equipment that is designed for ease of use.]
+
+3.1.7 Medical Evacuation
+
+[V1 3007] Medical evacuation to a location with a higher level of medical care shall be available for serious illness/injuries occurring during a space flight mission, which are beyond the medical capabilities available at the crew's location. This might entail evacuation to planetary or orbiting assets, or back to Earth, depending on the scenario, medical needs, and availability of resources at each location.
+
+[Rationale: The limitations of onboard medical capabilities (including trained medical professionals) means that some illnesses or injuries may require medical interventions beyond those which can be provided during the mission. Assuming a guiding philosophy that preservation of life supersedes preservation of the mission, such severe medical occurrences will necessitate aborting the mission and returning the ill or injured crewmember to Earth for definitive medical care. Depending on mission parameters and orbital dynamics, a return to Earth may not be possible, or may take such a long time as to be rendered futile. In other cases, higher medical capability may be available on a closer-than-Earth asset, either in orbit or on the planetary surface, and may be used as a temporizing measure before returning to Earth, or as the location of definitive care.]
+
+3.1.8 In-Mission Evacuation to Definitive Medical Care Facilities
+
+[V1 3008] Plans shall be available to transport severely ill or injured crewmember(s) to appropriate Medical Care Facilities, including Definitive Medical Care Facilities (DMCF) in the event of a contingency.
+
+[Rationale: If a return to Earth of a severely ill or injured crewmember is possible and is undertaken, coordination with suitable DMCFs in proximity to potential landing sites will be made in advance of the crewmember's landing to ascertain readiness of the facility to accept and implement immediate medical care. Mobile ground resources with the capability to initiate medical care en route to the DMCF will be deployed at potential landing sites.]
+
+3.1.9 Palliative Comfort Care
+
+[V1 3009] In medical scenarios where onboard medical resources have been exhausted, a timely return to Earth or another location of higher medical capability is not feasible, and survival of the crewmember has been determined to be impossible, palliative comfort care shall be provided.
+
+[Rationale: Certain medical conditions may occur during a space flight mission for which treatment was not manifested, either because those conditions were considered unlikely to occur or were considered to require care beyond that which is feasible for such a mission. If a crewmember were to experience such an illness or traumatic injury for which therapeutic care is not available, palliative care should be provided to relieve pain, anxiety, and other types of discomfort. The main medical conditions which have the potential to require palliative care include, but are not limited to: abdominal injury, severe burns, head injury, neck injury, cardiogenic shock, hypovolemic shock, neurogenic shock, radiation sickness, and sepsis.
+Palliative comfort care may include administration of long-acting analgesics, antiemetics, supplemental oxygen, and psychosocial support (including religious and cultural if requested) from the ground for the ill or injured crewmember as well as for the rest of the crew.]
+
+3.1.10 Termination of Care
+
+[V1 3010] Each human space flight program shall have criteria for termination of care.
+
+[Rationale: Several medical scenarios could conceivably end with a decision to terminate medical care. Catastrophic injury or very severe illness could be such that either the resources required to sustain life or definitively treat are not available or have been depleted, and/or the medical training of the medical care provider could be insufficient to support such critical and complex medical care. In these rare scenarios, medical care that had begun may need to be withdrawn and palliative comfort care provided, either because of the extreme futility of the situation, because all relevant medical resources have been used and are no longer available, or because continuation of futile measures will completely deplete medical resources and could compromise the survival of the remaining crew if the mission cannot be aborted and medical resources for other medical issues later on in the mission will be needed. The ethical and moral implications of a decision to terminate care are complex and will impact both the surviving crew and the assigned flight surgeons. Policy, procedures, and training prior to flight may be helpful in mentally preparing for such scenarios.]
+
+3.1.11 Capability to Handle Deceased Crewmembers
+
+[V1 3011] Each human space flight program shall provide the capability to handle deceased crewmembers.
+
+[Rationale: Despite screening, health care measures, and safety precautions, it is possible for crewmembers to die during a mission, particularly on extended duration missions. Problems that can threaten the health and safety of remaining crewmembers include grief, mission delays, and contamination. Facilities and plans for handling deceased crewmembers that are socially, biologically, and physically acceptable are to be established during system development. The plan needs to consider the following factors: minimizing risk to surviving crewmembers, potential forensics collection, biohazard containment (via pressurized suit or human remains containment unit) and legal jurisdiction which will involve working with other agencies (such as the Federal Bureau of Investigation) and international partners (via treaties).]
+
+3.1.12 Terrestrial Launch/Landing Medical Support
+
+[V1 3012] All programs shall have medical capability at the site of terrestrial launch and landing to address nominal operations and launch/landing contingencies, including, but not limited to the following:
+
+      a. HSP requirements for the crew, the crew's family, and supporting personnel for purpose of disease prevention.
+
+      b. Access to the full spectrum of medical capabilities, from routine medical and mental health care to advanced trauma life support (ATLS) capabilities, or equivalent.
+
+      c. Incorporation of civilian and/or Department of Defense (DOD) facilities and Emergency Medical Services (EMS).
+
+[Rationale: Medical support for terrestrial launch and landing should account for the local geographic conditions. Requirements are provided in the Program MORD or similar document and in a Program Requirements Document (PRD) or similar document to task outside agencies for EMS support and ensure its implementation. Medical support at all primary landing sites is to be sufficiently uniform, without disparity between standards of care. If there is no Definitive Medical Care Facility that satisfies the requirement for high-quality emergency treatment, mobile or fixed medical suites onsite are to be provided or engaged to protect crew health and afford the capability of resuscitation.]
+
+3.1.13 Terrestrial Launch/Landing - Definitive Medical Care Facility
+
+3.1.13.1 DMCF Medical Care
+
+[V1 3013] The program shall establish medical care agreements with DMCF(s) for each launch and landing location.
+
+[Rationale: It is critical to have pre-established medical care agreements with at least one DMCF for each launch and landing location to ensure timely access to appropriate medical care for crew and ground support personnel.]
+
+3.1.13.2 DMCF Transport
+
+[V1 3014] The program shall have the capability to transport crewmembers to a DMCF.
+
+[Rationale: Depending on the location of the launch/landing contingency, transport capabilities may involve evacuation via ground, water, or air via prepositioned civilian and/or DOD assets. All rescue vehicles are to have ATLS or equivalent capabilities to sustain the crew until transfer to a DMCF.]
+
+3.1.14 Certification of Training Plans for Launch/Landing Medical Team
+
+[V1 3015] The organization responsible for astronaut health shall certify training plans for EMS personnel who work launch/landing and concur on training plans for organizations that have a specific EMS training plan in support of a NASA space flight program. Training includes, but is not limited to:
+
+a. Physiological changes occurring as a result of prolonged launch body posture.
+
+b. Space flight physiology.
+
+      c. Injuries resulting from launch and landing contingencies (such as trauma, burns, hypoxia, and hypothermia).
+
+      d. Hazards of exposure to space vehicle-associated toxic chemicals such as propellant, fuels, oxidizers, thermal control fluids, offgassed products, and their unique treatments and responses.
+
+e. Launch/landing suit, helmet, and equipment configuration and safe removal.
+
+[Rationale: General EMS training should be supplemented with specific training to prepare the EMS providers to work at a launch/landing site and provide care to astronauts.]
+
+3.1.15 Post-Mission Health Care
+
+[V1 3016] Post-mission health care shall be provided to minimize occurrence of deconditioning- related illness or injury, including but not limited to:
+
+      a. Physical examinations by a flight surgeon immediately following landing and periodically thereafter, until crew status is stable.
+
+b. Clinical laboratory tests.
+
+c. Physical reconditioning.
+
+d. Treatment as required.
+
+e. Scheduled days off and rest periods.
+
+f. Circadian rhythm retraining.
+
+g. Nutrition assessment and support.
+
+      h. Psychosocial support for the crew and their families to assist with transition back into work and family life.
+
+
+      i. Monitoring by a flight surgeon during post-mission scientific investigations that may pose some risk to a deconditioned crewmember's health.
+
+3.1.16 Post-Mission Reconditioning
+
+[V1 3017] All programs shall provide the planning, coordination, and resources for an individualized post-mission reconditioning program, specific to each crewmember, mission type, and mission duration.
+
+The post-mission reconditioning starts with crew egress at landing and includes a guided, phased reconditioning protocol. The goals of the reconditioning program include the following:
+
+a. To ensure the health and safety of returning crew.
+
+b. To actively assist the crew's return to full functional abilities and return-to-flight
+status.
+
+c. To actively assist in the crew's return to pre-mission fitness.
+
+3.1.17 Post-Mission Long-Term Monitoring
+
+[V1 3018] Crewmembers returning from space flight shall be monitored longitudinally for health and well-being parameters in a standardized manner.
+
+[Rationale: Data derived from standardized testing procedures, used in a pooled, non- attributable fashion, are essential to characterize the short- and (in particular) the long-term effects of space flight on human health (occupational surveillance). Exposure metadata from flight monitoring are critical components of correlating exposure to health outcomes, and such data should be accessible.]
+
+4. STANDARDS FOR HUMAN PERFORMANCE
+
+To support space exploration and to guide and focus efforts to protect the health of spacefaring crews, space flight health standards for human performance have been developed. These standards provide a declaration of acceptable medical risk from the deleterious health and performance effects of space flight and help target and prioritize biomedical research and technology development efforts, providing target parameters for products and deliverables that support the health maintenance of crews during space missions. They also promote operational and vehicle design requirements and aid in medical decision-making during space missions.
+
+The standards are based on the best available scientific and clinical evidence. Research findings, lessons learned from previous space missions and in analogue environments, current standards of medical practice, risk management data, and expert recommendations were all considered in the process of setting the standards. The process used for setting the standards was modeled on
+
+that used by the United States Occupational Safety and Health Administration (OSHA) but were tailored to meet the unique needs and characteristics associated with the human health aspects of space exploration and the NASA mission.
+
+4.1 Fitness-for-Duty Aerobic Capacity
+
+4.1.1 Microgravity EVA Aerobic Capacity Standard
+
+[V1 4001] Crewmembers shall maintain an in-mission maximum aerobic capacity (VO2max) at or above 32.9 ml•min-1•kg-1 for missions with microgravity EVAs as determined by either direct or indirect measures.
+
+[Rationale: Expected EVA metabolic rates were determined based either on flight data or analog study data. The estimated microgravity data came from an unpublished database of Shuttle and ISS EVA metabolic rates and Neutral Buoyancy Laboratory (NBL) training metabolic rates.
+Data used for the ISS scenario were the flight metabolic data from Space Transportation System (STS)-114 through STS-135. These data were reported in kcal•hr-1 and transferred into VO2 (ml•min-1•kg-1) using an assumed respiratory exchange ratio (RER) of 0.85 and a crewmember mass of 80 kg. The average duration of these EVAs was 6.67 hours with a maximum of 8 hours. Based on these numbers, the assumption that crewmembers would sustain 30% of their in- mission VO2max was used to calculate the required in-mission VO2max minimum. Pre-mission recommendations are provided given the historical experience showing declines of 15-25% in VO2max but are not required as long as the in-mission VO2max of 32.9 ml•min-1•kg-1 can be maintained. (See Table 1, Required Minimum In-Mission VO2max and Pre-mission VO2max Recommendations.) This recommended in-mission VO2max would also be sufficient to address the average peak EVA VO2, which was 19.4 ml•min-1•kg-1 and even the average of the top 10 EVA peak VO2 values, which was 32.3 ml•min-1•kg-1.]
+Table 1-Required Minimum In-Mission VO2max and Pre-mission VO2max Recommendations
+ Example DestinationEstimated Average VO2 (ml•min-1•kg-1) during EVAIn-mission VO2max Minimum (ml•min-1•kg-1)Pre-mission VO2max Recommendation (assuming an in-
+mission 15% decline)Pre-mission VO2max Recommendation (assuming an in-
+mission 25% decline)ISS9.8732.938.743.8
+4.1.2 Celestial Surface EVA Aerobic Capacity
+
+[V1 4002] Crewmembers shall maintain an in-mission maximum aerobic capacity (VO2max) at or above 36.5 ml•min-1•kg-1 for missions with celestial surface EVAs as determined by either direct or indirect measures.
+
+4.1.3 In-Mission Aerobic Capacity
+
+[V1 4003] The in-mission aerobic capacity shall be maintained, either through countermeasures or work performance, at or above 80% of the pre-mission capacity determined by either direct or indirect measures.
+
+4.1.4 Post-Mission Aerobic Capacity
+
+[V1 4004] The post-mission reconditioning shall be aimed at achieving a VO2max at or above the crewmember's pre-mission values.
+
+4.2 Fitness-for-Duty Sensorimotor
+
+4.2.1 Pre-Mission Sensorimotor
+
+[V1 4005] Pre-mission sensorimotor functioning shall be assessed and be within normal clinical values for age and sex of the astronaut population.
+
+4.2.2 In-Mission Fitness for Duty Sensorimotor
+
+[V1 4006] In-mission Fitness-for-Duty requirements shall be guided by the nature of mission- associated critical operations (such as, but not limited to, vehicle control, robotic operations, EVAs).
+
+4.2.3 In-Mission Fitness for Duty Sensorimotor Metrics
+
+[V1 4007] In-mission Fitness-for-Duty requirements shall be assessed using metrics that are task specific.
+
+4.2.4 Sensorimotor Performance Limits
+
+[V1 4008] Sensorimotor performance limits for each metric shall be operationally defined.
+
+4.2.5 Sensorimotor Countermeasures
+
+[V1 4009] Countermeasures shall maintain function within performance limits.
+
+4.2.6 Post-Mission Sensorimotor Reconditioning
+
+[V1 4010] Post-mission reconditioning shall be monitored and aimed at returning to baseline sensorimotor function.
+
+4.3 Fitness-for-Duty Behavioral Health and Cognition
+
+4.3.1 Mission Cognitive State
+
+[V1 4011] Pre-mission, in-mission, and post-mission crew behavioral health and crewmember cognitive state shall be within clinically accepted values as judged by behavioral health evaluation.
+
+4.3.2 End-of-Mission Cognitive Assessment and Treatment
+
+[V1 4012] End-of-mission assessment and treatment for crewmember cognitive state shall include cognitive assessment, monitoring, and as needed, transitioning the crewmember back to pre-mission values.
+
+4.3.3 End-of-Mission Psychosocial Assessment
+
+[V1 4013] End-of-mission assessment and treatment for behavioral health of the crewmember shall include behavioral health and psychosocial assessment, monitoring, and as needed, transitioning the crewmember back into terrestrial work, family, and society.
+
+4.3.4 Completion of Critical Tasks
+
+[V1 4014] The planned number of hours for completion of critical tasks and events, workday, and planned sleep period shall have established limits to assure continued crew health and safety.
+
+4.4 Fitness-for-Duty Hematology and Immunology
+
+4.4.1 Pre-Mission Hematological/Immunological Function
+
+[V1 4015] Pre-launch hematological/immunological function shall be within normative ranges established for the healthy general population.
+
+4.4.2 In-Mission Hematological/Immunological Countermeasures
+
+[V1 4016] In-mission countermeasures shall be in place to sustain hematological/immunological parameters within the normal range as determined by direct or indirect means.
+
+4.4.3 Hematology and Immunology Countermeasures and Monitoring
+
+[V1 4017] Countermeasures and monitoring shall be developed to ensure immune and hematology values remain outside the critical values, i.e., the level that represents a significant failure of the hematological/immunological system, and is associated with specific clinical morbidity, defined for specific parameters.
+
+4.4.4 Post-Mission Hematological/Immunological
+
+[V1 4018] Post-mission assessment and treatment shall be aimed at returning to pre-mission baseline.
+
+4.5 Permissible Outcome Limit for Nutrition
+
+4.5.1 Pre-Mission Nutritional Status
+
+[V1 4019] Pre-mission nutritional status shall be assessed and any deficiencies mitigated before launch.
+
+4.5.2 In-Mission Nutrient Intake
+
+[V1 4020] In-mission nutrient intake shall be no less than 90% of the calculated nutrient requirements, based on an individual's age, sex, body mass (kg), height (m), and an activity factor of 1.25.
+
+4.5.3 In-Mission Nutritional Status
+
+[V1 4021] In-mission nutritional status shall be assessed and recommendations/countermeasures applied for any decrements below predetermined values.
+
+4.5.4 Post-Mission Nutritional Assessment and Treatment
+
+[V1 4022] Post-mission nutritional assessment and treatment shall be aimed at returning to baseline.
+
+4.6 Permissible Outcome Limit for Muscle Strength
+
+4.6.1 Pre-Mission Muscle Strength and Function
+
+[V1 4023] Pre-mission muscle strength and function shall be per the values in Table 2, Pre- Mission Muscle Strength Requirements.
+
+[Rationale: Crew member strength capacity should be sufficient to complete in-flight and post- flight nominal tasks, maintain operational efficiency, minimize loss of mission objectives, and preserve muscle strength reserves for off-nominal and contingency events requiring physically
+
+demanding actions. For these reasons, a minimum level of muscle strength needs to be set. Table 2, Pre-Mission Muscle Strength Requirements, provides strength standards for minimum level, missions with microgravity EVAs, celestial surface EVAs, and unaided egress. EVA suit design (i.e., suit design impacts the ability of the human to perform) needs to be considered and may require adjustment to the values.]
+
+Table 2-Pre-Mission Muscle Strength Requirements
+MinimumMicrogravity EVAsCelestial Surface EVAsUnaided EgressDeadlift1.0 × Body Weight1.3 × Body Weight1.6 × Body Weight1.3 × Body WeightBench Press0.7 × Body Weight0.8 × Body Weight1.0 × Body Weight0.7 × Body Weight
+4.6.2 In-Mission Skeletal Muscle Strength
+
+[V1 4024] Countermeasures shall maintain in-mission skeletal muscle strength at or above 80% of baseline values.
+
+[Rationale: Exercise equipment design and capabilities needs to account for the entire range of crew members' strength, including crew members at the upper end of the strength range to meet this standard.]
+
+4.6.3 Post-Mission Reconditioning
+
+[V1 4025] Post-mission reconditioning shall be aimed at returning to baseline muscle strength.
+
+4.7 Permissible Outcome Limit for Microgravity-Induced Bone Mineral Density Loss
+
+4.7.1 Pre-Mission Bone Mineral Density
+
+[V1 4026] Crewmembers' pre-mission bone mineral density (BMD) T-scores for total hip and lumbar spine (L1-L4), as measured by mass dual energy X-ray absorptiometry (DXA) shall be consistent with an age, sex, gender, and ethnic-matched population.
+
+4.7.2 Pre-Mission Bone Countermeasures
+
+[V1 4027] Countermeasures shall maintain bone mass of the hip and spine at or above 95% of pre-mission values and at or above 90% for the femoral neck.
+
+[Rationale: Countermeasures, including an advanced resistive exercise device (ARED), cycle ergometer device, and treadmill, have resulted in the majority of crewmembers losing <10% bone mineral density in femoral neck and <5% in total hip or spine during 6-month ISS
+
+missions. Additional countermeasures may also include pharmacological antiresorptive (bisphosphonate) therapy which has been tested in research space studies and decreased the bone loss further (~0% loss) when used in combination with exercise countermeasures. Post- mission long-term effects to bone health are being monitored.]
+
+4.7.3 Post-Mission Bone Reconditioning
+
+[V1 4028] Post-mission reconditioning shall be aimed at returning bone mineral density to pre- mission baseline.
+
+4.8 Space Permissible Exposure Limit for Space Flight Radiation Exposure
+
+The following standards define the Space Permissible Exposure Limits (PELs) for the following: astronaut total career exposure limits, short-term acute exposure limits and nuclear technology exposure limits. It is important to further minimize exposure from all sources of radiation below the following limits using the as low as reasonably achievable (ALARA) principle.
+
+4.8.1 As Low as Reasonably Achievable (ALARA) Principle
+
+[V1 4029] All crew radiation exposures shall be minimized using the ALARA principle.
+
+[Rationale: It is important to minimize crew health risk due to radiation exposure by decreasing crew radiation exposure from all sources using the ALARA principle. The ALARA principle is a fundamental guiding principle for radiation protection which requires programs to minimize radiation exposures below the limits/standards within the design constraints of the mission.]
+
+4.8.2 Career Space Permissible Exposure Limit for Space Flight Radiation
+
+[V1 4030] An individual astronaut's total career effective radiation dose due to space flight radiation exposure shall be less than 600 mSv. This limit is universal for all ages and sexes.
+
+The NASA effective dose for determining the standard threshold limit is calculated using the NASA Q (based on the NASA cancer model of 2012), 35-year-old female model parameters (tissue weighting factors, phantom, etc.) for both males and females. Individual astronaut risk of exposure-induced death (REID) calculations are calculated using the appropriate NASA Q (based on the NASA cancer model of 2012) sex and age model parameters.
+
+[Rationale:. The total career dose limit is based on ensuring all astronauts (inclusive of all ages and sexes) remain below 3% mean risk of cancer mortality (REID) above the non-exposed baseline mean. Individual astronaut career dose includes all past space flight radiation exposures, plus the projected exposure for an upcoming mission. Medical and biomedical research exposures are not included in the dose limit but are tracked for overall crew exposure history. This standard protects the career limits for all organs in Table 3, Dose Limits for Short- Term or Career Non-Cancer Effects (in mGy-Eq or mGy) (see Crew Radiation Limits for Nuclear Technologies [V1 4032]). Due to variability and subjectivity of the selection of model
+
+parameters, the model should not be updated unless a 30% change is seen in the effective dose associated with the 3% mean REID calculation. Refer to NASA/TP-2020-5008710, Ensemble Methodologies for Astronaut Cancer Risk Assessment in the face of Large Uncertainties.]
+
+Table 3-Dose Limits for Short-Term or Career Non-Cancer Effects (in mGy-Eq. or mGy)
+Note: RBEs for specific risks are distinct as described below.
+Organ30-Day limit1-Year LimitCareerLens*#1,000 mGy-Eq2,000 mGy-Eq4,000 mGy-EqSkin#1,500 mGy-Eq3,000 mGy-Eq6,000 mGy-EqBlood-forming Organs (BFO)#250 mGy-Eq500 mGy-EqNot applicableCirculatory System**##250 mGy-Eq500 mGy-Eq1000 mGy-EqCentral Nervous System***##500 mGy-Eq1,000 mGy-Eq1,500 mGy-EqCentral Nervous System*** (Z=10)##-100 mGy-Eq250 mGy-Eq
+*Lens limits are intended to prevent early (<5 years) severe cataracts, e.g., from a solar particle event. An additional cataract risk exists at lower doses from cosmic rays for sub- clinical cataracts, which may progress to severe types after long latency (>5 years) and are not preventable by existing mitigation measures; however, they are deemed an acceptable risk to the program.
+**Circulatory system doses calculated as average over heart muscle and adjacent arteries.
+  ***Central Nervous System limits should be calculated at the hippocampus.
+#Reference: National Council on Radiation Protection and Measurements. 2000. Recommendations of Dose Limits for Low Earth Orbit. NCRP Report 132, Bethesda MD. ## Human Research Program Evidence Book
+
+Table 4-Relative Biological Effectiveness (RBE) for Non-Cancer Effectsa of the Lens,
+Skin, BFO, and Circulatory Systems
+
+Radiation TypeRecommended RBE bRange1 to 5 MeV neutrons6.0(4-8)5 to 5o MeV neutrons3.5(2-5)Heavy Ionsc
+2.5(1-4)Protons > 2 MeV1.5-
+
+a RBE values for late deterministic effects are higher than for early effects in some tissues and are influenced by the doses used to determine the RBE.
+b There are not sufficient data on which to base RBE values for early or late effects by neutrons of energies <1 MeV or greater than about 25 MeV.
+
+c There are few data for the tissue effects of ions with a Z>18, but the RBE values for iron ions (Z=26) are comparable to those of argon (Z=18). One possible exception is cataract of the lens of the eye because high RBE values for cataracts in mice have been reported.
+
+Reference: National Council on Radiation Protection and Measurements. 2000. Recommendations of Dose Limits for Low Earth Orbit. NCRP Report 132, Bethesda MD.
+
+4.8.3 Short-Term Radiation Limits - Solar Particle Events
+
+[V1 4031] The program shall protect crewmembers from exposure to the design reference solar particle event (SPE) environment proton energy spectrum (sum of the October 1989 events) to less than a NASA effective dose of 250 mSv.
+
+[Rationale: The 250 mSv effective dose threshold was chosen to minimize acute effects and protects for the short-term limits for all organs listed in Table 3. In the design process, ALARA ensures optimization of the design to afford the most protection possible within other constraints of the vehicle systems. The additional protection significantly contributes to the mitigation of long-term health effects such as cancer (refer to Career Space Permissible Exposure Limit for Space Flight Radiation [V1 4030]).
+
+The Design Reference SPE Environment Proton Energy Spectrum is referenced in Table 5, Design Reference SPE Environment Proton Energy Spectrum. SPE shielding should be an inherent part of the vehicle design and/or reconfigured components within the vehicle to minimize the addition of mass. To be most effective, it is critical that the shielding surrounds the crew. The design solution which includes considerations for the vehicle/habitat should minimize exposure as much as possible utilizing the ALARA principle. For solar particle event shielding designs, an iterative approach should be taken for determining shielding designs that continue to iterate the design until less than a 10 mSv is achieved from the previous iteration. If a reconfigurable shelter is deployed, environmental control life support system (ECLSS) impacts need to be considered. Refer to Table 6, Recommended Shielding Guidelines for SPEs, for shielding recommendations based on mission duration and location.]
+
+Table 5-Design Reference SPE Environment Proton Energy Spectrum (Sum of the October 1989 Events)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Table 6-Recommended Shielding Guidelines for SPEs
+Mission Location and
+Duration
+Shielding*
+Type(s) of Shielding
+Comments
+Celestial surface any duration10 cm (or g/cm2) water equivalent
+surrounding the astronaut; Considers celestial surface shielding contribution
+ Reconfigurable shielding already within the vehicle
+Timeline of SPEs allows for reconfiguration
+Beyond low Earth orbit
+<6 months
+15 cm (or g/cm2) water equivalent
+surrounding the astronautReconfigurable shielding already within the vehicle; Shielding may include personal protective
+equipment (PPE)
+Timeline of SPEs allows for reconfigurationBeyond low Earth orbit
+> 6 Months20 cm (or g/cm2) water equivalent
+surrounding the astronautIntegrated vehicle and/or reconfigurable Shielding which may include PPELong-duration missions increase the probability of the crew being exposed SPEs*The shielding required to meet the standard (utilizing existing mass when feasible).
+
+4.8.4 Crew Radiation Limits for Nuclear Technologies
+
+[V1 4032] Radiological exposure from nuclear technologies emitting ionizing radiation to crewmembers (e.g., radioisotope power systems, fission reactors, etc.) shall be less than an effective dose of 20 mSv per mission year (prorated/extrapolated to mission durations) and utilizing the ALARA principle.
+
+[Rationale: This limit is based on not adding more than 10% radiation exposure beyond the space environment radiation of the mission. Based on an analysis for a surface-based mission (see Figure 2, Effective Dose [mSv per Earth Mission Day] Variation with Solar Cycle), the radiation environment exposure is approximately 0.5 mSv per day; and 10% of this value sets the standard to 0.05 mSv per day and ~20 mSv/mission year. This standard is applied to both surface and free-space missions regardless of mission solar cycle. Twenty (20) mSv was also based on the occupational workers' limit guideline from the ICRP, The 2007 Recommendations of the International Commission on Radiological Protection, ICRP 103, 2007).
+
+For a typical surface power application, the allowable astronaut dose can be converted to an effective reactor dose for shield sizing. The effective reactor dose would be calculated by estimating the time an astronaut spends in a shielded habitat versus the time spent during unshielded EVAs over a typical mission timeline. Exact mission assumptions should be considered when performing the calculation; parameters should include estimates of time in a habitat, habitat shielding, and EVA frequency. Example parameters to be considered: time fraction (67%) in the habitat, habitat shielding (20 g/cm2), terrain shielding, distance from source, line of sight to source, and time fraction (33%) of performing EVAs.
+
+Space radiation and radioactive source tradeoff for a waiver of standard consideration: For missions that are leveraging nuclear sources for a propulsion system, the tradeoff of reduced mission duration due to faster transit which reduces the crew exposure to space flight radiation exposure should be considered compared to the increased exposure due to the nuclear source. For example, if the nuclear propulsion system saved 90 days of exposure during the transit to Mars which equates to 1.5 mSv/day × 90 days = 135 mSv "saved" space flight radiation exposure and the source generates 150 mSv, then the net exposure is +15 mSv. Other considerations for reduced mission time on engineering risks (systems reliability, logistics, etc.) and other human risks such as bone loss, renal stone development, and medical care should also be considered in the waiver process.]
+
+
+
+Figure 2-Effective Dose (mSv per Mission Day) Variation with Solar Cycle
+
+Reference: Quick-Look Assessment of the Impact of Solar Cycle Variability on Astronaut Radiation Exposure during a Human Mars Mission, Prepared by Dr. Ronald Turner, ANSER., February 17, 2021
+
+5. TRAINING
+
+The following requirements outline the required training for personnel who support a space flight mission. Also refer to [V1 3005] Medical Care Training for In-Mission Medical Care Provider, and [V1 3006] Crew Medical Officers Quantity, for additional medical care training information.
+
+5.1 Medical Training
+
+[V1 5001] Medical training to astronaut candidates, assigned crewmembers, flight surgeons (FSs), mission control support staff, and other ground support personnel (GSP) deemed appropriate shall be provided.
+
+5.2 Astronaut Training
+
+[V1 5002] Beginning with the astronaut candidate year, general medical training, including first aid, cardiopulmonary resuscitation (CPR), altitude physiological training, carbon dioxide exposure training, familiarization with medical issues, procedures of space flight, psychological training, and supervised physical conditioning training shall be provided to the astronaut corps.
+
+5.2.1 Crew Medical Officer Medical Training
+
+[V1 5003] Crewmembers who have received a mission assignment as a Crew Medical Officer (CMO) shall be provided with more detailed and specific medical training, including health issues, space physiology, medical procedures, medical equipment, toxicology, and countermeasures.
+
+
+5.2.2 Medical Training Verification
+
+[V1 5004] Medical Training shall be verified for all personnel.
+
+5.3 Crew Surgeon Training
+
+[V1 5005] NASA and/or contractor FSs assigned to support the subject space program shall
+receive training and certification in accordance with a program-specific training plan.
+An example is JSC-26546, NASA International Space Station Flight Surgeon Training and Certification Plan.
+
+[Rationale: For the subject program, this training includes courses such as mission controller certification (for all involved Mission Control Centers) advanced cardiac life support/advanced trauma life support (ACLS/ATLS), flight medicine procedures, aerospace physiology, space medicine, hyperbaric medicine, and emergency mishap response.]
+
+5.4 Medical Operations Flight Controller Training
+
+[V1 5006] All Medical Operations personnel staffing the Mission Control Center (MCC) shall
+be trained and certified according to program-specific training and certification plans.
+
+5.5 Support Personnel Training
+
+[V1 5007] Supervised training programs shall be implemented for individuals who require knowledge of space medicine or flight medical procedures, such as flight directors, medical consultants, and/or other personnel deemed appropriate as part of the Medical and Crew Health Requirements Document.
+
+5.6 Psychological Mission Training
+
+[V1 5008] Specific pre-mission briefings and training shall be provided as appropriate to the commander (CDR), CMOs, crewmembers, key ground personnel, and crew families concerning the significant psychological and social phenomena that may arise in all phases of a mission.
+
+[Rationale: This training may include the following:
+
+a. Provision of recommendations and guidelines for family support activities.
+
+      b. Training and support for effective individual adaptation, crew integration, and team dynamics.
+
+      c. Recommendations to Flight Crew Operations Directorate (FOD), as requested, to assist in crew assignment and composition.
+
+      d. Training for medical and other GSP as indicated in support of behavior and performance issues.
+
+e. Cross-cultural training support as indicated for international missions.]
+
+5.7 Physiological Exposure Mission Training
+
+[V1 5009] Physiological training designed to assist crewmembers with pre-mission familiarization to in-flight exposures (i.e., carbon dioxide [CO2] exposure training, hypoxia training/instruction, centrifuge, and high-performance aircraft microgravity adaptation training) in preparation for space flight shall be provided.
+
+6. MEDICAL OPERATIONS
+
+6.1 Circadian Shifting Operations and Fatigue Management
+
+[V1 6001] Crew schedule planning and operations shall be provided to include circadian entrainment, work/rest schedule assessment, task loading assessment, countermeasures, and special activities.
+
+6.2 Private Medical Communication (PMC)
+
+6.2.1 Private Medical Communication (PMC) Schedule
+
+[V1 6002] A PMC shall be scheduled on a routine basis, as determined by the Flight Surgeon, at a frequency dictated for short- or long-duration missions
+
+[Rationale: Real time communications are preferred for all PMCs; however, when missions have communication delays, different modalities can be considered (e.g., stored/ forward communications).]
+
+6.2.2 Private Medical Communications Information Delivery
+
+[V1 6003] Medical information that is sent to/from the ground via spacecraft telemetry shall be considered private communication.
+
+[Rationale: The PMC deals directly with medical problems and preventive medicine. This secured or private communication provides for privacy of medical information between the NASA crew and the NASA flight surgeons per the Privacy Act of 1974.]
+
+6.3 Behavioral Health and Performance
+
+6.3.1 Behavioral Health and Performance Provisions
+
+[V1 6004] Provisions shall be made to implement appropriate psychological support programs for the crew, key ground personnel, and crew families throughout the mission.
+
+6.3.2 Behavioral Health for Key Ground Personnel
+
+[V1 6005] Psychological programs shall be available for key ground personnel.
+
+6.4 Extravehicular Activities (EVAs)
+
+[V1 6006] All EVAs shall be preceded by an assessment of medical fitness requiring concurrence by ground medical support personnel.
+
+6.5 Medical and Survival Kits
+
+[V1 6007] Vehicle medical kits (routine and survival) shall be provided for all phases of the mission.
+
+6.6 Crew Health Operations Concept
+
+6.6.1 Crew Health Operations Concept Document
+
+[V1 6008] The program(s) shall develop a crew health operations concept document to define the medical and health care concepts during all phases of the spaceflight program.
+
+[Rationale: The medical and health care operations concept should include, as a minimum, the operational concepts of crew selection; pre-flight medical intervention standards; inflight medical and health care standards; private medial conferences; periodic health and fitness evaluation; behavioral health support for the crew, ground personnel, and crew families; definitive care facilities; vehicle/habitat crew performance system; medical survival kits; post- flight standards; post-flight medical evaluations; and landing/launch EMS support. For past programs, this information has been documented in a Crew Health Operations Concept (CHOC) document.]
+
+6.6.2 Medical and Crew Health Requirements Document
+
+[V1 6009] The program(s) shall develop a medical and crew health requirements document based on the concepts outlined in the CHOC document and NASA-STD-3001.
+
+[Rationale: The medical and crew health requirements document should include, as a minimum, the implementation of the requirements for crew selection; pre-flight medical intervention standards; in-flight medical and health care standards; private medial conferences; periodic
+
+health and fitness evaluation; behavioral health support for the crew, ground personnel, and crew families; definitive care facilities; vehicle/habitat crew performance system; crew and ground support training; medical survival kits; post-flight standards; post-flight medical evaluations; and landing/launch EMS support. The Medical and Crew Health Requirements Document ensures effective implementation and communication of the health and medical care for the crew from selection to post-flight reconditioning. For missions beyond low Earth orbit that may involve multiple programs, one medical and crew health requirements document may include the medical and crew health requirements for each program that contributes to the mission (e.g., Artemis). For past programs, this information has been documented in a MORD.]
+
+7. CREW HEALTH RECORDS
+
+7.1 Crew Health Results
+
+[V1 7001] The results of all crew health monitoring shall be kept in a permanent retrievable format for evaluation, including trend analysis.
+
+7.2 Crew Records Communication
+
+[V1 7002] The method of transmission of crewmembers' medical health data shall be in a timely manner to meet the medical operational needs of the program.
+
+7.3 Crew Records Storing
+
+[V1 7003] The method for handling, storing, and transmission of crewmembers' medical health records shall be secured.
+
+       APPENDIX A REFERENCE DOCUMENTS
+A.1 PURPOSE
+
+This Appendix provides guidance made available in the reference documents listed below. Reference documents may be accessed at https://standards.nasa.gov, obtained directly from the Standards Developing Body or other document distributors, obtained from information provided or linked, or by contacting the Center Library or office of primary responsibility.
+
+A.2 REFERENCE DOCUMENTS
+
+A.2.1 Government Documents
+
+NPD 1000.3	The NASA Organization
+
+NPD 8900.1	Medical Operations Responsibilities in Support of Human Space
+Flight Programs
+
+NPD 8900.3	Astronaut Medical and Dental Observation Study and Care
+Program
+NPD 8900.5	NASA Health and Medical Policy for Human Space Exploration NPR 8900.1	NASA Health and Medical Requirements for Human Space
+Exploration
+
+NID 8900.136	Private Astronaut and Sub-Orbital Spaceflight Participant Medical
+Procedural Requirements
+
+NPR 7120.11	NASA Health and Medical Technical Authority (HMTA)
+Implementation
+
+NID 1241.126	To Research, Evaluate, Assess, and Treat (TREAT)
+Astronauts Policy
+
+NASA-STD-3001,	NASA Space Flight Human System Standard, Volume 2: Human Volume 2	Factors, Habitability, and Environmental Health
+
+JSC-26546	NASA International Space Station Flight Surgeon Training and Certification Plan
+
+JSC-27384	Behavioral Health and Performance Program Plan Definition and
+Implementation Guide
+
+OCHMO-STD-100.1A	NASA Astronaut Medical Standards Selection and Annual
+Recertification
+
+SSP 50667, Volume A	Medical Evaluation Documents (MED) Volume A - Medical Standards for ISS Crewmembers
+
+SSP 50667, Volume B	Medical Evaluation Documents (MED) Volume B - Pre-flight, In- mission, and Post-mission Medical
+
+SSP 50667, Volume C	Evaluation Requirements for Long-Duration ISS Crewmembers
+Medical Evaluation Documents (MED) Volume C - Medical Standards and Certification Procedures for Space Flight Participants
+
+MSFC Form 4657	Change Request for a NASA Engineering Standard
+
+Privacy Act of 1974	A code of fair information practices that governs the collection, 5 U.S.C. § 552a	maintenance, use, and dissemination of information about
+individuals that is maintained in systems of records by federal agencies. The United States Department of Justice.
+
+A.2.2 Non Government Documents
+
+National Council on Radiation Protection and Measurements. 2000. Recommendations of Dose Limits for Low Earth Orbit. NCRP Report 132, Bethesda MD.
+
+Quick-Look Assessment of the Impact of Solar Cycle Variability on Astronaut Radiation Exposure during a Human Mars Mission, Prepared by Dr. Ronald Turner, ANSER., February 17, 2021
+
+APPENDIX B
+
+ACRONYMS, ABBREVIATIONS, AND SYMBOLS
+B.1 PURPOSE
+
+This Appendix provides guidance, made available in the acronym, abbreviation, and symbol definitions listed below.
+
+%percentACLS/ATLSadvanced cardiac life support/advanced trauma life supportALARAas low as reasonably achievableAREDadvanced resistive exercise deviceARTassisted reproductive technologyBFOblood forming organ(s)BMDbone mineral densityCCPCommercial Crew ProgramCDRcommanderCHOCcrew health operations conceptcmcentimeterCMOcrew medical officerCO2carbon dioxideCPRcardiopulmonary resuscitationDMCFdefinitive medical care facilityDODDepartment of DefenseDRMdesign reference missionDXAdual energy x-ray absorptiometryECLSSenvironmental control life support systemEMSemergency medical servicesEVAextravehicular activityFARFederal Acquisition RegulationFODFlight Operations DirectorateFFDfitness for dutyFFRDCFederally Funded Research and Development CenterFSflight surgeonggravityGCRgalactic cosmic raysGSPground support personnelHMTAHealth and Medical Technical AuthorityhrhourHSPhealth stabilization programIMMintegrated medical modelISSInternational Space StationICRPInternational Commission on Radiological Protection and Measurements
+
+IVintravenousJSCJohnson Space Centerkcalkilocalorie(s)kgkilogram(s)LElower extremityLETlinear energy transfermmeter(s)Almax (subscript)maximumMCCMission Control CenterMEDmedical evaluation documentsMeVmegaelectron voltmGymilligraymGy-Eqmilligray-equivalentminminute(s)mlmilliliter(s)MORDMedical Operations Requirements DocumentMSFCMarshall Space Flight CentermSvmillisievertsNASANational Aeronautics and Space AdministrationNBLNeutral Buoyancy LaboratoryNCRPNational Council on Radiation Protection and MeasurementsNPDNASA Policy DirectiveNPRNASA Procedural RequirementOCHMOOffice of the Chief Health and Medical OfficerOSHAOccupational Safety and Health AdministrationPELpermissible exposure limitPMCprivate medical communication/conferencePOLpermissible outcome limitsPPEpersonal protective equipmentPRAprobabilistic risk assessmentPRDProgram Requirements DocumentRBErelative biological effectivenessREIDrisk of exposure-induced deathRERrespiratory exchange ratioSANSSpace Flight Associated Neuro-Ocular SyndromeSARS-CoV-2severe acute respiratory syndrome coronavirus 2SASSpace Adaptation SyndromeSDstandard deviationSISystem International or metric system of measurementSPEsolar particle eventSPELspace permissible exposure limitsSSPSpace Station ProgramSTDstandardSTSSpace Transportation SystemTREATTo Research, Evaluate, Assess, and Treat
+
+U.S./USUnited StatesV1Volume 1VOvolume of oxygen
+APPENDIX C
+
+
+
+
+C.1	PURPOSE
+
+DEFINITIONS
+
+
+This Appendix provides guidance, made available in the definitions listed below:
+
+      As low as (is) reasonably achievable (ALARA): Making every reasonable effort to maintain exposures to ionizing radiation as far below the dose limits as practical, consistent with the purpose for which the licensed activity is undertaken, taking into account the state of technology, the economics of improvements in relation to state of technology, the economics of improvements in relation to benefits to the public health and safety, and other societal and socioeconomic considerations, and in relation to utilization of nuclear energy and licensed materials in the public interest.
+
+Bone Mineral Density (BMD): The amount of mineral content per unit volume of bone.
+A BMD test measures how much calcium and other types of minerals are in an area of
+your bone. This test helps predict risk for bone fractures. Bone mineral density is measured by a T-score, which indicates how BMD compares to that of a healthy 30 year old. Peak bone density is reached by age 30 and should ideally be maintained at this level throughout life. As BMD decreases from this peak density, fracture risk increases. The T-score is in units of standard deviations (SD) and shows whether bones are more dense (+) or less dense (-) than those of a 30 year old. A T-score of -1.0 or above is normal bone density, between -1.0 and -2.5 means low bone density or osteopenia, and a T-score of -2.5 or below is a diagnosis of osteoporosis.
+
+Definitive Medical Care Facility (DMCF): An inpatient medical facility capable of comprehensive diagnosis and treatment of a crewmember's injuries or illness. DMCFs are trauma-capable facilities; ideally, such facilities should be capable of managing (per the American College of Surgeons' definitions) Category I, II, and III trauma patients. In an off- nominal landing location, depending on regional resources, a facility with more limited capabilities may be considered a DMCF if able to manage crewmember medical needs. Interim treatment locations, such as a recovery ship, field triage station, or lower capability medical facility, may be utilized for stabilization until transport to a DMCF is possible.
+
+      Fitness for Duty (FFD): Minimum measurable capability or capacity for a given physiological or behavioral parameter that allows successful performance of all required duties. Functional capacity measured.
+
+      Galactic Cosmic Rays (GCR): Originate outside the solar system. They consist of ionized atoms ranging from a single proton up to a uranium nucleus. The flux (rate of flow) levels of these particles are very low. However, since they travel very close to the speed of light, and because some of them are composed of very heavy elements such as iron, they produce intense ionization as they pass through matter.
+
+
+      Hypothermia: A medical emergency that occurs when the body loses heat faster than it can produce heat, causing a dangerously low body temperature. Normal body temperature is around 98.6ºF (37ºC). Hypothermia occurs as your body temperature falls below 95ºF (35ºC).
+Hypoxia: A deficiency of oxygen reaching the tissues of the body.
+      Linear Energy Transfer (LET): The average amount of energy imparted to a material by an ion per unit path length traveled by the ion. The LET of an energetic ion, weighted by a radiation "quality factor," is used in regulatory standards as a relative measure of biological effectiveness for harm resulting from ionizing radiation exposures.
+      Palliative Care: Specialized medical care that focuses on providing patients relief from pain and other symptoms of a serious illness, no matter the diagnosis or stage of disease.
+Palliative care teams aim to improve the quality of life for both patients and their families.
+      Permissible Outcome Limits (POL): Acceptable maximum decrement or change in a physiological or behavioral parameter, during or after a space flight mission, as the result of exposure to the space environment. Biological/clinical parameter measured, e.g., bone density.
+
+      Probabilistic Risk Assessment (PRA): A comprehensive, structured, and disciplined approach to identifying and analyzing risk by seeking answers to three basic questions: what can go wrong, how likely is it, and what are its consequences? (Derived from ESD 10011)
+      Relative biological effectiveness (RBE): A term used to compare how damaging radiation is, using x-rays or gamma rays as a reference. A radiation that is 10 times more effective per unit dose than X-rays would have an RBE of 10. RBE varies with dose, dose rate, and measured endpoint among other factors.
+      Sievert: A derived (not directly measured) unit of dose equivalent or NASA equivalent dose of radiation which accounts for the biological effect (radiation quality and tissue sensitivity) of ionizing radiation in reference to carcinogenic potential. 1 Sv = 1000 millisieverts (mSv).
+      Solar particle events (SPE): Injections of energetic electrons, protons, alpha particles, and heavier particles into interplanetary space. These particles are accelerated to near relativistic speeds by the interplanetary shock waves which precede fast coronal mass ejections, and which exist in the vicinity of solar flare sites. The most energetic particles arrive at Earth within tens of minutes of the event on the Sun, while the lower-energy population arrives over the course of a day. They temporarily enhance the radiation in interplanetary space around the magnetosphere, and they may penetrate to low altitudes in the polar regions.
+      Space Permissible Exposure Limits (SPEL): Quantifiable limit of exposure to a space flight factor over a given length of time, e.g., lifetime radiation exposure.
+
+      To Research, Evaluate, Assess, and Treat (TREAT) Astronauts Act: Authorizes NASA to monitor and diagnose potential conditions and treat conditions associated with space flight. It is a
+
+comprehensive program of monitoring, diagnosis, and treatment services provided to current and former United States Government astronauts.
+
+APPENDIX D
+
+HEALTH AND MEDICAL CARE STANDARDS
+
+D.1 PURPOSE
+
+This Appendix provides information relative to health and medical care standards.
+
+D.2 EPIDEMIOLOGICAL EVIDENCE-BASED PROBABILISTIC RISK ASSESSMENT (PRA)
+
+D.2.1 Background
+
+The Health and Medical Care Standards reference an epidemiological evidence-based PRA as a decision support tool to aid clinical stakeholders and medical mission planners in the development of medical capabilities to treat the most likely medical conditions that will occur for a specific mission. The purpose of this Appendix is to provide background on this PRA and provide an outline of steps to consider during the process.
+
+Epidemiological evidence-based medical PRA is a comprehensive, structured, and logical analysis method aimed at providing probability of occurrence of medical conditions based on past space flight experience coupled with terrestrial occurrences of medical conditions.
+Presently, the integrated medical model (IMM) that was developed by the Human Research Program is a stochastic decision support tool that is available for use by clinical stakeholders, space flight mission planners, and medical system designers in assessing risks and optimizing medical systems. Other approved PRA decision support tools may also be utilized to meet the intent of the health and medical care standards. Refer to section 3.1 for Health and Medical Standards description.
+
+D.2.2 Integrated Medical Model (IMM) Overview
+
+The IMM incorporates "best evidence" with data from past missions, computer models, and comparable populations on Earth, to provide a quantifiable assessment of medical risk for a given mission scenario. The IMM also identifies medical resources, such as equipment and supplies, which are necessary for treating the medical conditions most likely to occur during the mission. Using the Monte Carlo simulation technique (a random sampling of the data inputs as described by their statistical distribution), the IMM can forecast medical outcomes, helping to provide more appropriate medical support for flight crews. The medical conditions addressed by the IMM range from minor conditions (such as headaches and nasal congestion) to more serious conditions (such as sudden cardiac arrest and kidney failure).
+
+The IMM currently derives estimates of fire/smoke/toxic inhalation risks from the ISS PRA fire module. IMM uses incidence data generated by independent predictive health models and by
+
+Bayesian analysis. The incidence of these events can be used as estimates for other vehicles, if appropriate, or updated data can be provided for the specific vehicle.
+
+The IMM requires the user to provide the mission duration, location, number of EVAs and crew attributes (for example quantity or sex) and will generate the type and probability of occurrence (likelihood) of medical events. IMM also assumes that the crew selection and health stabilization program standards are followed to ensure that the crew is in the best health posture prior to the mission. Refer to Table 6, Sample IMM Output.
+
+Table 7-Sample IMM Output
+Medical ConditionLikelihood1Late Insomnia13.85 per mission2Skin Abrasion9.86 per mission3Skin Rash9.83 per mission4Eye Abrasion7.42 per mission5Late Headache5.25 per mission6Space Motion Sickness (SAS)4.37 per mission7Diarrhea3.53 per mission8Nasal Congestion3.51 per mission9Respiratory Infection3.46 per mission10Back Injury3.41 per mission11Barotrauma (Ear/Sinus Block)3.28 per mission12Back Pain (SAS)3.15 per mission13Insomnia (SAS)2.70 per mission14Shoulder Sprain/Strain2.43 per mission15C02 Headache2.15 per mission16Headache (SAS)2.11 per mission17Spaceflight Associated Neuro-ocular
+Syndrome (SAS)2.08 per mission18Urinary Tract Infection1.44 per mission19Skin Infection1.38 per mission20Elbow Sprain/Strain1.32 per mission21Ankle Sprain/Strain1.22 per mission22Allergic Reaction1.18 per mission23Pharyngitis1.17 per mission24Constipation1.02 per mission25Neck Injury0.99 per mission26Mouth Ulcer0.96 per mission27Dental Caries0.88 per mission28Knee Sprain/Strain0.78 per mission29Paresthesia [Extravehicular Activity (EVA)]0.65 per mission30Indigestion0.64 per mission31Eye Chemical Burn0.64 per mission32Sinusitis0.64 per mission33Hearing Loss0.57 per mission34Wrist Sprain/Strain0.55 per mission35Eye Infection0.53 per mission36Hip Sprain/Strain0.45 per mission37Gastroenteritis0.42 per mission38Fingernail Delamination [Extravehicular
+Activity (EVA)]0.40 per mission39Otitis Externa0.32 per mission40Otitis Media0.30 per mission41Hemorrhoids0.22 per mission42Lower Extremity Stress Fracture0.13 per mission43Urinary Retention0.11 per mission44Skin Laceration0.11 per mission
+
+45Influenza0.11 per mission46Finger Dislocation0.11 per mission47Shingles0.11 per mission48Dental Abscess0.068 per mission
+Table 8, Medical Conditions Considered of High Likelihood or High Consequence for Space Flight Missions, summarizes the most common conditions that need to be assessed for missions up to 6 months. The items in bold and with an asterisk are the most common and should be considered for any mission duration.
+
+Table 8-Medical Conditions Considered of High Likelihood or High Consequence for Space Flight Missions
+Conditions noted with an asterisk (*) should be addressed on every mission regardless of the DRM parameters.
+CategorySpecific ConditionEnvironmental or space flight- induced medical conditionsAcute radiation syndrome Allergic reaction * Altitude sickness Anaphylaxis *
+Back pain (space-adaptation related) *
+Barotrauma (ear/sinus block) Burn (thermal)
+Burns secondary to fire Celestial dust exposure Choking/obstructed airway Cold injury (chilblains frostbite)
+Constipation (space-adaptation related) *
+Decompression sickness Embolism
+Electrical injury
+Epistaxis (nose bleed, space adaptation related) EVA-related dehydration
+Headache (CO2 related) *
+Headache (space-adaptation related) *
+Hearing loss (noise related) Heat illness
+Hypothermia
+Medication adverse reaction
+Nasal congestion (space-adaptation related) *
+Nutritional deficiency
+Space motion sickness (space-adaptation related) *
+Smoke/combustion product inhalation Toxic inhalation injury
+Urinary incontinence (space-adaptation related) * Urinary retention (space-adaptation related) *Ophthalmic conditionsAcute glaucoma Chemical eye injury * Corneal abrasion * Corneal ulcer
+Eye foreign body *
+Eye infection Eyelid/anterior eye infection
+
+Loss of vision Penetrating eye injury
+Retinal detachment/injury SANSEar, nose, and throat conditionsAcute sinusitis Cerumen impaction Epistaxis (nose bleed) Hearing loss
+Otitis externa Otitis media Pharyngitis
+Respiratory infectionDental/oral conditionsCaries Crown loss
+Dental abscess Filling loss
+Fractured tooth/Exposed pulp Oral ulcer
+Tooth loss (avulsion/luxation)Cardiovascular conditionsAcute coronary syndrome Angina/Myocardial infarction
+Cardiac dysrhythmias (atrial fibrillation/flutter) Cardiogenic shock
+Gravity transition orthostatic intolerance *
+Hypertension Sudden cardiac arrest
+Traumatic hypovolemic shock Venous thromboembolismPulmonary and other chest conditionsChest injury - Blunt Chest injury - Penetrating Reactive airway/asthma
+Respiratory tract infection (lower) Respiratory tract infection (upper)Gastrointestinal and other abdominal conditionsAbdominal injury - Blunt Abdominal injury - Penetrating Abdominal wall hernia
+Acute cholecystitis / Biliary colic Acute diverticulitis
+Acute pancreatitis Appendicitis Constipation * Diarrhea * Gastroenteritis Hemorrhoids Indigestion * Reflux/esophagitis
+Small bowel obstructionGenitourinary conditionsAbnormal uterine bleeding Acute kidney injury
+Acute prostatitis Bacterial vaginosis Nephrolithiasis
+Urinary tract infection *
+Unprotected intercourse
+
+Vaginal yeast infection *Musculoskeletal conditionsAcute arthritis
+Acute compartment syndrome Back injury (sprain/strain)
+Dislocation (finger, elbow, shoulder) Fingernail delamination (EVA related)
+Fracture (finger, hand, wrist/arm, distal leg, hip/proximal femur, thoracolumbar spine, cervical spine)
+Hand injury (EVA related)
+Joint sprain/strain (shoulder, elbow, wrist, hip, knee, ankle) Lower extremity stress fracture
+Muscular sprain/strain Neck injury (sprain/strain)
+Overuse injury - Upper or lower extremity Paresthesia
+Subungual hematoma
+Suit contact injury (EVA related) Vertebral disc injuryDermatological conditionsBurn - Chemical, skin
+Cellulitis - Bacterial skin infection *
+Herpes zoster (Shingles)
+Skin abrasion * Skin laceration * Skin rash *
+Toxic dermal exposure Viral/fungal skin infectionNeurologic conditionsBenzodiazepine/Opiate overdose Cerebrovascular accident
+Gravity transition neurovestibular disturbance * Headache *
+Head trauma (major) Head trauma (minor) Neurogenic shock
+Neuropathy (Central - impingement) Paresthesia
+SeizurePsychological, cognitive, or behavioral conditionsAcute stress * Adjustment reaction * Anxiety/panic * Apathy/low motivation Cognitive disturbance * Delirium
+Depression Grief reaction
+Insomnia/sleep disturbances/circadian dysregulation * Interpersonal conflict (i.e., team, ground, family) * Lack of meaningful work and/or monotony
+Mood disturbance (e.g., irritability) *
+Neurocognitive disorders (adjustment, mood, anxiety, trauma-related, or stress-related)
+Psychosis
+Relationship problems (family, crew, mission support personnel) Work overload/burnout/exhaustion
+
+Other conditions
+not captured elsewhereAnemia/Iron deficiency Sepsis
+D.2.3 Medical System Development using PRA - Integrated Medical Model (IMM) Data
+
+The IMM output of probability of occurrence of medical conditions that may occur in mission is a quantitative starting point for clinical stakeholders to consider while developing an in-mission medical system. One limitation is that IMM is geared more toward ISS missions, but the medical condition rate of occurrence will be similar for many other missions. Figure 3, Outline for the Use of PRA Data to Aid in the Generation of a Medical Conditions List, outlines the steps to utilize the PRA/IMM data in the development of a health and medical care system.
+
+
+
+
+
+
+
+
+Figure 3-Outline for the Use of PRA Data to Aid in the Generation of a Medical Conditions List
+*Refer to Table 11 for a medical conditions list.
+
+
+             APPENDIX E REQUIREMENTS COMPLIANCE Matrix
+E.1	PURPOSE
+
+Due to the complexity and uniqueness of space flight, it is unlikely that all of the requirements in a NASA technical standard will apply. The Requirements Compliance Matrix below contains this NASA Technical Standard's technical authority requirements and may be used by programs and projects to indicate requirements that are applicable or not applicable. Enter "Yes" in the "Applicable" column if the requirement is applicable to the program or project or "No" if the requirement is not applicable to the program or project. The "Comments" column may be used to provide specific instructions on how to apply the requirement or to specify proposed tailoring.
+
+Table 9-Requirements Compliance Matrix
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Comments3.1.1[V1 3000]Medical ManagementAll terrestrial and in-mission medical aspects included in this NASA Technical Standard shall be in accordance with current U.S. medical care standards, with limitations as imposed by mission constraints, and managed by the Flight Medicine team, which includes, but is not limited to, the Flight Medicine Clinic, Crew Surgeon, Deputy Crew Surgeon, and
+their designees, including the in-mission medical care providers (Crew Medical Officers).3.1.2[V1 3001]Selection and RecertificationCrewmembers shall be medically and psychologically selected and annually recertified following the guidance in OCHMO-STD-100.1A,
+NASA Astronaut Medical Standards Selection and Annual Recertification.3.1.3[V1 3002]Pre-Mission Preventive Health CarePre-mission preventive strategies shall be used to reduce in-mission and long-term health medical risks including, but not limited to:
+
+Flight surgeon monitoring of crewmembers during hazardous training and pre-flight science testing.
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Comments
+a. Optimization of nutrition.
+
+b. Vitamin D supplementation.
+
+c. Triennial imaging of bone mineral density.
+
+d. Maintenance of optimal aerobic and strength physical fitness.
+
+e. Maintenance of flexibility, agility, and balance.
+
+f. Annual physicals.
+
+g. Preventive dental care.
+
+h. Vaccinations (influenza, tetanus toxoid, varicella zoster vaccine, severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), etc.
+
+i. Behavioral health resiliency training.
+
+j. Total radiation dose control/monitoring.
+
+k. Pre-mission Health-Stabilization Program (HSP) to reduce the likelihood of contracting an infectious disease before launch.
+
+l. Assisted Reproductive Technology (ART) if desired by the
+crewmember to preserve gametocytes prior to missions with exposure to radiation.3.1.4[V1 3003]In-Mission Preventive Health CareAll programs shall provide training, in-mission capabilities, and resources to monitor physiological and psychosocial well-being and enable delivery of in-mission preventive health care, based on epidemiological evidence- based probabilistic risk assessment (PRA) that takes into account the needs and limitations of each specific design reference mission (DRM),
+and parameters such as mission duration, expected return time to Earth, mission route and destination, expected radiation profile, concept of
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Commentsoperations, and more. In- mission preventive care includes, but is is not limited to:
+
+Note: The term "in-mission" covers all phases of the mission, from launch, through landing on a planetary body and all surface activities entailed, up to landing back on Earth.
+
+a. Periodic monitoring of general health status.
+
+b. Optimization and periodic monitoring of nutrition intake - To include caloric density and macro/micronutrients (including antioxidants, flavonoids, lycopene, omega-3 fatty acids, lutein, sterols, and prebiotics), to support multiple physiological systems such as immune function, bone and muscle health, effectiveness of radiation damage repair mechanisms, cognitive and mental well-being, microbiome, etc. Optimization of nutrition intake also includes such aspects as food palatability and food variety, to support psychological well-being and crew morale.
+
+c. Vitamin D supplementation - For bone and immune function.
+
+d. Maintenance and periodic monitoring of aerobic and strength physical fitness - For maintenance of muscle strength and aerobic capacity (essential for performance of safety-critical physical tasks such as emergency vehicle egress), bone strength, immune system performance, sensorimotor function, stress relief, and reduction in renal stone formation.
+
+e. Maintenance and periodic monitoring of flexibility, agility, and balance - For sensorimotor function (essential for performance of safety-critical physical tasks such as emergency vehicle egress).
+
+f. Maintenance and monitoring of work/rest schedules and optimal sleep/circadian rhythm.
+
+g. Maintenance and monitoring of environmental parameters at optimal levels for crew health and performance, as outlined in other requirements.
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Comments
+h. Prevention of decompression sickness by utilizing the appropriate prebreathe protocols.
+
+i. Hearing conservation and protection, including periodic monitoring.
+
+j. Optimization and periodic monitoring of psychosocial countermeasures for team cohesion, privacy, social isolation, and sensory deprivation.
+
+k. Preventive measures for orthostatic intolerance and neurovestibular challenges during g-transitions.
+
+l. Space Flight Associated Neuro-Ocular Syndrome (SANS) periodic monitoring, and prevention with to-be-determined countermeasures (to be validated by research in the coming years).
+
+m. Periodic monitoring of vascular motility and patency of venous drainage pathways in the neck as well as the deep veins in the lower extremities.
+
+n. Optimization and periodic monitoring of immune function via implementation of a suite of multi-component countermeasures.
+
+o. For missions that land on planetary bodies - Training, capabilities, and resources for rehabilitation on the planetary surface, analogous to the functions of the post-Earth-landing recovery team, rehabilitation team, and flight surgeon team to enable surface mission success.
+
+p. Maintenance and monitoring of any future risks as they emerge.3.1.5[V1 3004]In-Mission Medical CareAll programs shall provide training, in-mission medical capabilities, and resources to diagnose and treat potential medical conditions based on epidemiological evidence-based PRA, clinical practice guidelines and expertise, historical review, mission parameters, and vehicle-derived
+limitations. These analyses should consider the needs and limitations of each specific DRM and vehicles. The term "in-mission" covers all phases
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Commentsof the mission, from launch, through landing on a planetary body and all surface activities entailed, up to landing back on Earth. In-mission capabilities (including hardware and software), resources (including consumables), and training to enable in-mission medical care, are to include, but are not limited to:
+
+a. Medical system architecture and infrastructure (i.e., electronic medical records, inventory monitoring/maintenance, medical stowage allocation [including pressurized or refrigerated volume], etc.).
+
+b. Medical equipment selected for ease-of-use.
+
+c. Configuring environment for medical care (including privacy considerations).
+
+d. Obtaining and recording history of medical encounter.
+
+e. Performing and recording the physical exam.
+
+f. Assessing, recording, monitoring, and trending vital signs (including pulse oximetry and co-oximetry).
+
+g. Conducting ancillary tests as needed, including imaging, laboratory analyses, and electrocardiography.
+
+h. Performing procedures.
+
+i. Providing physical restraints for the patient, caregiver, and medical equipment.
+
+j. Recording treatment plan.
+
+k. Administering and managing medications (both oral and parenteral) and intravenous (IV) fluids.
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Commentsl. Consumables.
+
+m. Capability to treat decompression sickness.
+
+n. Monitoring and altering work/rest schedule and balance.
+
+o. Treating neurobehavioral disorders with medical devices and/or evidence-based asynchronous behavioral health treatment protocols available on electronic devices.
+
+p. Private two-way audio and video communication with ground medical support, family, and crew support system.
+
+q. Private transmission of medical data (including imaging) to ground medical support.
+
+r. Means of providing autonomous medical care and advanced life support.
+
+s. Medical evacuation.
+
+t. Palliative care.3.1.6[V1 3005]Medical Training for In-Mission Medical Care ProvidersThe level of training of in-mission medical care providers shall be commensurate with the complexity of anticipated medical, mental health, and behavioral conditions, taking into account such aspects as mission duration, destination, capabilities of the medical system, return-to-Earth capability, mission architecture, crew quantity, vehicle design, and the need for autonomous-from-Earth medical care. The term "in-mission" covers all phases of the mission, from launch, through landing on a planetary body and all surface activities entailed, up to landing back on
+Earth.3.1.6.1[V1 3006]Crew Medical Officers QuantityThe program(s) shall train a minimum of two crewmembers per vehicle/platform as Crew Medical Officers (CMOs).3.1.7[V1 3007]Medical EvacuationMedical evacuation to a location with a higher level of medical care shall be available for serious illness/injuries occurring during a space flight
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Commentsmission, which are beyond the medical capabilities available at the crew's location. This might entail evacuation to planetary or orbiting assets, or back to Earth, depending on the scenario, medical needs, and availability
+of resources at each location.3.1.8[V1 3008]In-Mission Evacuation to Definitive Medical Care FacilitiesPlans shall be available to transport severely ill or injured crewmember(s) to appropriate Medical Care Facilities, including Definitive Medical Care
+Facilities (DMCF) in the event of a contingency.3.1.9[V1 3009]Palliative Comfort CareIn medical scenarios where onboard medical resources have been exhausted, a timely return to Earth or another location of higher medical capability is not feasible, and survival of the crewmember has been
+determined to be impossible, palliative comfort care shall be provided.3.1.10[V1 3010]Termination of CareEach human space flight program shall have criteria for termination of care.3.1.11[V1 3011]Capability to Handle Deceased CrewmembersEach human space flight program shall provide the capability to handle deceased crewmembers.3.1.12[V1 3012]Terrestrial Launch/Landing Medical SupportAll programs shall have medical capability at the site of terrestrial launch and landing to address nominal operations and launch/landing contingencies, including, but not limited to, the following:
+
+a. HSP requirements for the crew, the crew's family, and supporting personnel for purpose of disease prevention.
+
+b. Access to the full spectrum of medical capabilities, from routine medical and mental health care to advanced trauma life support (ATLS) capabilities, or equivalent.
+
+c. Incorporation of civilian and/or Department of Defense (DOD) facilities and Emergency Medical Services (EMS).3.1.13.1[V1 3013]DMCF Medical CareThe program shall establish medical care agreements with DMCF(s) for each launch and landing location.3.1.13.2[V1 3014]DMCF TransportThe program shall have the capability to transport crewmembers to a DMCF .3.1.14[V1 3015]Certification of Training Plans for Launch/Landing Medical TeamThe organization responsible for astronaut health shall certify training plans for EMS personnel who work launch/landing and concur on training
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Commentsplans for organizations that have a specific EMS training plan in support of a NASA space flight program. Training includes, but is not limited to:
+
+a. Physiological changes occurring as a result of prolonged launch body posture.
+
+b. Space flight physiology.
+
+c. Injuries resulting from launch and landing contingencies (such as trauma, burns, hypoxia, and hypothermia).
+
+d. Hazards of exposure to space vehicle-associated toxic chemicals such as propellant, fuels, thermal control fluids, offgassed products, and their unique treatments and responses.
+
+e. Launch/landing suit, helmet, and equipment configuration and safe removal.3.1.15[V1 3016]Post-Mission Health CarePost-mission health care shall be provided to minimize occurrence of deconditioning-related illness or injury, including but not limited to:
+
+a. Physical examinations by a flight surgeon immediately following landing and periodically thereafter, until crew status is stable.
+
+b. Clinical laboratory tests.
+
+c. Physical reconditioning.
+
+d. Treatment as required.
+
+e. Scheduled days off and rest periods.
+
+f. Circadian rhythm retraining.
+
+g. Nutrition assessment and support.
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Commentsh. Psychosocial support for the crew and their families to assist with transition back into work and family life.
+
+i. Monitoring by a flight surgeon during post-mission scientific investigations that may pose some risk to a deconditioned crewmember's health.3.1.16[V1 3017]Post-Mission ReconditioningAll programs shall provide the planning, coordination, and resources for an individualized post-mission reconditioning program, specific to each crewmember, mission type, and mission duration.
+
+The post-mission reconditioning starts with crew egress at landing, and includes a guided, phased reconditioning protocol. The goals of the reconditioning program include the following:
+
+a. To ensure the health and safety of returning crew.
+
+b. To actively assist the crew's return to full functional abilities and return-to-flight status.
+
+c. To actively assist in the crew's return to pre-mission fitness.3.1.17[V1 3018]Post-Mission Long-Term MonitoringCrewmembers returning from space flight shall be monitored longitudinally for health and well-being parameters in a standardized manner.4.1.1[V1 4001]Microgravity EVA Aerobic CapacityCrewmembers shall maintain an in-mission maximum aerobic capacity
+(VO2max) at or above 32.9 ml•min-1•kg-1 for missions with microgravity EVAs as determined by either direct or indirect measures.4.1.2[V1 4002]Celestial Surface EVA Aerobic Capacity StandardCrewmembers shall maintain an in-mission maximum aerobic capacity
+(VO2max) at or above 36.5 ml•min-1•kg-1 for missions with celestial surface EVAs as determined by either direct or indirect measures.4.1.3[V1 4003]In-Mission Aerobic CapacityThe in-mission aerobic capacity shall be maintained, either through countermeasures or work performance, at or above 80% of the pre-mission
+capacity determined by either direct or indirect measures.4.1.4[V1 4004]Post-Mission Aerobic CapacityThe post-mission reconditioning shall be aimed at achieving a VO2max at or above the crewmember's pre-mission values.
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Comments4.2.1[V1 4005]Pre-Mission SensorimotorPre-mission sensorimotor functioning shall be assessed and be within normal clinical values for age and sex of the astronaut population.4.2.2[V1 4006]In-Mission Fitness for Duty SensorimotorIn-mission Fitness-for-Duty requirements shall be guided by the nature of mission-associated critical operations (such as, but not limited to, vehicle control, robotic operations, EVAs).4.2.3[V1 4007]In-Mission Fitness-for-Duty Sensorimotor MetricsIn-mission Fitness-for-Duty requirements shall be assessed using metrics that are task specific.4.2.4[V1 4008]Sensorimotor Performance LimitsSensorimotor performance limits for each metric shall be operationally
+defined.4.2.5[V1 4009]Sensorimotor CountermeasuresCountermeasures shall maintain function within performance limits.4.2.6[V1 4010]Post-Mission Sensorimotor ReconditioningPost-mission reconditioning shall be monitored and aimed at returning to baseline sensorimotor function.4.3.1[V1 4011]Mission Cognitive StatePre-mission, in-mission, and post-mission crew behavioral health and crewmember cognitive state shall be within clinically accepted values as
+judged by behavioral health evaluation.4.3.2[V1 4012]End-of-Mission Cognitive Assessment and TreatmentEnd-of-mission assessment and treatment for crewmember cognitive state shall include cognitive assessment, monitoring, and as needed,
+transitioning the crewmember back to pre-mission values.4.3.3[V1 4013]End-of-Mission Psychosocial AssessmentEnd-of-mission assessment and treatment for behavioral health of the crewmember shall include behavioral health and psychosocial assessment, monitoring, and as needed, transitioning the crewmember back into
+terrestrial work, family, and society.4.3.4[V1 4014]Completion of Critical TasksThe planned number of hours for completion of critical tasks and events, workday, and planned sleep period shall have established limits to assure continued crew health and safety.4.4.1[V1 4015]Pre-Mission Hematological/Immunological FunctionPre-launch hematological/immunological function shall be within normative ranges established for the healthy general population.4.4.2[V1 4016]In-Mission Hematological/Immunological
+CountermeasuresIn-mission countermeasures shall be in place to sustain hematological/immunological parameters within the normal range as
+determined by direct or indirect means.4.4.3[V1 4017]Hematology and Immunology Countermeasures and MonitoringCountermeasures and monitoring shall be developed to ensure immune and hematology values remain outside the critical values, i.e., the level that represents a significant failure of the hematological/immunological
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Commentssystem and is associated with specific clinical morbidity, defined for specific parameters.4.4.4[V1 4018]Post-Mission Hematological/ImmunologicalPost-mission assessment and treatment shall be aimed at returning to pre- mission baseline.4.5.1[V1 4019]Pre-Mission Nutritional StatusPre-mission nutritional status shall be assessed and any deficiencies mitigated before launch.4.5.2[V1 4020]In-Mission Nutrient IntakeIn-mission nutrient intake shall be no less than 90% of the calculated nutrient requirements, based on an individual's age, sex, body mass (kg), height (m), and an activity factor of 1.25.4.5.3[V1 4021]In-Mission Nutritional StatusIn-mission nutritional status shall be assessed, and
+recommendations/countermeasures applied for any decrements below predetermined values.4.5.4[V1 4022]Post-Mission Nutritional Assessment and TreatmentPost-mission nutritional assessment and treatment shall be aimed at returning to baseline.4.6.1[V1 4023]Pre-Mission Muscle Strength and FunctionPre-mission muscle strength and function shall be per the values in Table 2, Pre-Mission Muscle Strength Requirements.
+Table 2-Pre-Mission Muscle Strength RequirementsMinimumMicrogravity EVAsCelestial Surface EVAsUnaided EgressDeadlift1.0 × Body Weight1.3 × Body Weight1.6 × Body Weight1.3 × Body WeightBench Press0.7 × Body Weight0.8 × Body Weight1.0 × Body Weight0.7 × Body Weight4.6.2[V1 4024]In-Mission Skeletal Muscle StrengthCountermeasures shall maintain in-mission skeletal muscle strength at or above 80% of baseline values.4.6.3[V1 4025]Post-Mission ReconditioningPost-mission reconditioning shall be aimed at returning to baseline muscle strength.4.7.1[V1 4026]Pre-Mission Bone Mineral DensityCrewmembers' pre-mission bone mineral density (BMD) T scores for total hip and lumbar spine (L1-L4), as measured by mass dual energy X-ray
+absorptiometry (DXA) shall be consistent with an age, sex, gender, and ethnic-matched population.
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Comments4.7.2[V1 4027]Pre-Mission Bone CountermeasuresCountermeasures shall maintain bone mass of the hip and spine at or above 95% of pre-mission values and at or above 90% for the femoral
+neck.4.7.3[V1 4028]Post-Mission Bone ReconditioningPost-mission reconditioning shall be aimed at returning bone mineral density to pre-mission baseline.4.8.1[V1 4029]As Low as Reasonably Achievable (ALARA) PrincipleAll crew radiation exposures shall be minimized using the ALARA principle4.8.2[V1 4030]Career Space Permissible Exposure Limit for Space Flight RadiationAn individual astronaut's total career effective radiation dose due to space flight radiation exposure shall be less than 600 mSv. This limit is universal for all ages and sexes.
+
+The NASA effective dose for determining the standard threshold limit is calculated using the NASA Q (based on the NASA cancer model of 2012), 35-year-old female model parameters (tissue weighting factors, phantom, etc.) for both males and females. Individual astronaut risk of exposure- induced death (REID) calculations are calculated using the appropriate NASA Q (based on the NASA cancer model of 2012) sex and age model
+parameters.4.8.3[V1 4031]Short-Term Radiation Limits - Solar Particle EventsThe program shall protect crewmembers from exposure to the design reference solar particle event (SPE) environment proton energy spectrum (sum of the October 1989 events) to less than a NASA effective dose of 250 mSv.4.8.4[V1 4032]Crew Radiation Limits for Nuclear TechnologiesRadiological exposure from nuclear technologies emitting ionizing radiation to crewmembers (e.g., radioisotope power systems, fission reactors, etc.) shall be less than an effective dose of 20 mSv per mission year (prorated/extrapolated to mission durations) and utilizing the
+ALARA principle.5.1[V1 5001]Medical TrainingMedical training to astronaut candidates, assigned crewmembers, flight
+surgeons (FSs), mission control support staff, and other ground support personnel (GSP) deemed appropriate shall be provided.5.2[V1 5002]Astronaut Training Beginning with the astronaut candidate year, general medical training, including first aid, cardiopulmonary resuscitation (CPR), altitude
+physiological training, carbon dioxide exposure training, familiarization with medical issues, procedures of space flight, psychological training,
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Commentsand supervised physical conditioning training shall be provided to the astronaut corps.5.2.1[V1 5003]Crew Medical Officer Medical TrainingCrewmembers who have received a mission assignment as a Crew Medical Officer (CMO) shall be provided with more detailed and specific medical training, including health issues, space physiology, medical procedures, medical equipment, toxicology, and countermeasures.5.2.2[V1 5004]Medical Training VerificationMedical Training shall be verified for all personnel.5.3[V1 5005]Crew Surgeon TrainingNASA and/or contractor FSs assigned to support the subject space program shall receive training and certification in accordance with a program-specific training plan.5.4[V1 5006]Medical Operations Flight Controller TrainingAll Medical Operations personnel staffing the Mission Control Center (MCC) shall be trained and certified according to program-specific
+training and certification plans.5.5[V1 5007]Support Personnel TrainingSupervised training programs shall be implemented for individuals who require knowledge of space medicine or flight medical procedures, such as flight directors, medical consultants, and/or other personnel deemed
+appropriate as part of the Medical and Crew Health Requirements Document.5.6[V1 5008]Psychological Mission TrainingSpecific pre-mission briefings and training shall be provided as appropriate to the commander (CDR), CMOs, crewmembers, key ground personnel, and crew families concerning the significant psychological and social phenomena that may arise in all phases of a mission.5.7[V1 5009]Physiological Exposure Mission TrainingPhysiological training designed to assist crewmembers with pre-mission familiarization to in-mission exposures (i.e., carbon dioxide [CO2] exposure training, hypoxia training/instruction, centrifuge, and high- performance aircraft microgravity adaptation training) in preparation for
+space flight shall be provided.6.1[V1 6001]Circadian Shifting Operations and Fatigue ManagementCrew schedule planning and operations shall be provided to include
+circadian entrainment, work/rest schedule assessment, task loading assessment, countermeasures, and special activities.6.2.1[V1 6002]Private Medical Communication (PMC) ScheduleA PMC shall be scheduled on a routine basis as determined by the Flight Surgeon, at a frequency dictated for short- or long-duration missions.6.2.2[V1 6003]Private Medical Communications Information DeliveryMedical information that is sent to/from the ground via spacecraft telemetry shall be considered private communication.
+NASA-STD-3001, Volume 1, Revision B
+SectionStandard Number
+Description
+Requirement in this StandardApplicable (Enter Yes or No)Comments6.3.1[V1 6004]Behavioral Health and Performance ProvisionsProvisions shall be made to implement appropriate psychological support programs for the crew, key ground personnel, and crew families
+throughout the mission.6.3.2[V1 6005]Behavioral Health for Key Ground PersonnelPsychological programs shall be available for key ground personnel.6.4[V1 6006]Extravehicular Activities (EVAs)All EVAs shall be preceded by an assessment of medical fitness requiring concurrence by ground medical support personnel.6.5[V1 6007]Medical and Survival KitsVehicle medical kits (routine and survival) shall be provided for all phases
+of the mission.6.6.1[V1 6008]Crew Health Operations Concept DocumentThe program(s) shall develop a crew health operations concept document
+to define the medical and health care concepts during all phases of the spaceflight program.6.6.2[V1 6009]Medical and Crew Health Requirements DocumentThe program(s) shall develop a medical and crew health requirements document based on the concepts outlined in the CHOC document and NASA-STD-3001.7.1[V1 7001]Crew Health ResultsThe results of all crew health monitoring shall be kept in a permanent retrievable format for evaluation, including trend analysis.7.2[V1 7002]Crew Records CommunicationThe method of transmission of crewmembers' medical health data shall be in a timely manner to meet the medical operational needs of the program.7.3[V1 7003]Crew Records StoringThe method for handling, storing, and transmission of crewmembers' medical health records shall be secured.
+
+
+
+
+
+
+
+
