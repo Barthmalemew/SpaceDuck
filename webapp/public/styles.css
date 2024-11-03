@@ -287,3 +287,6 @@ div.Duck1 {
     max-width:fit-content;
     position:fixed;
 }
+header{
+  scale:10%;
+}

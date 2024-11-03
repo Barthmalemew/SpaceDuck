@@ -198,7 +198,7 @@ app.post('/api/chat', checkServerReady, async (req, res) => {
             //if the error message includes the words not running log that the LLM was not available and that user should try again later
         } else if (error.message.includes('not running')) {
             statusCode = 503;
-            errorMessage = 'The AI service is currently unavailable. Please try again later.';
+            errorMessage = 'The model is currently unavailable. Please try again later.';
         }
         //this responses to the call with the status code which includes any error messages and the details in a json file format
         res.status(statusCode).json({
