@@ -9,7 +9,6 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-family: 'Arial', sans-serif;
     background: #0B3D91;  /* NASA Blue */
     color: white;
@@ -30,27 +29,65 @@ body {
 h1 {
     color: white;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.5vw;
     margin: 10px 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Main container for the layout */
+.main-container {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Content area styles */
+.content-area {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.topic-selector {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.presentation-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    flex: 1;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Chat container */
 .chat-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    width: 90%;
-    max-width: 1000px;
-    flex: 1;
     padding: 20px;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    overflow-y:auto;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
 }
 
 /* Messages area */
@@ -64,10 +101,7 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    background-image:url('images/RubberDuck3.png');
-    background-size: 200px 100px;
-    background-position: left bottom;
-    background-repeat:no-repeat;
+    height: calc(100% - 70px);
 }
 
 /* Scrollbar styling */
@@ -102,6 +136,26 @@ h1 {
     align-self: flex-end;
 }
 
+/* Select and Input areas */
+select, textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    padding: 12px;
+    font-size: 1vw;
+    width: 100%;
+}
+
+select {
+    cursor: pointer;
+}
+
+select option {
+    background: #0B3D91;
+    color: white;
+}
+
 /* Input area */
 .chat-input-container {
     display: flex;
@@ -113,12 +167,6 @@ h1 {
 textarea {
     flex-grow: 1;
     resize: none;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    color: white;
-    padding: 12px;
-    font-size: 1em;
 }
 
 textarea::placeholder {
@@ -130,7 +178,7 @@ button {
     border: none;
     color: white;
     padding: 0 20px;
-    font-size: 1.1em;
+    font-size: 1.1vw;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -141,10 +189,16 @@ button:hover {
 }
 div.Duck1
 {
-  height: fit-content;
-  width: fit-content;
-}
+  height: 30%;
+  max-width:fit-content;
+  position:fixed;
+  left:5vw;
 
+}
+#rotate2D
+{
+  animation: rotate 12s linear infinite;
+}
 @keyframes rotate{
   0%{
     transform:rotate(0deg);
@@ -156,7 +210,31 @@ div.Duck1
     transform:rotate(360deg);
   }
 }
-#rotate2D
-{
-  animation: rotate 12s linear infinite;
+.content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.question-display {
+    padding: 15px;
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.answer-text {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
+}
+
+.answer-text.visible {
+    display: block;
+}
+
+div.Duck1 {
+    height: 30%;
+    max-width:fit-content;
+    position:fixed;
 }

@@ -1,44 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-    <script src="scripts.js"></script>
-   
+<html>
 <head>
-    <!-- 
-    NASA Space Duck Chat Interface
-    Main chat interface for space training simulation
-    Updated with modern NASA styling
-    -->
-    <meta charset="UTF-8">
     <title>NASA Space Duck</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="rotate2D" class="Duck1">
+    <img src="images/RubberDuck1.png" alt = "yellow duck with space helmet"/>;
+</div>
+<div class="Duck2"></div>
+<div class="Duck3"></div>
+
+<div class="header">
+    <img src="/api/placeholder/150/50" alt="NASA Logo" class="nasa-logo">
     <h1>NASA Space Duck</h1>
-    <div class="block" id="rotate2D"></div>
-    <div class="Duck1" id="rotate2D">
-        <img src="images/RubberDuck1.png" alt = "yellow duck with space helmet"/>;
+</div>
+
+<div class="main-container">
+    <div class="content-area">
+        <div class="topic-selector">
+            <h2>Select Training Topic</h2>
+            <select id="categorySelect">
+                <option value="">Choose a topic...</option>
+                <option value="Astronomy">Astronomy</option>
+                <option value="Space Technology">Space Technology</option>
+                <option value="Mechanical Problem">Mechanical Problem</option>
+                <option value="Navigational Problem">Navigational Problem</option>
+                <option value="Resource Management">Resource Management</option>
+            </select>
+            <button id="getQuestionButton">Get Question</button>
+        </div>
+
+        <div class="presentation-box">
+            <h2>Training Content</h2>
+            <div id="trainingContent" class="content">
+                Select a topic to begin your training session.
+            </div>
+        </div>
     </div>
-    <div class="Duck2"></div>
-    <div class="Duck3"></div>
-    <div class="nasa-logo"></div>
+
     <div class="chat-container">
-        <div class="chat-messages" id="chatMessages">
+        <div id="chatMessages" class="chat-messages">
             <div class="message bot-message">
-                Welcome to NASA's Virtual Training Portal. I'm your AI instructor, ready to guide you through space science, 
-                astronaut training, and space exploration. How can I assist you today?
+                Welcome to NASA's Virtual Training Portal. I'm your AI instructor, ready to guide you through space science, astronaut training, and space exploration. How can I assist you today?
             </div>
         </div>
         <div class="chat-input-container">
-            <textarea 
-                id="chatInput" 
-                placeholder="Ask a question about space..."
-                rows="3"
-                cols="50"
-                aria-label="Chat input"
-            ></textarea>
+            <textarea id="chatInput" placeholder="Type your message..."></textarea>
             <button id="sendButton">Send</button>
         </div>
     </div>
-    
+</div>
+
+<script src="scripts.js"></script>
 </body>
 </html>

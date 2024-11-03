@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatMessages = document.getElementById('chatMessages');
     const chatInput = document.getElementById('chatInput');
     const sendButton = document.getElementById('sendButton');
-    let inactivityTimer = null;
-    const INACTIVITY_TIMEOUT = 30000; // 30 seconds
+    const categorySelect = document.getElementById('categorySelect');
+    const getQuestionButton = document.getElementById('getQuestionButton');
+    const trainingContent = document.getElementById('trainingContent');
+    let currentAnswer = null;
 
     // Adds a new message to the chat interface
-    // @param message - The message text to display
-    // @param isUser - Boolean indicating if message is from user
     function addMessage(message, isUser = false) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `message ${isUser ? 'user-message' : 'bot-message'}`;
@@ -19,70 +19,111 @@ document.addEventListener('DOMContentLoaded', () => {
         chatMessages.appendChild(messageDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
-    //Gets a random question from the API
-    async function askRandomQuestion() {
-        //This try function attemps to fetch an entry from the random questions endpoint if it succeeds it adds the message to the chat interface
+
+    // Gets a question from the API based on selected category
+    async function getQuestion() {
         try {
-            const response = await fetch('/api/random-question');
-            const data = await response.json();
-            if (response.ok) {
-                addMessage(data.question);
+            const category = categorySelect.value;
+            if (!category) {
+                trainingContent.innerHTML = 'Please select a topic first.';
+                return;
             }
-            //if an error occurs it sends a message to the console with the name of the error
+
+            const endpoint = `/api/questions/${encodeURIComponent(category)}`;
+            const response = await fetch(endpoint);
+            const data = await response.json();
+
+            if (response.ok) {
+                currentAnswer = data.correct_answer;
+                trainingContent.innerHTML = `
+                    <div class="question-display">
+                        <h3>Question:</h3>
+                        <p>${data.question}</p>
+                        <div class="answer-text" id="answerText">
+                            <h3>Answer:</h3>
+                            <p>${data.correct_answer}</p>
+                        </div>
+                    </div>`;
+
+                // Change button text and function
+                getQuestionButton.textContent = 'Show Answer';
+                getQuestionButton.onclick = showAnswer;
+            }
         } catch (error) {
-            console.error('Error fetching random question:', error);
+            console.error('Error fetching question:', error);
+            trainingContent.innerHTML = 'Error: Unable to fetch question. Please try again.';
         }
     }
-    
+
+    function showAnswer() {
+        if (currentAnswer) {
+            const answerText = document.getElementById('answerText');
+            answerText.classList.add('visible');
+            getQuestionButton.textContent = 'Get Question';
+            getQuestionButton.onclick = getQuestion;
+            currentAnswer = null;
+        }
+    }
+
     async function sendMessage() {
-        //sets the variable message to a trimed version of the value in the chat input variable
         const message = chatInput.value.trim();
-        //pretty sure this is checking to make sure message isnt null and if it is it exists the function
         if (!message) return;
 
-        // Add user message to chat
-        addMessage(message, true);
+        // Clear input and disable button before sending
+        const originalMessage = message;
         chatInput.value = '';
         sendButton.disabled = true;
-        
-        //this trys to send the users message to the server
+
+        // Show user message
+        addMessage(originalMessage, true);
+
         try {
-            console.log('Sending message to server:', message);
+            // Add loading indicator
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'message bot-message loading';
+            loadingDiv.textContent = 'Thinking...';
+            chatMessages.appendChild(loadingDiv);
+
             const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ message }),
+                body: JSON.stringify({ message: originalMessage }),
             });
-            //this sends a response request to the server and sets that to the variable data when it arrives
+
+            // Remove loading indicator
+            chatMessages.removeChild(loadingDiv);
+
             const data = await response.json();
-            if (response.ok) {
-                if (data.response) {
-                    addMessage(data.response);
-                } else {
-                    //throws an error if the response format is invalid
-                    throw new Error('Invalid response format');
-                }
+            if (!response.ok) {
+                throw new Error(data.error || 'Server error');
+            }
+
+            if (data.response) {
+                addMessage(data.response);
             } else {
-                //should now post the error in the message log instead of defaulting to the Unkown error occured message which should hopefully be more useful
-                addMessage(`Error: ${error.message || 'Unknown error occurred'}`);
+                throw new Error('Invalid response format');
             }
         } catch (error) {
-            addMessage('Sorry, something went wrong. Please try again.');
+            addMessage(`Error: ${error.message || 'Unknown error occurred'}`);
         } finally {
             sendButton.disabled = false;
+            // Remove loading indicator if it still exists
+            const loadingDiv = document.querySelector('.loading');
+            if (loadingDiv) {
+                chatMessages.removeChild(loadingDiv);
+            }
         }
     }
 
-    sendButton.addEventListener('click', sendMessage); //this adds an event listener that checks for if send button has been clicked and if so runs the send message function
-    //adds a event listen to the chat input element that detects if the enter key has been pressed and the shift key was not being pressed at the same time and then runs the send message function if that happens
+    // Event listeners
+    getQuestionButton.addEventListener('click', getQuestion);
+    sendButton.addEventListener('click', sendMessage);
     chatInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
             sendMessage();
         }
     });
-    
-    
 });

@@ -6,6 +6,8 @@
 const express = require('express');
 const path = require('path');
 const axios = require('axios');
+const sqlite3 = require('sqlite3').verbose();
+const db = new sqlite3.Database(path.join(__dirname, 'db', 'questions.db'));
 require('dotenv').config();
 
 const app = express();
@@ -37,12 +39,12 @@ let initRetryCount = 0;
 async function initializeServer() {
     try {
         const statusResponse = await ollamaClient.get('/status');
-        
+
         if (!statusResponse.data.initialized) {
             console.log(`Initializing Ollama service (Status: ${statusResponse.data.status})...`);
             await ollamaClient.post('/initialize');
         }
-        
+
         serverReady = true;
         initializationError = null;
         console.log('Server initialization complete, ready to handle requests');
@@ -50,7 +52,7 @@ async function initializeServer() {
         initRetryCount++;
         initializationError = error.response?.data?.error || error.message;
         console.error(`Initialization attempt ${initRetryCount} failed:`, initializationError);
-        
+
         if (initRetryCount < MAX_INIT_RETRIES) {
             console.log(`Retrying initialization in 5 seconds...`);
             setTimeout(initializeServer, 5000);
@@ -72,15 +74,81 @@ const checkServerReady = (req, res, next) => {
     next();
 };
 
-app.get('/api/random-question', checkServerReady, async (req, res) => {
+// Enhanced questions endpoint with error handling and caching
+const questionCache = new Map();
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+
+app.get('/api/questions/:category', async (req, res) => {
     try {
-        const response = await ollamaClient.get('/random-question');
-        const question = response.data.question;
-        res.json({ question });
+        const category = req.params.category;
+        const cacheKey = `category_${category}`;
+        const cachedData = questionCache.get(cacheKey);
+        
+        if (cachedData && (Date.now() - cachedData.timestamp) < CACHE_DURATION) {
+            return res.json(cachedData.data);
+        }
+
+        db.get(
+            'SELECT * FROM questions WHERE category = ? ORDER BY RANDOM() LIMIT 1',
+            [category],
+            (err, row) => {
+                if (err) throw err;
+                if (!row) {
+                    return res.status(404).json({ 
+                        error: 'No questions found for this category' 
+                    });
+                }
+                questionCache.set(cacheKey, {
+                    data: row,
+                    timestamp: Date.now()
+                });
+                res.json(row);
+            });
     } catch (error) {
-        console.error('Error getting random question:', error);
+        console.error('Error fetching questions:', error);
         res.status(500).json({
-            error: 'Failed to get random question'
+            error: 'Failed to fetch questions',
+            details: error.message
+        });
+    }
+});
+
+// New endpoint to get categories
+app.get('/api/categories', async (req, res) => {
+    try {
+        db.all(
+            'SELECT DISTINCT category FROM questions',
+            [],
+            (err, rows) => {
+                if (err) throw err;
+                res.json(rows.map(row => row.category));
+            }
+        );
+    } catch (error) {
+        console.error('Error fetching categories:', error);
+        res.status(500).json({
+            error: 'Failed to fetch categories',
+            details: error.message
+        });
+    }
+});
+
+// New endpoint to get random question
+app.get('/api/random-question', async (req, res) => {
+    try {
+        db.get(
+            'SELECT * FROM questions ORDER BY RANDOM() LIMIT 1',
+            [],
+            (err, row) => {
+                if (err) throw err;
+                res.json(row);
+            }
+        );
+    } catch (error) {
+        console.error('Error fetching random question:', error);
+        res.status(500).json({
+            error: 'Failed to fetch random question',
+            details: error.message
         });
     }
 });
