@@ -210,6 +210,11 @@ div.Duck3
   max-height:20%;
   max-width:20%;
   top:45%;
+  left:-11.5vw;
+}
+#amongDucks
+{
+  animation: among 10s linear 5s infinite;
 }
 #rotate2D
 {
@@ -228,7 +233,10 @@ div.Duck3
 }
 
 @keyframes among{
-  
+  0%{ transform:translate(0vw) rotate(0deg) ;}
+  50%{ transform: translate(50vw) rotate(180deg);}
+  99%{ transform:translate(100vw) rotate(360deg) ;}
+  100%{transform: translate(110vw) rotate(0deg);}
 }
 .content {
   height: 100%;
