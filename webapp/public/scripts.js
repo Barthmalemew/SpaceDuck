@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
             chatMessages.removeChild(loadingDiv);
             //this sets data to the value of response in the json format and waits till it is completed before moving on
             const data = await response.json();
-            //if the response is nonexistant then it will throw an error
+            //fi thee
             if (!response.ok) {
                 throw new Error(data.error || 'Server error');
             }
-            //this checks if the formating is correct and calls addMessage with data.response as the parameter if so and throws an error if the format is invalid
+
             if (data.response) {
                 addMessage(data.response);
             } else {
