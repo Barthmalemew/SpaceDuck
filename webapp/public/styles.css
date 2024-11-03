@@ -191,33 +191,41 @@ button:hover {
 div.Duck1
 {
     height: 30%;
+    scale:90%;
     max-width:fit-content;
     position:absolute;
     left:5vw;
+    top:8vh;
 
 }
 div.Duck2
 {
   position:absolute;
   z-index:1;
-  left:0%;
-  bottom:0;
+  align-self:end;
+  align-content:end;
+  bottom:0%;
   max-width:fit-content;
-  width:25%;
-  height:25%;
+  min-width:10%;
+  min-height:10%;
+  opacity:50%;
+  scale:35%;
+  
 }
 div.Duck3
 {
   position:fixed;
-  max-height:20vh;
-  max-width:20vw;
+  max-height:fit-content;
+  max-width:fit-content;
+  scale:50%;
   top:45%;
   left:-11.5vw;
+  animation: among 40s linear infinite;
+  /* transform-origin:13vmin 25vmin; */
+  transform:translate3d(-50vmin,-20vmin,0px);
+  align-content:center;
 }
-#amongDucks
-{
-  animation: among 10s linear 5s infinite;
-}
+
 #rotate2D
 {
     animation: rotate 12s linear infinite;
@@ -235,9 +243,17 @@ div.Duck3
 }
 
 @keyframes among{
-  0%{ transform:translate(0vw) rotate(0deg) ;}
-  50%{ transform: translate(50vw) rotate(180deg);}
-  100%{ transform:translate(110vw) rotate(360deg) ;}
+  0%{ transform:translate3d(-50vmin,-20vmin,0px) rotate(0turn) ;}
+  50%,
+  100%{transform:translate3d(200vw,-20vmin,0px) rotate(4turn) ;}
+ 
+}
+@keyframes among2{
+  0%{ transform:rotate(0turn) ; left:0%;}
+  25%{transform:rotate(1turn); top:50vmin;}
+  50%{transform:rotate(2turn); left:50%; top:50vmin;}
+  75%{transform:rotate(3turn); top:50vmin;}
+  100%{ transform:rotate(4turn) ; left:100%;}
  
 }
 .content {
