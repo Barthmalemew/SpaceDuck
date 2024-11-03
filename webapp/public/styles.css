@@ -50,6 +50,7 @@ h1 {
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    overflow-y:auto;
 }
 
 /* Messages area */
