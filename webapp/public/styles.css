@@ -254,17 +254,10 @@ div.Duck3 {
     100% { transform: rotate(360deg); }
 }
 
-@keyframes among {
-    0% { transform: translate3d(-50%, -20%, 0px) rotate(0turn); }
-    50%, 100% { transform: translate3d(200%, -20%, 0px) rotate(4turn); }
-}
-
-@keyframes among2 {
-    0% { transform: rotate(0turn); left: 0%; }
-    25% { transform: rotate(1turn); top: 50%; }
-    50% { transform: rotate(2turn); left: 50%; top: 50%; }
-    75% { transform: rotate(3turn); top: 50%; }
-    100% { transform: rotate(4turn); left: 100%; }
+@keyframes among{
+  0%{ transform:translate3d(-50vmin,-20vmin,0px) rotate(0turn) ;}
+  50%,
+  100%{transform:translate3d(200vw,-20vmin,0px) rotate(4turn) ;}
 }
 
 /* Content styles */
