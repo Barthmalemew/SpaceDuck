@@ -182,6 +182,12 @@ button {
 button:hover {
     background-color: #ff4d2e;
 }
+div.Duck1
+{
+  height: 30%;
+  max-width:fit-content;
+  position:fixed
+}
 
 .question-item {
     background: rgba(255, 255, 255, 0.1);
