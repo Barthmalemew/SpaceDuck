@@ -1,4 +1,4 @@
-/* Prevent page scrolling */
+/* Base styles */
 html, body {
     height: 100%;
     overflow: hidden;
@@ -10,46 +10,50 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Arial', sans-serif;
-    background: #0B3D91;  /* NASA Blue */
+    background: #0B3D91;
     color: white;
     background-image: url('images/etoiles.png');
     background-repeat: repeat;
-    background-size: 300px;
-    padding: 20px;
+    background-size: 25%;
+    padding: 2%;
     box-sizing: border-box;
 }
 
 /* Header styles */
 .nasa-logo {
-    width: 150px;
+    width: 12%;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 1%;
 }
 
 h1 {
     color: white;
     text-align: center;
     font-size: 2.5vw;
-    margin: 10px 0;
+    margin: 1% 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Main container for the layout */
+/* Main container */
 .main-container {
     display: flex;
-    gap: 20px;
-    flex: 1;
-    width: 100%;
+    width: 96%;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 1%;
+    height: calc(90vh - 100px);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Content area styles */
+/* Content area */
 .content-area {
-    flex: 2;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 65%;
+    overflow: hidden;
 }
 
 .topic-selector {
@@ -62,35 +66,36 @@ h1 {
 }
 
 .presentation-box {
+    flex: 1;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 20px;
-    flex: 1;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    position:relative;
 }
 
 /* Chat container */
 .chat-container {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
+    width: 30%;
+    height: calc(100% - 20px);
+    position: absolute;
+    right: 1%;
+    top: 10px;
     display: flex;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
-    padding: 20px;
+    padding: 15px;
+    padding-bottom: 20px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    overflow-y:auto;
-    max-height:80vmin;
-
+    box-sizing: border-box;
 }
 
 /* Messages area */
@@ -98,12 +103,12 @@ h1 {
     flex: 1;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 15px;
+    margin-bottom: 15px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     height: calc(100% - 70px);
 }
 
@@ -124,7 +129,7 @@ h1 {
 /* Message bubbles */
 .message {
     max-width: 80%;
-    padding: 12px 16px;
+    padding: 12px;
     border-radius: 8px;
     word-wrap: break-word;
 }
@@ -145,13 +150,14 @@ select, textarea {
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
     color: white;
-    padding: 12px;
+    padding: 8px;
     font-size: 1vw;
-    width: 100%;
+    box-sizing: border-box;
 }
 
 select {
     cursor: pointer;
+    width: 100%;
 }
 
 select option {
@@ -161,15 +167,23 @@ select option {
 
 /* Input area */
 .chat-input-container {
-    display: flex;
-    gap: 10px;
     height: 50px;
     min-height: 50px;
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 textarea {
     flex-grow: 1;
     resize: none;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    width: 75%;
+    margin-bottom: 5px;
 }
 
 textarea::placeholder {
@@ -177,91 +191,87 @@ textarea::placeholder {
 }
 
 button {
-    background-color: #FC3D21;  /* NASA Red */
+    background-color: #FC3D21;
     border: none;
     color: white;
-    padding: 0 20px;
+    width: 20%;
+    min-width: fit-content;
+    padding: 0;
     font-size: 1.1vw;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 5px;
 }
 
 button:hover {
     background-color: #ff4d2e;
 }
-div.Duck1
-{
+
+/* Duck positioning and animations */
+div.Duck1 {
     height: 30%;
-    scale:90%;
-    max-width:fit-content;
-    position:absolute;
-    left:5vw;
-    top:8vh;
-
-}
-div.Duck2
-{
-  position:absolute;
-  z-index:1;
-  align-self:end;
-  align-content:end;
-  bottom:0%;
-  max-width:fit-content;
-  min-width:10%;
-  min-height:10%;
-  opacity:50%;
-  scale:35%;
-  
-}
-div.Duck3
-{
-  position:fixed;
-  max-height:fit-content;
-  max-width:fit-content;
-  scale:50%;
-  top:45%;
-  left:-11.5vw;
-  animation: among 40s linear infinite;
-  /* transform-origin:13vmin 25vmin; */
-  transform:translate3d(-50vmin,-20vmin,0px);
-  align-content:center;
+    scale: 90%;
+    max-width: fit-content;
+    position: absolute;
+    left: 5%;
+    top: 8%;
 }
 
-#rotate2D
-{
+div.Duck2 {
+    position: absolute;
+    z-index: 1;
+    align-self: end;
+    align-content: end;
+    bottom: 0;
+    max-width: fit-content;
+    min-width: 10%;
+    min-height: 10%;
+    opacity: 50%;
+    scale: 35%;
+}
+
+div.Duck3 {
+    position: fixed;
+    max-height: fit-content;
+    max-width: fit-content;
+    scale: 50%;
+    top: 45%;
+    left: -11.5%;
+    animation: among 40s linear infinite;
+    transform: translate3d(-50%, -20%, 0px);
+    align-content: center;
+}
+
+#rotate2D {
     animation: rotate 12s linear infinite;
 }
-@keyframes rotate{
-    0%{
-        transform:rotate(0deg);
-    }
-    50%{
-        transform:rotate(180deg);
-    }
-    100%{
-        transform:rotate(360deg);
-    }
+
+/* Animations */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
 }
 
-@keyframes among{
-  0%{ transform:translate3d(-50vmin,-20vmin,0px) rotate(0turn) ;}
-  50%,
-  100%{transform:translate3d(200vw,-20vmin,0px) rotate(4turn) ;}
- 
+@keyframes among {
+    0% { transform: translate3d(-50%, -20%, 0px) rotate(0turn); }
+    50%, 100% { transform: translate3d(200%, -20%, 0px) rotate(4turn); }
 }
-@keyframes among2{
-  0%{ transform:rotate(0turn) ; left:0%;}
-  25%{transform:rotate(1turn); top:50vmin;}
-  50%{transform:rotate(2turn); left:50%; top:50vmin;}
-  75%{transform:rotate(3turn); top:50vmin;}
-  100%{ transform:rotate(4turn) ; left:100%;}
- 
+
+@keyframes among2 {
+    0% { transform: rotate(0turn); left: 0%; }
+    25% { transform: rotate(1turn); top: 50%; }
+    50% { transform: rotate(2turn); left: 50%; top: 50%; }
+    75% { transform: rotate(3turn); top: 50%; }
+    100% { transform: rotate(4turn); left: 100%; }
 }
+
+/* Content styles */
 .content {
     height: 100%;
     overflow-y: auto;
-    position:relative;
+    position: relative;
 }
 
 .question-display {
@@ -282,11 +292,65 @@ div.Duck3
     display: block;
 }
 
-div.Duck1 {
-    height: 30%;
-    max-width:fit-content;
-    position:fixed;
+/* Media queries */
+@media (max-width: 768px) {
+    body {
+        padding: 3%;
+    }
+
+    .main-container {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .content-area {
+        width: 100%;
+    }
+
+    .chat-container {
+        position: relative;
+        width: 100%;
+        height: 40vh;
+        right: 0;
+        top: 0;
+        margin-top: 20px;
+    }
+
+    .nasa-logo {
+        width: 25%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    .Duck3 {
+        display: none;
+    }
 }
-header{
-  scale:10%;
+
+@media (max-height: 600px) {
+    .chat-container {
+        height: 50%;
+        padding: 15px;
+    }
+
+    .chat-messages {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .chat-container {
+        width: 25%;
+    }
+
+    .main-container {
+        width: 90%;
+    }
 }
